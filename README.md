@@ -1,2 +1,2 @@
-bijou
-=====
+division-project-installer
+==========================

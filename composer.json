@@ -1,0 +1,34 @@
+{
+	"name": "md/cfo-project-installer",
+	"description": "The SilverStripe Framework Installer",
+	"require": {
+		"php": ">=5.3.2",
+		"md/cfo-project": "dev-master"
+
+	},
+	"config": {
+		"process-timeout": 600	
+	},
+	"minimum-stability": "dev",
+	
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/division-project-installer"
+      
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/cfo-project"
+      
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar"
+
+        }
+    ]
+
+}
+
+
