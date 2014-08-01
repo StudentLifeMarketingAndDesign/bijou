@@ -1,0 +1,21 @@
+//theme's settings import
+@import "settings";
+
+@import "../../../cfo-project/bower_components/foundation/scss/foundation";
+@import "../../../division-bar/css/_division-bar.css"; 
+
+//additional division bar styles for foundation: */
+@import "../../../cfo-project/scss/layout/division-bar";
+
+//footer styles from division-project
+@import "../../../cfo-project/scss/layout/footer/config";
+@import "../../../cfo-project/scss/layout/footer/mixins";
+@import "../../../cfo-project/scss/layout/footer/footer";
+@import "../../../cfo-project/scss/layout/footer/grid-simple";
+
+
+
+.main {
+	padding-top: 32px;
+	min-height: 320px;
+}
