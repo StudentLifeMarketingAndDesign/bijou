@@ -41,11 +41,9 @@
 		<a href="#" class="text-center">View all board members</a>
 		<br>
 		<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-5">
-			<% with $Page(about-us) %>
-				<% loop $Children.Limit(5) %>
-					<% include StaffPageListItem %>
-				<% end_loop %>
-			<% end_with %>
+			<% loop RandomStaffMembers(5) %>
+				<% include StaffPageListItem %>
+			<% end_loop %>
 		</ul>
 	</div>
 
