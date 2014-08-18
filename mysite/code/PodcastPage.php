@@ -49,9 +49,6 @@ class PodcastPage_Controller extends Page_Controller {
 	private static $allowed_actions = array (
 	);
 
-	public function getBlogsByTag($tag) {
-		return DataObject::get("BlogEntry", "Tag = '{$tag}'");
-	}
 	public function init() {
 		parent::init();
 

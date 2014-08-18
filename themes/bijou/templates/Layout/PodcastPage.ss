@@ -6,11 +6,16 @@
 		$Content
 		$Form
 
-		<% loop getBlogsByTag(podcast) %>
-			html code here...
-		<% end_loop %>
-
-
+		<% with Page(bijou-blog) %>
+			<% if $Entries('','podcast') %>
+				<h3 class="mod-title">Podcasts</h3>
+				<ul class="unstyled">
+					<% loop $Entries('','podcast') %>
+						<li>$Title</li>
+					<% end_loop %>
+				</ul>
+			<% end_if %>
+		<% end_with %>
 
 	</div>
 </div>
