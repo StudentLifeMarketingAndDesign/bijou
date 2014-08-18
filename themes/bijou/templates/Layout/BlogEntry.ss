@@ -11,6 +11,9 @@
 			</p>
 		<% end_if %>
 		$Content
+		<% if $AudioClip %>
+			<audio src="$AudioClip.Filename" controls="controls"></audio>
+		<% end_if %>
 	</article>
 </div>
 
