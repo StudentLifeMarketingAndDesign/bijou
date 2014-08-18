@@ -42,7 +42,20 @@
 		<br>
 		<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-5">
 			<% loop RandomStaffMembers(5) %>
-				<% include StaffPageListItem %>
+				<li>
+					<% if $Photo %>
+						<a href="$Link" class="staff-link">
+							<img src="$Photo.CroppedImage(230,230).URL" alt="$FirstName $LastName" class="staff-img">
+						</a>
+					<% else %>
+						<a href="$Link" class="staff-link">
+							<img src="division-project/images/dosl.png" alt="$FirstName $LastName" class="staff-img">
+						</a>
+					<% end_if %>
+					<p class="staff-name">
+						<a href="$Link">$FirstName $LastName</a>
+					</p>
+				</li>
 			<% end_loop %>
 		</ul>
 	</div>
