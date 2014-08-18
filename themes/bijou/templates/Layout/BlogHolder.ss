@@ -2,14 +2,6 @@
 <div class="large-9 columns">
 	<div id="BlogContent" class="blogcontent">
 
-		<% loop $getBlogsByTag("podcast") %>
-			begin loop
-			<% loop BlogEntries %>
-				<% include BlogSummary %>
-			<% end_loop %>
-			end loop
-		<% end_loop %>
-
 		<% if SelectedTag %>
 			<h3><% _t('BlogHolder_ss.VIEWINGTAGGED', 'Viewing entries tagged with') %> '$SelectedTag'</h3>
 		<% else_if SelectedDate %>
