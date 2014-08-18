@@ -10,7 +10,7 @@
 // $rem-base: 16px;
 
 // Allows the use of rem-calc() or lower-bound() in your settings
-@import "foundation/functions";
+@import "../../../cfo-project/bower_components/foundation/scss/foundation/_functions";
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
@@ -31,7 +31,7 @@ $include-html-global-classes: $include-html-classes;
 // Grid
 
 // $include-html-grid-classes: $include-html-classes;
-// $include-xl-html-grid-classes: false;
+$include-xl-html-grid-classes: true;
 
 // $row-width: rem-calc(1000);
 // $total-columns: 12;
@@ -45,7 +45,7 @@ $include-html-global-classes: $include-html-classes;
 // We use these to control various global styles
 // $body-bg: #fff;
 // $body-font-color: #222;
- $body-font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$body-font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-weight-normal:normal;
 $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
@@ -59,12 +59,15 @@ $body-font-weight: $font-weight-normal;
 // $default-float: left;
 
 // We use these as default colors throughout
-$primary-color: #1295fa;
+$primary-color: #3399cc;
+$bijoublue: #5cacc9;
+$yellow: #ffce39;
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
+
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 3px;
@@ -75,14 +78,14 @@ $primary-color: #1295fa;
 // $shiny-edge-color: rgba(#fff, .5);
 // $shiny-edge-active-color: rgba(#000, .2);
 
-// $column-gutter: rem-calc(30);
+$column-gutter: rem-calc(44);
 
 // Media Query Ranges
-// $small-range: (0em, 40em);
-// $medium-range: (40.063em, 64em);
-// $large-range: (64.063em, 90em);
-// $xlarge-range: (90.063em, 120em);
-// $xxlarge-range: (120.063em, 99999999em);
+$small-range: (0em, 30em);
+$medium-range: (30.063em, 48em);
+$large-range: (48.063em, 64em);
+$xlarge-range: (64.063em, 120em);
+$xxlarge-range: (120.063em, 99999999em);
 
 // $screen: "only screen";
 
@@ -182,7 +185,7 @@ $primary-color: #1295fa;
 
 // We use these to style anchors
 // $anchor-text-decoration: none;
-// $anchor-text-decoration-hover: none;
+$anchor-text-decoration-hover: underline;
 // $anchor-font-color: $primary-color;
 // $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
 

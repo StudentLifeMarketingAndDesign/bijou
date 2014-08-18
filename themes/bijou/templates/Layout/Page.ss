@@ -1,6 +1,7 @@
+
 <div class="<% if $Children || $Parent %>large-9 columns<% else %>large-12<% end_if %> columns">
 	<article>
-		<h2>$Title</h2>
+		<h1>$Title</h1>
 		$Content
 		$Form
 	</article>

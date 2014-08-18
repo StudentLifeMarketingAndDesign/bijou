@@ -1,4 +1,9 @@
-	<p>Individuals with disabilities are encouraged to attend all University of Iowa - sponsored events. If you are a person with a disability who requires an accommodation in order to participate in this program, please contact the Center for Student Involvement and Leadership in advance at 319-335-3059.</p> 
-				<!--<h4>Support The Division</h4>-->
-				
-				<!--<a href="https://www.givetoiowa.org/GiveToIowa/WebObjects/GiveToIowa.woa/wa/goTo?area=studentlife" class="appt-btn">Give Online Now</a> -->
+<h4>Now Playing at Filmscene</h4>
+<ul class="border-list">
+	<li><a href="#">Obvious Child</a></li>
+	<li><a href="#">Snowpiercer</a></li>
+	<li><a href="#">Life Itself</a></li>
+	<li><a href="#">The Muppet Movie</a></li>
+	<li><a href="#">The great Muppet Caper</a></li>
+	<li><a href="#">The Texas Chain Saw Massacre</a></li>
+</ul>
