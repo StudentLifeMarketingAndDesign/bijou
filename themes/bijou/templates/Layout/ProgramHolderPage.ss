@@ -17,8 +17,11 @@
 				<% end_if %>
 				<div class="program-content">
 					<h4 class="title">$Title <% if $Year %><span>($Year)</span><% end_if %></h4>
-					<p>runtime: $Runtime min. | rating: $Rating | director: $Director
-					<p>$DateAndTime.format("F j, g:i A")</p>
+					<p>$DateAndTime.format("F j, g:i A") <br>
+					<% if $Runtime %><strong>runtime</strong>: $Runtime min. &nbsp;|&nbsp; <% end_if %>
+					<% if $Rating %><strong>rating</strong>: $Rating &nbsp;|&nbsp; <% end_if %>
+					<% if $Director %><strong>director</strong>: $Director<% end_if %>
+					</p>
 					<div class="desc">
 						$Content
 					</div>

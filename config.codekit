@@ -20,6 +20,83 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/assets\/Uploads\/_resampled\/CMSThumbnail-Anthony-Rinaldi.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2896,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CMSThumbnail-Anthony-Rinaldi.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CMSThumbnail-Anthony-Rinaldi.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/CMSThumbnail-Chang-Min-Yu.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3107,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CMSThumbnail-Chang-Min-Yu.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CMSThumbnail-Chang-Min-Yu.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/CMSThumbnail-Dominick-Shults.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3150,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CMSThumbnail-Dominick-Shults.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CMSThumbnail-Dominick-Shults.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/CMSThumbnail-fs-boyhood.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2750,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CMSThumbnail-fs-boyhood.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CMSThumbnail-fs-boyhood.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/CroppedImage200200-Grave-Of-The-Fireflies-post.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14026,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage200200-Grave-Of-The-Fireflies-post.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage200200-Grave-Of-The-Fireflies-post.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/CroppedImage200200-Hook-movie-3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7698,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage200200-Hook-movie-3.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage200200-Hook-movie-3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/CroppedImage200200-level5.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9102,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage200200-level5.jpeg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage200200-level5.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/Uploads\/_resampled\/CroppedImage230230-Anthony-Rinaldi.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -49,6 +126,28 @@
 		"initialSize": 10021,
 		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage230230-Dominick-Shults.jpg",
 		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage230230-Dominick-Shults.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/CroppedImage230230-Grave-Of-The-Fireflies-post.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17992,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage230230-Grave-Of-The-Fireflies-post.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage230230-Grave-Of-The-Fireflies-post.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/CroppedImage230230-Hook-movie-3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9487,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage230230-Hook-movie-3.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage230230-Hook-movie-3.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -97,13 +196,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/Uploads\/_resampled\/CroppedImage350234-Anthony-Rinaldi.jpg": {
+	"\/assets\/Uploads\/_resampled\/CroppedImage230230-level5.jpeg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 14775,
-		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage350234-Anthony-Rinaldi.jpg",
-		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage350234-Anthony-Rinaldi.jpg",
+		"initialSize": 11198,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage230230-level5.jpeg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage230230-level5.jpeg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -115,17 +214,6 @@
 		"initialSize": 11339,
 		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage350234-Chang-Min-Yu.jpg",
 		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage350234-Chang-Min-Yu.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/Uploads\/_resampled\/CroppedImage350234-Dominick-Shults.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 12118,
-		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage350234-Dominick-Shults.jpg",
-		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage350234-Dominick-Shults.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -185,6 +273,105 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/Uploads\/_resampled\/CroppedImage706397-Kasia-Plazinska.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 49007,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage706397-Kasia-Plazinska.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage706397-Kasia-Plazinska.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/CroppedImage706397-Katherine-Steinbach.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 27992,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage706397-Katherine-Steinbach.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage706397-Katherine-Steinbach.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/CroppedImage706397-Laura-Ferris.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 55513,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage706397-Laura-Ferris.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage706397-Laura-Ferris.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/CroppedImage706530-Dominick-Shults.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 41421,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage706530-Dominick-Shults.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage706530-Dominick-Shults.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/CroppedImage706530-Josh-Langseth.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 38782,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage706530-Josh-Langseth.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage706530-Josh-Langseth.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/CroppedImage706530-Kasia-Plazinska.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 64907,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage706530-Kasia-Plazinska.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage706530-Kasia-Plazinska.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/CroppedImage706530-Katherine-Steinbach.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 42565,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage706530-Katherine-Steinbach.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage706530-Katherine-Steinbach.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/CroppedImage706530-Laura-Ferris.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 73559,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage706530-Laura-Ferris.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage706530-Laura-Ferris.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/CroppedImage8080-Katherine-Steinbach.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2234,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage8080-Katherine-Steinbach.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage8080-Katherine-Steinbach.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/Uploads\/_resampled\/SetRatioSize8060-Anthony-Rinaldi.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -225,6 +412,28 @@
 		"initialSize": 1822,
 		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/SetRatioSize8060-fs-boyhood.jpg",
 		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/SetRatioSize8060-fs-boyhood.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/SetRatioSize8060-Grave-Of-The-Fireflies-post.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2877,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/SetRatioSize8060-Grave-Of-The-Fireflies-post.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/SetRatioSize8060-Grave-Of-The-Fireflies-post.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/SetRatioSize8060-Hook-movie-3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2235,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/SetRatioSize8060-Hook-movie-3.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/SetRatioSize8060-Hook-movie-3.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -273,6 +482,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/Uploads\/_resampled\/SetRatioSize8060-level5.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1938,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/SetRatioSize8060-level5.jpeg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/SetRatioSize8060-level5.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/Uploads\/_resampled\/SetRatioSize8060-slide-1.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -280,6 +500,127 @@
 		"initialSize": 2263,
 		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/SetRatioSize8060-slide-1.jpg",
 		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/SetRatioSize8060-slide-1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/stripthumbnail-Anthony-Rinaldi.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1501,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/stripthumbnail-Anthony-Rinaldi.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/stripthumbnail-Anthony-Rinaldi.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/stripthumbnail-Chang-Min-Yu.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1644,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/stripthumbnail-Chang-Min-Yu.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/stripthumbnail-Chang-Min-Yu.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/stripthumbnail-Dominick-Shults.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1636,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/stripthumbnail-Dominick-Shults.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/stripthumbnail-Dominick-Shults.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/stripthumbnail-fs-boyhood.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1638,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/stripthumbnail-fs-boyhood.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/stripthumbnail-fs-boyhood.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/stripthumbnail-Grave-Of-The-Fireflies-post.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2014,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/stripthumbnail-Grave-Of-The-Fireflies-post.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/stripthumbnail-Grave-Of-The-Fireflies-post.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/stripthumbnail-Hook-movie-3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1604,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/stripthumbnail-Hook-movie-3.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/stripthumbnail-Hook-movie-3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/stripthumbnail-Josh-Langseth.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1586,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/stripthumbnail-Josh-Langseth.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/stripthumbnail-Josh-Langseth.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/stripthumbnail-Kasia-Plazinska.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1354,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/stripthumbnail-Kasia-Plazinska.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/stripthumbnail-Kasia-Plazinska.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/stripthumbnail-Katherine-Steinbach.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1478,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/stripthumbnail-Katherine-Steinbach.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/stripthumbnail-Katherine-Steinbach.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/stripthumbnail-Laura-Ferris.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1826,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/stripthumbnail-Laura-Ferris.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/stripthumbnail-Laura-Ferris.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/_resampled\/stripthumbnail-slide-1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1944,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/stripthumbnail-slide-1.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/stripthumbnail-slide-1.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -328,6 +669,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/Uploads\/Grave-Of-The-Fireflies-post.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 161355,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/Grave-Of-The-Fireflies-post.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/Grave-Of-The-Fireflies-post.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/Hook-movie-3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 157559,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/Hook-movie-3.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/Hook-movie-3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/Uploads\/Josh-Langseth.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -368,6 +731,17 @@
 		"initialSize": 64955,
 		"inputAbbreviatedPath": "\/assets\/Uploads\/Laura-Ferris.jpg",
 		"outputAbbreviatedPath": "\/assets\/Uploads\/Laura-Ferris.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/level5.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24647,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/level5.jpeg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/level5.jpeg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -8832,6 +9206,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/themes\/bijou\/templates\/Includes\/StaffPageListItem.ss": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/themes\/bijou\/templates\/Includes\/StaffPageListItem.ss",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/themes\/bijou\/templates\/Includes\/StaffSideNav.ss": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -8909,6 +9292,24 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/themes\/bijou\/templates\/Layout\/PodcastPage.ss",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/themes\/bijou\/templates\/Layout\/ProgramHolderPage.ss": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/themes\/bijou\/templates\/Layout\/ProgramHolderPage.ss",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/themes\/bijou\/templates\/Layout\/StaffHolderPage.ss": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/themes\/bijou\/templates\/Layout\/StaffHolderPage.ss",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
