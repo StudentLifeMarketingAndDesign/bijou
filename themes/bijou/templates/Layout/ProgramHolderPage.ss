@@ -22,10 +22,8 @@
 					<% if $Rating %><strong>rating</strong>: $Rating &nbsp;|&nbsp; <% end_if %>
 					<% if $Director %><strong>director</strong>: $Director<% end_if %>
 					</p>
-					<div class="desc">
-						$Content
-					</div>
-					<p><a href="$Trailer" target="_blank">Trailer</a></p>
+					$Content
+					<p><a href="$Trailer" target="_blank" class="button radius tiny">Trailer</a></p>
 				</div>
 				<!-- <p class="">
 					<a href="$Link">$Title</a>
