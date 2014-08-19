@@ -6,7 +6,7 @@
 				<% else %>
 					<img src="{$ThemeDir}/images/placeholder.gif" alt="$FirstName $LastName" class="staff-img">
 			<% end_if %>
-
+			<hr>
 			<h3>$Position</h3>
 			<% if $EmailAddress %><p>Email: <a href="mailto:$EmailAddress">$EmailAddress</a></p><% end_if %>
 			$Content
