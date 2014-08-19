@@ -197,7 +197,7 @@ h1 {
 .program-img {
 	background: #fff;
 	padding: 5px;
-	border: 1px solid #ddd;
+	border: 1px solid #d4d4d4;
 	overflow: hidden;
 	display: block;
 	float: left;
@@ -210,9 +210,8 @@ h1 {
 	margin: 0;
 	padding: 0;
 	& li {
-		border-bottom: 1px solid #eee;
-		margin-bottom: 1em;
-		padding-bottom: 1em;
+		border-bottom: 1px solid #ddd;
+		padding: 1em .5em;
 	}
 	& li:last-of-type {
 		border-bottom: none;
@@ -227,6 +226,9 @@ h1 {
 	& .button {
 		margin: 0;
 	}
+}
+.program-events li:nth-child(even) {
+	background-color: #f4f4f4;
 }
 
 // Mission Statement ===================================================

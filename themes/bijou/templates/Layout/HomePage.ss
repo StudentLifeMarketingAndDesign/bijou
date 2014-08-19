@@ -9,7 +9,7 @@
 				<div class="row">
 					<% loop $Titles %>
 						<div class="medium-6 large-3 columns">
-							<h5><a href="/bijou/our-programs">$Title</a></h5>
+							<h5><a href="{$baseUrl}our-programs">$Title</a> </h5>
 							<p>$Description</p>
 						</div>
 					<% end_loop %>

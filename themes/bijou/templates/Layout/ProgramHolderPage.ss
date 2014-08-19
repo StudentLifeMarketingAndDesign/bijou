@@ -5,8 +5,8 @@
 		<% if $Titles %>
 		<% loop $Titles %>
 			<hr>
-			<h2 class="">$Title</h2>
-			<p>$Description description goes here</p>
+			<h2>$Title</h2>
+			<p>$Description</p>
 			<ul class="program-events">
 			<% loop $SortedProgramEvents %>
 				<li <% if $Photo %>class="photo"<% end_if %>>

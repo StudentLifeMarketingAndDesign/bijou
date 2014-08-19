@@ -97,6 +97,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/Uploads\/_resampled\/CroppedImage200200-thewall.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6731,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage200200-thewall.jpeg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage200200-thewall.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/Uploads\/_resampled\/CroppedImage230230-Anthony-Rinaldi.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -504,6 +515,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/Uploads\/_resampled\/SetRatioSize8060-thewall.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1762,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/SetRatioSize8060-thewall.jpeg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/SetRatioSize8060-thewall.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/Uploads\/_resampled\/stripthumbnail-Anthony-Rinaldi.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -753,6 +775,17 @@
 		"initialSize": 176238,
 		"inputAbbreviatedPath": "\/assets\/Uploads\/slide-1.jpg",
 		"outputAbbreviatedPath": "\/assets\/Uploads\/slide-1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/Uploads\/thewall.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 20278,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/thewall.jpeg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/thewall.jpeg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
