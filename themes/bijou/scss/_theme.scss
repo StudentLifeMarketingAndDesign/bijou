@@ -4,6 +4,8 @@ body {
 }
 .main-content {
 	background-color: #fff;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
 	padding: $column-gutter/2 0;
 }
 // Global Styles
@@ -11,6 +13,10 @@ body {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+}
+small {
+	font-size: 80%;
+	line-height: inherit;
 }
 .white {
 	background-color: #fff;
@@ -165,6 +171,9 @@ body {
 
 .social-blog {
 	border-top: 1px solid #ddd;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	box-shadow: 0 2px 3px rgba(0,0,0,.25);
 }
 
 // Our Programs ========================================================
@@ -238,6 +247,9 @@ body {
 		text-align: center;
 	}
 }
+.staff-name {
+	text-align: center;
+}
 
 
 // Facebook =====================================================
@@ -252,21 +264,23 @@ body {
 .social-blog {
 	overflow: hidden;
 	position: relative;
-	&:before {
-		content:"";
-		position: absolute;
-		background-color: #ddd;
-		width: 1px;
-		height: 300px;
-		top: 0;
-		right: 25%;
+	@media #{$large-up} {
+		&:before {
+			content:"";
+			position: absolute;
+			background-color: #ddd;
+			width: 1px;
+			height: 340px;
+			top: 0;
+			right: 25%;
+		}
 	}
 }
 .social-blog .fb-like-box {
 	border-right: 1px solid #ddd;
 }
 .blogsnippit {
-	padding: 15px;
+	padding: 15px 0;
 	& .intro {
 		 font-size: rem-calc(12);
 		 margin-bottom: 2em;
