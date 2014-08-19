@@ -22,7 +22,7 @@
 <div class="row collapse">
 	<div class="large-12 columns">
 		<div class="mission-statement">
-			$Mission
+			$Content
 		</div>
 	</div>
 </div>

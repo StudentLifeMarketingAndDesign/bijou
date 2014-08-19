@@ -284,6 +284,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/Uploads\/_resampled\/CroppedImage706397-Josh-Langseth.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 29384,
+		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage706397-Josh-Langseth.jpg",
+		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage706397-Josh-Langseth.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/Uploads\/_resampled\/CroppedImage706397-Kasia-Plazinska.jpg": {
 		"fileType": 16384,
 		"ignore": 0,

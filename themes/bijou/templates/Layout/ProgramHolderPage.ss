@@ -10,11 +10,7 @@
 			<ul class="program-events">
 			<% loop $SortedProgramEvents %>
 				<li class="clearfix <% if $Photo %>photo<% end_if %>">
-				<% if $Photo %>
-					<a href="$Link" class="">
-						<img src="$Photo.CroppedImage(200,200).URL" alt="$Title" class="program-img">
-					</a>
-				<% end_if %>
+				<% if $Photo %><img src="$Photo.CroppedImage(200,200).URL" alt="$Title" class="program-img"><% end_if %>
 				<div class="program-content">
 					<h4 class="title">$Title <% if $Year %><span>($Year)</span><% end_if %></h4>
 					<% if $DateAndTime %>
