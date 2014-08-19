@@ -4,12 +4,12 @@
 		$Content
 		<% if $Titles %>
 		<% loop $Titles %>
-			<hr>
-			<h2>$Title</h2>
+			<br>
+			<h1>$Title</h1>
 			<p>$Description</p>
 			<ul class="program-events">
 			<% loop $SortedProgramEvents %>
-				<li <% if $Photo %>class="photo"<% end_if %>>
+				<li class="clearfix <% if $Photo %>photo<% end_if %>">
 				<% if $Photo %>
 					<a href="$Link" class="">
 						<img src="$Photo.CroppedImage(200,200).URL" alt="$Title" class="program-img">
@@ -34,7 +34,7 @@
 		<% else %>
 			<ul class="">
 			<% loop $Children %>
-				<li <% if $Photo %>class="photo"<% end_if %>>
+				<li class="clearfix <% if $Photo %>photo<% end_if %>">
 				<% if $Photo %>
 					<a href="$Link" class="">
 						<img src="$Photo.CroppedImage(200,200).URL" alt="$Title" class="program-img">

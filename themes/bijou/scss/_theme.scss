@@ -210,11 +210,11 @@ h1 {
 	margin: 0;
 	padding: 0;
 	& li {
-		border-bottom: 1px solid #ddd;
+		border-top: 1px solid #ddd;
 		padding: 1em .5em;
 	}
 	& li:last-of-type {
-		border-bottom: none;
+		border-bottom: 1px solid #ddd;
 	}
 	& .title {
 		font-weight: bold;
