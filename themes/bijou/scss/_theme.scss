@@ -194,6 +194,29 @@ h1 {
 		font-size: rem-calc(14);
 	}
 }
+.program-img {
+	background: #fff;
+	padding: 5px;
+	border: 1px solid #ddd;
+	overflow: hidden;
+	display: block;
+	float: left;
+}
+.program-content {
+	margin-left: 230px;
+}
+.program-events {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	& .title {
+		font-weight: bold;
+	}
+	& p {
+		font-size: rem-calc(14);
+		margin-bottom: 10px;
+	}
+}
 
 // Mission Statement ===================================================
 .mission-statement {

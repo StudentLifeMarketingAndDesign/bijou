@@ -3,6 +3,7 @@ class ProgramEvent extends Page {
 
 	private static $db = array(
 		"Director" => "Text",
+		"Year" => "Text",
 		"Runtime" => "Text",
 		"DateAndTime" => "SS_Datetime",
 		"Rating" => "Text",
@@ -26,10 +27,12 @@ class ProgramEvent extends Page {
 		$fields->removeByName("BackgroundImage");
 
 		$fields->addFieldToTab("Root.Main", new TextField("Director", "Director"));
+		$fields->addFieldToTab("Root.Main", new TextField("Year", "Year"));
 		$fields->addFieldToTab("Root.Main", new TextField("Runtime", "Runtime (minutes)"));
 		$fields->addFieldToTab("Root.Main", new TextField("Rating", "Rating (PG, PG-13, R, NR)"));
 
 		$dateTimeField = new DatetimeField("DateAndTime", "Enter a date and time");
+		$dateTimeField::create('DateAndTime')->setConfig('dateformat', 'dd-MM-yyyy');
 		$dateTimeField->getDateField()->setConfig('showcalendar', 1);
 
 		$fields->addFieldToTab("Root.Main", $dateTimeField );
