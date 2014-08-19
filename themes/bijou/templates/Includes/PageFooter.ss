@@ -17,7 +17,7 @@
 				<div class="blogsnippit">
 					<h5 class="intro">From the Blog</h5>
 					<h3 class="title"><a href="$Link">$Title</a></h3>
-					$Content.FirstParagraph(html)
+					<p>$Content.LimitCharacters(220)</p>
 					<a href="$Link" class="anchor">read more</a>
 				</div>
 			</div>
