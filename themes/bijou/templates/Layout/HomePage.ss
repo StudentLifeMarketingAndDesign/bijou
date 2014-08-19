@@ -5,24 +5,16 @@
 		<!-- $Form -->
 		<div class="our-programs">
 			<h4 class="subtitle">Our Programs</h4>
-			<div class="row">
-				<div class="medium-6 large-3 columns">
-					<h5><a href="#">Bijou After Hours</a></h5>
-					<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
+			<% with Page(our-programs) %>
+				<div class="row">
+					<% loop $Titles %>
+						<div class="medium-6 large-3 columns">
+							<h5><a href="/bijou/our-programs">$Title</a></h5>
+							<p>$Description</p>
+						</div>
+					<% end_loop %>
 				</div>
-				<div class="medium-6 large-3 columns">
-					<h5><a href="#">Bijou After Hours</a></h5>
-					<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
-				</div>
-				<div class="medium-6 large-3 columns">
-					<h5><a href="#">Bijou After Hours</a></h5>
-					<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
-				</div>
-				<div class="medium-6 large-3 columns">
-					<h5><a href="#">Bijou After Hours</a></h5>
-					<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
-				</div>
-			</div>
+			<% end_with %>
 		</div>
 	</div>
 </div>
