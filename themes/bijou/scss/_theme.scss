@@ -202,7 +202,7 @@ h1 {
 	display: block;
 	float: left;
 }
-.program-content {
+.photo .program-content {
 	margin-left: 230px;
 }
 .program-events {
@@ -223,6 +223,9 @@ h1 {
 	& p {
 		font-size: rem-calc(14);
 		margin-bottom: 10px;
+	}
+	& .button {
+		margin: 0;
 	}
 }
 
