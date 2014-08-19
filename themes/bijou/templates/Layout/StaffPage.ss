@@ -2,7 +2,7 @@
 	<article>
 			<h1>$Title</h1>
 			<% if $Photo %>
-					<img src="$Photo.CroppedImage(706,530).URL" alt="$FirstName $LastName">
+					<img src="$Photo.CroppedImage(706,530).URL" alt="$FirstName $LastName" class="staffpage-img">
 				<% else %>
 					<img src="{$ThemeDir}/images/placeholder.gif" alt="$FirstName $LastName" class="staff-img">
 			<% end_if %>
