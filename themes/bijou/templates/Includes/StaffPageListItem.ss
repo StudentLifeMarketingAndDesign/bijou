@@ -10,6 +10,5 @@
 	<% end_if %>
 	<p class="staff-name">
 		<a href="$Link">$FirstName $LastName</a>
-		<% if $Position %><small class="staff-position">$Position</small><% end_if %>
 	</p>
 </li>
