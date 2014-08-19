@@ -3,6 +3,7 @@ class ProgramTitle extends DataObject {
 
 	private static $db = array(
 		"Name" => "Text",
+		"Description" => "Text",
 		"SortOrder" => "Int"
 
 	);
@@ -18,6 +19,7 @@ class ProgramTitle extends DataObject {
 
 	private static $summary_fields = array(
 	  'Name' => 'Name',
+	  "Description" => "Description",
    );
 
    private static $default_sort = array(
@@ -26,8 +28,9 @@ class ProgramTitle extends DataObject {
 
       public function getCMSFields() {
 		$f = parent::getCMSFields();
+		$f->addFieldToTab("Root.Main", new TextareaField("Description", "Description"));
 
-		$f->addFieldToTab('Root.Main', new CheckboxSetField("ProgramEvents", 'Titles <a href="admin/pages/edit/show/14" target="_blank">(Manage Titles)</a>', ProgramEvent::get()->map('ID', 'Title')));
+		$f->addFieldToTab('Root.Main', new CheckboxSetField("ProgramEvents", 'Titles', ProgramEvent::get()->map('ID', 'Title')));
 		return $f;
 
      }
