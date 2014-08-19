@@ -25,12 +25,8 @@
 						</p>
 					<% end_if %>
 					$Content
-					<p><a href="$Trailer" target="_blank" class="button radius tiny">Trailer</a></p>
+					<% if $Trailer %><p><a href="$Trailer" target="_blank" class="button radius tiny">Trailer</a></p><% end_if %>
 				</div>
-				<!-- <p class="">
-					<a href="$Link">$Title</a>
-					<% if $Position %><small class="">$Position</small><% end_if %>
-				</p> -->
 			</li>
 			<% end_loop %>
 			</ul>
@@ -38,16 +34,24 @@
 		<% else %>
 			<ul class="">
 			<% loop $Children %>
-				<li>
+				<li <% if $Photo %>class="photo"<% end_if %>>
 				<% if $Photo %>
 					<a href="$Link" class="">
-						<img src="$Photo.CroppedImage(230,230).URL" alt="$Title" class="">
+						<img src="$Photo.CroppedImage(200,200).URL" alt="$Title" class="program-img">
 					</a>
 				<% end_if %>
-				<p class="">
-					<a href="$Link">$Title</a>
-					<% if $Position %><small class="">$Position</small><% end_if %>
-				</p>
+				<div class="program-content">
+					<h4 class="title">$Title <% if $Year %><span>($Year)</span><% end_if %></h4>
+					<% if $DateAndTime %>
+						<p>$DateAndTime.format("F j, g:i A") <br>
+						<% if $Runtime %><strong>runtime</strong>: $Runtime min. &nbsp;|&nbsp; <% end_if %>
+						<% if $Rating %><strong>rating</strong>: $Rating &nbsp;|&nbsp; <% end_if %>
+						<% if $Director %><strong>director</strong>: $Director<% end_if %>
+						</p>
+					<% end_if %>
+					$Content
+					<% if $Trailer %><p><a href="$Trailer" target="_blank" class="button radius tiny">Trailer</a></p><% end_if %>
+				</div>
 			</li>
 			<% end_loop %>
 			</ul>
