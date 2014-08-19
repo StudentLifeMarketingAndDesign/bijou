@@ -22,7 +22,7 @@
 <div class="row collapse">
 	<div class="large-12 columns">
 		<div class="mission-statement">
-			The Bijou Film Board is a non-profit, student-run organization dedicated to the exhibition of American indementent, foreigh and classic cinema. Established in 1972, the Bijou has built a reputation as one of the preeminent student-run cinemas in the nation and has since partnered with FilmScene to assist with the programming and operation of the downtown cinema.
+			$Mission
 		</div>
 	</div>
 </div>
@@ -41,7 +41,7 @@
 						</a>
 					<% else %>
 						<a href="$Link" class="staff-link">
-							<img src="division-project/images/dosl.png" alt="$FirstName $LastName" class="staff-img">
+							<img src="{$ThemeDir}/images/placeholder.gif" alt="$FirstName $LastName" class="staff-img">
 						</a>
 					<% end_if %>
 					<p class="staff-name">
