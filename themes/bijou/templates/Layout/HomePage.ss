@@ -10,7 +10,7 @@
 					<% loop $Titles %>
 						<div class="medium-6 large-3 columns">
 							<h5><a href="{$baseUrl}our-programs">$Title</a> </h5>
-							<p>$Description</p>
+							<p>$DescriptionShort</p>
 						</div>
 					<% end_loop %>
 				</div>
