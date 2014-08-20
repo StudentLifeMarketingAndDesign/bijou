@@ -1,7 +1,7 @@
 <div class="large-9 columns content-left">
 	<article>
 		<h1 class="postTitle">$Title</h1>
-		<p class="authorDate"><% _t('BlogEntry_ss.POSTEDBY', 'Posted by') %> $Author.XML <% _t('BlogEntry_ss.POSTEDON', 'on') %> $Date.Long | $Comments.Count <% _t('BlogEntry_ss.COMMENTS', 'Comments') %></p>
+		<p class="authorDate"><% _t('BlogEntry_ss.POSTEDBY', 'Posted by') %> $Author.XML <% _t('BlogEntry_ss.POSTEDON', 'on') %> $Date.Long <!-- | $Comments.Count <% _t('BlogEntry_ss.COMMENTS', 'Comments') %> --></p>
 		<% if TagsCollection %>
 			<p class="tags">
 				 <% _t('BlogEntry_ss.TAGS', 'Tags:') %>
