@@ -54,12 +54,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "f22820dd0854a406f86e2fc29b81c1898d68e5fb"
+                "reference": "74fb0a7a1a23696d9c8cc2fba5903f6711cdd067"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/f22820dd0854a406f86e2fc29b81c1898d68e5fb",
-                "reference": "f22820dd0854a406f86e2fc29b81c1898d68e5fb",
+                "url": "https://api.github.com/repos/composer/installers/zipball/74fb0a7a1a23696d9c8cc2fba5903f6711cdd067",
+                "reference": "74fb0a7a1a23696d9c8cc2fba5903f6711cdd067",
                 "shasum": ""
             },
             "replace": {
@@ -136,7 +136,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2014-08-17 18:19:30"
+            "time": "2014-08-18 20:00:12"
         },
         {
             "name": "md/cfo-project",
@@ -144,12 +144,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/cfo-project.git",
-                "reference": "49be2c6ff004e3edbb97291c281396edf0eaa4d8"
+                "reference": "b21be44a5d09239ce8502d104e349930a8a9e996"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/cfo-project/zipball/49be2c6ff004e3edbb97291c281396edf0eaa4d8",
-                "reference": "49be2c6ff004e3edbb97291c281396edf0eaa4d8",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/cfo-project/zipball/b21be44a5d09239ce8502d104e349930a8a9e996",
+                "reference": "b21be44a5d09239ce8502d104e349930a8a9e996",
                 "shasum": ""
             },
             "require": {
@@ -182,7 +182,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/cfo-project/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/cfo-project/issues"
             },
-            "time": "2014-08-18 15:25:41"
+            "time": "2014-08-19 22:58:06"
         },
         {
             "name": "md/division-bar",
@@ -395,12 +395,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe-labs/silverstripe-googlesitemaps.git",
-                "reference": "27e79a4e0279d5a34a191c5f56e753f97324a643"
+                "reference": "e67f807f8a08884b4213d9c4cb74e692df824ef7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-labs/silverstripe-googlesitemaps/zipball/27e79a4e0279d5a34a191c5f56e753f97324a643",
-                "reference": "27e79a4e0279d5a34a191c5f56e753f97324a643",
+                "url": "https://api.github.com/repos/silverstripe-labs/silverstripe-googlesitemaps/zipball/e67f807f8a08884b4213d9c4cb74e692df824ef7",
+                "reference": "e67f807f8a08884b4213d9c4cb74e692df824ef7",
                 "shasum": ""
             },
             "require": {
@@ -424,7 +424,7 @@
                 "seo",
                 "silverstripe"
             ],
-            "time": "2014-08-13 21:29:51"
+            "time": "2014-08-19 05:20:40"
         },
         {
             "name": "silverstripe/installer",
@@ -606,12 +606,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-userforms.git",
-                "reference": "66a4d82d3aa8169855c953b0dfb33ea7ba314b19"
+                "reference": "8e0947ead362e698063d307aec7c30b4ad2bb226"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/66a4d82d3aa8169855c953b0dfb33ea7ba314b19",
-                "reference": "66a4d82d3aa8169855c953b0dfb33ea7ba314b19",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/8e0947ead362e698063d307aec7c30b4ad2bb226",
+                "reference": "8e0947ead362e698063d307aec7c30b4ad2bb226",
                 "shasum": ""
             },
             "require": {
@@ -637,7 +637,7 @@
                 "silverstripe",
                 "userforms"
             ],
-            "time": "2014-08-12 08:05:47"
+            "time": "2014-08-19 21:29:30"
         },
         {
             "name": "silverstripe/widgets",
