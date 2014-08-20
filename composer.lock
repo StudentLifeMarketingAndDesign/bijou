@@ -139,21 +139,61 @@
             "time": "2014-08-18 20:00:12"
         },
         {
+            "name": "jonom/focuspoint",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jonom/silverstripe-focuspoint.git",
+                "reference": "db14a4231b028059c10d5ed87435e9c2ec008c01"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jonom/silverstripe-focuspoint/zipball/db14a4231b028059c10d5ed87435e9c2ec008c01",
+                "reference": "db14a4231b028059c10d5ed87435e9c2ec008c01",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathon Menz",
+                    "homepage": "http://jonathonmenz.com"
+                }
+            ],
+            "description": "Smarter automatic image cropping for SilverStripe",
+            "keywords": [
+                "crop",
+                "cropping",
+                "focus",
+                "focuspoint",
+                "image",
+                "silverstripe"
+            ],
+            "time": "2014-08-19 07:32:57"
+        },
+        {
             "name": "md/cfo-project",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/cfo-project.git",
-                "reference": "b21be44a5d09239ce8502d104e349930a8a9e996"
+                "reference": "ef9815caec05c679ba80b010ee53ced204ba2de9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/cfo-project/zipball/b21be44a5d09239ce8502d104e349930a8a9e996",
-                "reference": "b21be44a5d09239ce8502d104e349930a8a9e996",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/cfo-project/zipball/ef9815caec05c679ba80b010ee53ced204ba2de9",
+                "reference": "ef9815caec05c679ba80b010ee53ced204ba2de9",
                 "shasum": ""
             },
             "require": {
                 "colymba/gridfield-bulk-editing-tools": "*",
+                "jonom/focuspoint": "*",
                 "md/division-bar": "*",
                 "php": ">=5.3.2",
                 "silverstripe-themes/simple": "*",
@@ -182,7 +222,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/cfo-project/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/cfo-project/issues"
             },
-            "time": "2014-08-19 22:58:06"
+            "time": "2014-08-20 22:01:31"
         },
         {
             "name": "md/division-bar",
