@@ -130,28 +130,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/Uploads\/_resampled\/CroppedImage230230-Chang-Min-Yu.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 9180,
-		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage230230-Chang-Min-Yu.jpg",
-		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage230230-Chang-Min-Yu.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/Uploads\/_resampled\/CroppedImage230230-Dominick-Shults.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 10021,
-		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage230230-Dominick-Shults.jpg",
-		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage230230-Dominick-Shults.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/assets\/Uploads\/_resampled\/CroppedImage230230-Grave-Of-The-Fireflies-post.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -170,50 +148,6 @@
 		"initialSize": 9487,
 		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage230230-Hook-movie-3.jpg",
 		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage230230-Hook-movie-3.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/Uploads\/_resampled\/CroppedImage230230-Josh-Langseth.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 9033,
-		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage230230-Josh-Langseth.jpg",
-		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage230230-Josh-Langseth.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/Uploads\/_resampled\/CroppedImage230230-Kasia-Plazinska.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 9364,
-		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage230230-Kasia-Plazinska.jpg",
-		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage230230-Kasia-Plazinska.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/Uploads\/_resampled\/CroppedImage230230-Katherine-Steinbach.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 9058,
-		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage230230-Katherine-Steinbach.jpg",
-		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage230230-Katherine-Steinbach.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/Uploads\/_resampled\/CroppedImage230230-Laura-Ferris.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 12874,
-		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage230230-Laura-Ferris.jpg",
-		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage230230-Laura-Ferris.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -280,28 +214,6 @@
 		"initialSize": 17525,
 		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage350234-Laura-Ferris.jpg",
 		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage350234-Laura-Ferris.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/Uploads\/_resampled\/CroppedImage644390-fs-boyhood.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 44993,
-		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage644390-fs-boyhood.jpg",
-		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage644390-fs-boyhood.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/Uploads\/_resampled\/CroppedImage644390-Hook-movie-3.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 30976,
-		"inputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage644390-Hook-movie-3.jpg",
-		"outputAbbreviatedPath": "\/assets\/Uploads\/_resampled\/CroppedImage644390-Hook-movie-3.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

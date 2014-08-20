@@ -6,7 +6,7 @@
 		<% loop $Titles %>
 			<br><br>
 			<h2>$Title</h2>
-			<p>$DescriptionLong</p>
+			<div>$DescriptionLong</div>
 			<ul class="program-events">
 			<% loop $SortedProgramEvents.Sort(DateAndTime) %>
 				<li class="clearfix <% if $Photo %>photo<% end_if %>">
