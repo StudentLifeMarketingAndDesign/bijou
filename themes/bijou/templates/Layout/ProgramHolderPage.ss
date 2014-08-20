@@ -4,8 +4,8 @@
 		$Content
 		<% if $Titles %>
 		<% loop $Titles %>
-			<br>
-			<h1>$Title</h1>
+			<br><br>
+			<h2>$Title</h2>
 			<p>$DescriptionLong</p>
 			<ul class="program-events">
 			<% loop $SortedProgramEvents %>
