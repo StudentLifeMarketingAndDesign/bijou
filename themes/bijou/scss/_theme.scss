@@ -9,17 +9,12 @@ body {
 	xpadding: $column-gutter/2 0;
 	position: relative;
 	overflow: hidden;
-	// @media #{$large-up} {
-	// 	&:before {
-	// 		content:"";
-	// 		position: absolute;
-	// 		background-color: #ddd;
-	// 		width: 1px;
-	// 		height: 1000px;
-	// 		top: 0;
-	// 		right: 25%;
-	// 	}
-	// }
+	& article {
+		padding: $column-gutter/2 0;
+	}
+}
+.blogcontent {
+	padding: $column-gutter/2 0;
 }
 .content-left{
 	border-right: 1px solid #ddd;
@@ -27,9 +22,6 @@ body {
 .content-right {
 	border-left: 1px solid #ddd;
 	left: -1px;
-}
-.article {
-	padding: $column-gutter/2 0;
 }
 // Global Styles
 .unstyled {

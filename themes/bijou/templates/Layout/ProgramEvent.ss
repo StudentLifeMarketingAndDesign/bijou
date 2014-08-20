@@ -1,6 +1,6 @@
 
 <div class="<% if $Children || $Parent %>large-9 columns content-left<% else %>large-12<% end_if %> columns">
-	<article class="article">
+	<article>
 		<h1>$Title <% if $Year %><span>($Year)</span><% end_if %></h1>
 
 			<% if $Photo %>

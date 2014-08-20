@@ -1,6 +1,5 @@
-
-<div class="large-9 columns">
-	<div class="">
+<div class="large-9 columns content-left">
+	<article>
 
 		<h1>$Title</h1>
 		$Content
@@ -17,12 +16,10 @@
 			<% end_if %>
 		<% end_with %>
 
-	</div>
+	</article>
 </div>
 
-<div class="large-3 columns">
-	<div class="panel">
-		<% include BlogSideBar %>
-	</div>
+<div class="large-3 columns content-right">
+	<% include BlogSideBar %>
 </div>
 

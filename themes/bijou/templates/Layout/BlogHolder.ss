@@ -1,5 +1,5 @@
 
-<div class="large-9 columns">
+<div class="large-9 columns content-left">
 	<div id="BlogContent" class="blogcontent">
 
 		<% if SelectedTag %>
@@ -23,9 +23,7 @@
 	</div>
 </div>
 
-<div class="large-3 columns">
-	<div class="panel">
-		<% include BlogSideBar %>
-	</div>
+<div class="large-3 columns content-right">
+	<% include BlogSideBar %>
 </div>
 
