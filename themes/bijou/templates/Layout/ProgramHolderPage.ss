@@ -8,7 +8,7 @@
 			<h2>$Title</h2>
 			<p>$DescriptionLong</p>
 			<ul class="program-events">
-			<% loop $SortedProgramEvents %>
+			<% loop $SortedProgramEvents.Sort(DateAndTime) %>
 				<li class="clearfix <% if $Photo %>photo<% end_if %>">
 				<% if $Photo %>
 					<a href="$Link"><img src="$Photo.CroppedImage(200,200).URL" alt="$Title" class="program-img"></a>
@@ -31,7 +31,7 @@
 		<% end_loop %>
 		<% else %>
 			<ul class="">
-			<% loop $Children %>
+			<% loop $Children.Sort(DateAndTime) %>
 				<li class="clearfix <% if $Photo %>photo<% end_if %>">
 				<% if $Photo %>
 					<a href="$Link" class="">
