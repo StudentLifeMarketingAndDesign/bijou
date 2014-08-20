@@ -2,9 +2,34 @@
 	<div class="row collapse">
 		<div class="large-4 columns">
 			<div class="logo-quicklinks">
-				<a href="{$baseUrl}">
+				<a href="{$baseUrl}" class="logo">
 					<img src="{$ThemeDir}/images/bijou_logo.png" alt="$SiteConfig.Title">
 				</a>
+				<ul class="main-nav-mobile nav-collapse hide-for-large-up">
+					<% loop Menu(1) %>
+					<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %><% if $Children %> has-dropdown<% end_if %>">
+						<a href="$Link" title="Go to $Title.ATT">$MenuTitle</a>
+						<!--<% if $Children %>
+						<ul class="dropdown">
+							<li><label>$MenuTitle</label></li>
+							<% loop $Children %>
+							<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %><% if $Children %> has-dropdown<% end_if %>">
+								<a href="$Link" title="Go to $Title.ATT">$MenuTitle</a>
+								<% if $Children %>
+								<ul class="dropdown">
+									<% loop $Children %>
+									<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %>"><a href="$Link" title="Go to $Title.ATT">$MenuTitle</a></li>
+									<% end_loop %>
+								</ul>
+								<% end_if %>
+							</li>
+							<% end_loop %>
+							<li><a href="$Link">See all &rarr;</a></li>
+						</ul>
+						<% end_if %>-->
+					</li>
+					<% end_loop %>
+				</ul>
 				<% if HomePageQuicklinks %>
 				<ul class="home-quicklinks">
 					<% loop HomePageQuicklinks %>
@@ -19,7 +44,7 @@
 			</div>
 		</div>
 		<div class="large-8 columns">
-			<ul class="main-nav nav-collapse">
+			<ul class="main-nav show-for-large-up">
 				<% loop Menu(1) %>
 				<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %><% if $Children %> has-dropdown<% end_if %>">
 					<a href="$Link" title="Go to $Title.ATT">$MenuTitle</a>

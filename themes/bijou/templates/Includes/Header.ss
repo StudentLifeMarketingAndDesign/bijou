@@ -1,7 +1,7 @@
 <header class="header" role="banner">
 	<div class="row">
 
-		<a href="{$baseUrl}">
+		<a href="{$baseUrl}" class="logo">
 			<img src="{$ThemeDir}/images/bijou_logo.png" alt="$SiteConfig.Title">
 		</a>
 
