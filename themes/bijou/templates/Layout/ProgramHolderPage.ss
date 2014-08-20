@@ -6,7 +6,7 @@
 		<% loop $Titles %>
 			<br>
 			<h1>$Title</h1>
-			<p>$Description</p>
+			<p>$DescriptionLong</p>
 			<ul class="program-events">
 			<% loop $SortedProgramEvents %>
 				<li class="clearfix <% if $Photo %>photo<% end_if %>">
