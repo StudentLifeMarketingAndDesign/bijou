@@ -1,6 +1,6 @@
 <div class="row gray collapse social-blog">
 
-	<div class="large-7 large-push-5 columns">
+	<div class="large-6 large-push-6 columns">
 		<div class="row">
 			<% with Page("bijou-blog") %>
 				<% loop $Entries('2') %>
@@ -16,7 +16,7 @@
 			<% end_with %>
 		</div>
 	</div>
-	<div class="large-5 large-pull-7 columns white">
+	<div class="large-6 large-pull-6 columns white">
 		<div id="fb-root"></div>
 		<script>(function(d, s, id) {
 		var js, fjs = d.getElementsByTagName(s)[0];
