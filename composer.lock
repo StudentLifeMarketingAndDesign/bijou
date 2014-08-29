@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "460399b0ce233d8029ce044e9fd6b032",
+    "hash": "abda77bd643bd9bb06a28b6ddd642f80",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/colymba/GridFieldBulkEditingTools.git",
-                "reference": "1906afcba4bbe0e56d7d99ff6d6a43b7e07507d7"
+                "reference": "013a4fde7babd6eacc67874021fb43be9b085a0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/1906afcba4bbe0e56d7d99ff6d6a43b7e07507d7",
-                "reference": "1906afcba4bbe0e56d7d99ff6d6a43b7e07507d7",
+                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/013a4fde7babd6eacc67874021fb43be9b085a0f",
+                "reference": "013a4fde7babd6eacc67874021fb43be9b085a0f",
                 "shasum": ""
             },
             "require": {
@@ -46,7 +46,7 @@
                 "gridfield bulk upload",
                 "silverstripe"
             ],
-            "time": "2014-08-08 15:34:11"
+            "time": "2014-08-29 07:00:51"
         },
         {
             "name": "composer/installers",
@@ -178,22 +178,55 @@
             "time": "2014-08-19 07:32:57"
         },
         {
+            "name": "md/ac-json-events",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events.git",
+                "reference": "c79927d586a1f14f2539843cb3a24e7813ddefec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/c79927d586a1f14f2539843cb3a24e7813ddefec",
+                "reference": "c79927d586a1f14f2539843cb3a24e7813ddefec",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "silverstripe/cms": "3.*",
+                "silverstripe/framework": "3.*"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                }
+            },
+            "description": "After Class JSON Display Module",
+            "support": {
+                "source": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/tree/master",
+                "issues": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/issues"
+            },
+            "time": "2014-08-29 19:17:57"
+        },
+        {
             "name": "md/cfo-project",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/cfo-project.git",
-                "reference": "ef9815caec05c679ba80b010ee53ced204ba2de9"
+                "reference": "a9fc5f0da16d65ae26b175869180dd50727adc02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/cfo-project/zipball/ef9815caec05c679ba80b010ee53ced204ba2de9",
-                "reference": "ef9815caec05c679ba80b010ee53ced204ba2de9",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/cfo-project/zipball/a9fc5f0da16d65ae26b175869180dd50727adc02",
+                "reference": "a9fc5f0da16d65ae26b175869180dd50727adc02",
                 "shasum": ""
             },
             "require": {
                 "colymba/gridfield-bulk-editing-tools": "*",
                 "jonom/focuspoint": "*",
+                "md/ac-json-events": "dev-master",
                 "md/division-bar": "*",
                 "php": ">=5.3.2",
                 "silverstripe-themes/simple": "*",
@@ -222,7 +255,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/cfo-project/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/cfo-project/issues"
             },
-            "time": "2014-08-20 22:01:31"
+            "time": "2014-08-29 19:34:30"
         },
         {
             "name": "md/division-bar",
@@ -298,12 +331,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-blog.git",
-                "reference": "095a97018e43840859b8888fd3ecbb9e27053e0d"
+                "reference": "8b28a1d047aea632b7ce9c552f0e04c6a282816c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/095a97018e43840859b8888fd3ecbb9e27053e0d",
-                "reference": "095a97018e43840859b8888fd3ecbb9e27053e0d",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/8b28a1d047aea632b7ce9c552f0e04c6a282816c",
+                "reference": "8b28a1d047aea632b7ce9c552f0e04c6a282816c",
                 "shasum": ""
             },
             "require": {
@@ -331,7 +364,7 @@
                 "blog",
                 "silverstripe"
             ],
-            "time": "2014-07-07 08:11:18"
+            "time": "2014-08-24 23:20:55"
         },
         {
             "name": "silverstripe/cms",
@@ -646,12 +679,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-userforms.git",
-                "reference": "8e0947ead362e698063d307aec7c30b4ad2bb226"
+                "reference": "fcba06c1664e4c2ae5c7e2998719af92d5b0b63d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/8e0947ead362e698063d307aec7c30b4ad2bb226",
-                "reference": "8e0947ead362e698063d307aec7c30b4ad2bb226",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/fcba06c1664e4c2ae5c7e2998719af92d5b0b63d",
+                "reference": "fcba06c1664e4c2ae5c7e2998719af92d5b0b63d",
                 "shasum": ""
             },
             "require": {
@@ -662,6 +695,11 @@
                 "colymba/gridfield-bulk-editing-tools": "Allows for bulk management of form submissions"
             },
             "type": "silverstripe-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
@@ -677,7 +715,7 @@
                 "silverstripe",
                 "userforms"
             ],
-            "time": "2014-08-19 21:29:30"
+            "time": "2014-08-25 06:42:29"
         },
         {
             "name": "silverstripe/widgets",
