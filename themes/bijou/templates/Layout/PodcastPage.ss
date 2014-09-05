@@ -14,15 +14,19 @@
 							<a href="$Link" title="<% _t('BlogSummary_ss.VIEWFULL', 'View full post titled -') %> '$Title'">$MenuTitle</a>
 						</h2>
 						<p class="authorDate">
-							Posted on $Date.Long
+							<% if $Author %>
+								<% _t('BlogSummary_ss.POSTEDBY', 'Posted by') %> $Author.XML <% _t('BlogSummary_ss.POSTEDON', 'on') %> $Date.Long
+							<% else %>
+								Posted on $Date.Long
+							<% end_if %>
 						</p>
 
 
 						<% if BlogHolder.ShowFullEntry %>
-							$Content
 							<% if $AudioClip %>
 								<audio src="$AudioClip.Filename" controls="controls"></audio>
 							<% end_if %>
+							$Content
 						<% else %>
 							<p>$Content.FirstParagraph(html)</p>
 							<% if $AudioClip %>
