@@ -7,12 +7,37 @@
 
 		<% with Page(bijou-blog) %>
 			<% if $Entries('','podcast') %>
-				<h3 class="mod-title">Podcasts</h3>
-				<ul class="unstyled">
-					<% loop $Entries('','podcast') %>
-						<li>$Title</li>
-					<% end_loop %>
-				</ul>
+				<% loop $Entries('','podcast') %>
+
+					<div class="blogSummary">
+						<h2 class="postTitle">
+							<a href="$Link" title="<% _t('BlogSummary_ss.VIEWFULL', 'View full post titled -') %> '$Title'">$MenuTitle</a>
+						</h2>
+						<p class="authorDate">
+							Posted on $Date.Long
+						</p>
+
+
+						<% if BlogHolder.ShowFullEntry %>
+							$Content
+							<% if $AudioClip %>
+								<audio src="$AudioClip.Filename" controls="controls"></audio>
+							<% end_if %>
+						<% else %>
+							<p>$Content.FirstParagraph(html)</p>
+							<% if $AudioClip %>
+								<audio src="$AudioClip.Filename" controls="controls"></audio>
+							<% end_if %>
+							<p class="blogVitals">
+								<a href="$Link" class="readmore" title="Read Full Post">
+									<% _t('BlogSummary_ss.READFULLPOST','Read the full post') %>
+								</a>
+							</p>
+						<% end_if %>
+					</div>
+					<hr>
+
+				<% end_loop %>
 			<% end_if %>
 		<% end_with %>
 
