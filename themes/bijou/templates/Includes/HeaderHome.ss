@@ -76,7 +76,9 @@
 				pause_on_hover:true;
 				navigation_arrows:true;
 				bullets:false;
-				timer:false;">
+				timer:true;
+				pause_on_hover:true;
+				timer_speed:5000;">
 				<% loop CarouselImages.Limit(3) %>
 					<li>
 						<% if $YouTubeEmbed %>
