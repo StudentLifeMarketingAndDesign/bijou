@@ -78,6 +78,7 @@
 				bullets:false;
 				timer:true;
 				pause_on_hover:true;
+				resume_on_mouseout: true,
 				timer_speed:5000;">
 				<% loop CarouselImages.Limit(3) %>
 					<li>

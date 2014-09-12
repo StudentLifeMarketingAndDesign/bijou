@@ -334,6 +334,17 @@ h1, h2 {
 	border-bottom-right-radius: 4px;
 	box-shadow: 0 2px 3px rgba(0,0,0,.25);
 }
+.orbit-container .orbit-timer {
+	left: 10px;
+	top: 20px;
+}
+.orbit-container .orbit-timer .orbit-progress {
+	left: 30px;
+}
+.orbit-container .orbit-timer>span {
+	display: block;
+	left: 10px;
+}
 
 // Our Programs ========================================================
 .our-programs {
