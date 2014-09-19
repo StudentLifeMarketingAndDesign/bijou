@@ -1,10 +1,10 @@
 <div class="blogSummary">
 	<h2 class="postTitle"><a href="$Link" title="<% _t('BlogSummary_ss.VIEWFULL', 'View full post titled -') %> '$Title'">$MenuTitle</a></h2>
 	<p class="authorDate">
-		<% if $Author %>
-			<% _t('BlogSummary_ss.POSTEDBY', 'Posted by') %> $Author.XML <% _t('BlogSummary_ss.POSTEDON', 'on') %> $Date.Long
+		<% if $StaffPage %>
+			Posted by <a href="$StaffPage.Link">$StaffPage.Title</a> on $Date.Long
 		<% else %>
-			Posted on $Date.Long
+			Posted<% if $Author %> by $Author<% end_if %> on $Date.Long
 		<% end_if %>
 	</p>
 	<% if TagsCollection %>
