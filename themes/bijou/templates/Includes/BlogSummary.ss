@@ -16,6 +16,8 @@
 		</p>
 	<% end_if %>
 
+
+
 	<% if BlogHolder.ShowFullEntry %>
 		<% if $AudioClip %>
 			<audio src="$AudioClip.Filename" controls="controls"></audio>
@@ -23,10 +25,20 @@
 		$Content
 	<% else %>
 		<p>$Content.FirstParagraph(html)</p>
+		<% if $AudioClip %>
+			<audio src="$AudioClip.Filename" controls="controls"></audio><br>
+		<% end_if %>
 		<p class="blogVitals">
-			<a href="$Link" class="readmore" title="Read Full Post">
-				<% _t('BlogSummary_ss.READFULLPOST','Read the full post') %>
-			</a>
+			<% if $AudioClip %>
+				<br>
+				<a href="$Link" class="readmore" title="Listen to the podcast">
+					Listen to the podcast
+				</a>
+			<% else %>
+				<a href="$Link" class="readmore" title="Read Full Post">
+					<% _t('BlogSummary_ss.READFULLPOST','Read the full post') %>
+				</a>
+			<% end_if %>
 		</p>
 	<% end_if %>
 </div>
