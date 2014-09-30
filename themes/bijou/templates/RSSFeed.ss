@@ -9,16 +9,14 @@
 		<itunes:author>Bijou Film Board</itunes:author>
 		<itunes:summary>The Bijou Film Board is a non-profit, student-run organization dedicated to showcasing independent, art house, foreign, and classic cinema.</itunes:summary>
 		<description>The Bijou Film Board is a non-profit, student-run organization dedicated to showcasing independent, art house, foreign, and classic cinema.</description>
+		<!-- <atom:link href="$Link" rel="self" type="application/rss+xml"/> -->
 		<itunes:owner>
 			<itunes:name>Bijou Banter</itunes:name>
 			<itunes:email>bijou.executive@gmail.com</itunes:email>
 		</itunes:owner>
-
+		<itunes:explicit>clean</itunes:explicit>
 		<itunes:image href="http://bijou.uiowa.edu/assets/bijouwhitelogo.png" />
-		<itunes:category text="TV &amp; Film">
-
-		<atom:link href="$Link" rel="self" type="application/rss+xml" />
-		<description>The Bijou Film Board is a non-profit, student-run organization dedicated to showcasing independent, art house, foreign, and classic cinema.</description>
+		<itunes:category text="TV &amp; Film" />
 
 		<% loop $Entries %>
 			<% if $AudioClip %>
@@ -29,7 +27,7 @@
 					<itunes:author>Bijou Film Board</itunes:author>
 					<itunes:subtitle>$Content.LimitCharacters(180)</itunes:subtitle>
 					<itunes:summary>$Content</itunes:summary>
-					<enclosure url="$AudioClip.AbsoluteURL" length="0" type="audio/mpeg">></audio>" />
+					<enclosure url="$AudioClip.AbsoluteURL" length="0" type="audio/x-m4a" />
 					<% if $Date %><pubDate>$Date.Rfc822</pubDate>
 					<% else %><pubDate>$Created.Rfc822</pubDate><% end_if %>
 					<guid>$AbsoluteLink</guid>
