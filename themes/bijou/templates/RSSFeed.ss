@@ -5,7 +5,7 @@
 		<link>http://bijou.uiowa.edu</link>
 		<language>en-us</language>
 		<copyright>Copyright Bijou</copyright>
-		<itunes:subtitle>A podcast about the business of design, and the design of business.</itunes:subtitle>
+		<itunes:subtitle>A weekly podcast discussing films and the film industry.</itunes:subtitle>
 		<itunes:author>Bijou Film Board</itunes:author>
 		<itunes:summary>The Bijou Film Board is a non-profit, student-run organization dedicated to showcasing independent, art house, foreign, and classic cinema.</itunes:summary>
 		<description>The Bijou Film Board is a non-profit, student-run organization dedicated to showcasing independent, art house, foreign, and classic cinema.</description>
