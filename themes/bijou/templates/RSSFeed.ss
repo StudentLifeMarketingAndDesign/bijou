@@ -15,7 +15,7 @@
 			<itunes:email>bijou.executive@gmail.com</itunes:email>
 		</itunes:owner>
 		<itunes:explicit>clean</itunes:explicit>
-		<itunes:image href="http://bijou.uiowa.edu/assets/bijouwhitelogo.png" />
+		<itunes:image href="http://bijou.uiowa.edu/assets/bijou-logo-album.jpg" />
 		<itunes:category text="TV &amp; Film" />
 
 		<% loop $Entries %>
