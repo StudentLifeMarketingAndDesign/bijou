@@ -363,10 +363,16 @@ h1, h2 {
 	border: 1px solid #d4d4d4;
 	overflow: hidden;
 	display: block;
-	float: left;
+
+	@media #{$medium-up} {
+		float: left;
+	}
 }
 .photo .program-content {
-	margin-left: 230px;
+
+	@media #{$medium-up} {
+		margin-left: 230px;
+	}
 }
 .program-events {
 	list-style: none;
