@@ -33,9 +33,7 @@
 								<audio src="$AudioClip.Filename" controls="controls"></audio>
 							<% end_if %>
 							<p class="blogVitals">
-								<a href="$Link" class="readmore" title="Read Full Post">
-									<% _t('BlogSummary_ss.READFULLPOST','Read the full post') %>
-								</a>
+								<a href="$Link" class="readmore" title="Listen to the podcast">Listen to the podcast</a>
 							</p>
 						<% end_if %>
 					</div>
