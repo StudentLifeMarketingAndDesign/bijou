@@ -5,7 +5,11 @@
 	<% base_tag %>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>$Title | $SiteConfig.Title | The University of Iowa</title>
+	<% if $URLSegment = 'home' %>
+		<title>$SiteConfig.Title - The University of Iowa</title>
+	<% else %>
+		<title>$Title - $SiteConfig.Title - The University of Iowa</title>
+	<% end_if %>
 
 	<% include MetaTags %>
 	<% include Favicon %>
