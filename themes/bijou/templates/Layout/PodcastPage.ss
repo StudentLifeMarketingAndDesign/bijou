@@ -40,8 +40,11 @@
 					<hr>
 
 				<% end_loop %>
+				<% include BlogPagination %>
 			<% end_if %>
+
 		<% end_with %>
+
 
 	</article>
 </div>

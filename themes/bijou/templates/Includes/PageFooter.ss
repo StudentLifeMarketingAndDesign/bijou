@@ -1,6 +1,6 @@
 <div class="row gray collapse social-blog">
 
-	<div class="large-6 large-push-6 columns">
+	<div class="large-7 large-push-5 columns">
 		<div class="row">
 			<% with Page("bijou-blog") %>
 				<% loop $Entries('2') %>
@@ -16,16 +16,16 @@
 			<% end_with %>
 		</div>
 	</div>
-	<div class="large-6 large-pull-6 columns white">
+	<div class="large-5 large-pull-7 columns white">
 		<div id="fb-root"></div>
 		<script>(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=270867676312194&version=v2.0";
-		fjs.parentNode.insertBefore(js, fjs);
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=142327899218761";
+		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
-		<div class="fb-like-box" data-href="$SiteConfig.FacebookLink" data-height="340" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false"></div>
+		<div class="fb-page" data-href="https://www.facebook.com/bijoufilm" data-width="500px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/bijoufilm"><a href="https://www.facebook.com/bijoufilm">Bijou Film Board</a></blockquote></div></div>
 	</div>
 
 

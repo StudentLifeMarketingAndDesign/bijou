@@ -480,6 +480,11 @@ h1, h2 {
 .fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
     width: 100% !important;
 }
+.fb-page,
+.fb-page span,
+.fb-page span iframe[style] {
+    width: 100% !important;
+}
 
 // Blog =========================================================
 .social-blog {
@@ -493,7 +498,7 @@ h1, h2 {
 			width: 1px;
 			height: 340px;
 			top: 0;
-			right: 25%;
+			right: 29%;
 		}
 	}
 }
@@ -637,4 +642,54 @@ h1, h2 {
 .nav-toggle.active::before {
   font-size: 24px;
   content:"x";
+}
+
+
+/* ------------------------------------------
+  PAGINATION
+--------------------------------------------- */
+.pagination {
+	margin-top: 30px;
+	text-align: center;
+}
+ul.PageNumbers {
+	display: block;
+	margin: 0;
+}
+ul.PageNumbers li {
+	color: #222;
+	font-size: 15px;
+	margin-left: 5px;
+	display: inline-block;
+}
+ul.PageNumbers li a {
+	border-radius: 3px;
+	background: none;
+	color: #444;
+	display: block;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: inherit;
+	padding: 5px 15px;
+}
+/* Hover */
+ul.PageNumbers li:hover a,
+ul.PageNumbers li a:focus {
+  background: #e6e6e6;
+}
+/* Current Link */
+ul.PageNumbers li.active a {
+	background: #39c;
+	color: #FFFFFF;
+	cursor: default;
+	font-weight: bold;
+}
+/* disabled prev/next links */
+ul.PageNumbers li.disabled a{
+	cursor: default;
+	color: #999999;
+}
+ul.PageNumbers li.unavailable:hover a,
+ul.PageNumbers li.unavailable a:focus {
+  background: transparent;
 }
