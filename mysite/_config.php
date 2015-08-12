@@ -25,6 +25,10 @@ HtmlEditorConfig::get('cms')->insertButtonsBefore(
     'removeformat'
 );
 
+if(Director::isLive()) {
+	Director::forceSSL(array('/^Security/','/^admin/'));
+}
+
 // tell the button which tags it may remove
 HtmlEditorConfig::get('cms')->setOption(
     'removeformat_selector',
