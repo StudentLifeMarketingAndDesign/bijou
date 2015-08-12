@@ -26,11 +26,10 @@ mathspamprotection/
 deploy-hulk.php
 deploy.php
 cfo-project/
-
 focuspoint/
-
 ac-json-events/
-
 betternavigator/
-
 foundationforms/
+tagfield
+gridfieldextensions
+lumberjack
