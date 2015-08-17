@@ -12,13 +12,9 @@
 		</a>
 	</p>
 
-	<% if $Summary %>
-		<p>$Summary
-	<% else %>
-		<p>$Excerpt
-	<% end_if %>
+		$Content.FirstParagraph(html)
 			<a href="$Link">
-				<%t Blog.ReadMoreAbout "Read more about '{title}'..." title=$Title %>
+				<%t Blog.ReadMoreAbout "Continue reading '{title}'..." title=$Title %>
 			</a>
 		</p>
 		<% if $AudioClip %>
