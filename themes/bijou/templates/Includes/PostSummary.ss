@@ -1,4 +1,4 @@
-<div class="post-summary">
+<div class="post-summary clearfix">
 	<h2>
 		<a href="$Link" title="<%t Blog.ReadMoreAbout "Read more about '{title}'..." title=$Title %>">
 			<% if $MenuTitle %>$MenuTitle
@@ -6,17 +6,17 @@
 		</a>
 	</h2>
 
-	<p class="post-image">
-		<a href="$Link" <%t Blog.ReadMoreAbout "Read more about '{title}'..." title=$Title %>>
-			$FeaturedImage.setWidth(795)
-		</a>
-	</p>
-
+	<% if $FeaturedImage %>
+		<p class="post-image">
+			<a href="$Link">
+				<img src="$FeaturedImage.setWidth(200).URL" alt="$Title" class="right">
+			</a>
+		</p>
+	<% end_if %>
 		$Content.FirstParagraph(html)
 			<a href="$Link">
 				<%t Blog.ReadMoreAbout "Continue reading '{title}'..." title=$Title %>
 			</a>
-		</p>
 		<% if $AudioClip %>
 			<audio src="$AudioClip.Filename" controls="controls"></audio>
 		<% end_if %>
