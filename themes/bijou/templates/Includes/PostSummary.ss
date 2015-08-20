@@ -1,6 +1,6 @@
 <div class="post-summary clearfix">
 	<h2>
-		<a href="$Link" title="<%t Blog.ReadMoreAbout "Read more about '{title}'..." title=$Title %>">
+		<a href="$Link">
 			<% if $MenuTitle %>$MenuTitle
 			<% else %>$Title<% end_if %>
 		</a>
@@ -14,9 +14,6 @@
 		</p>
 	<% end_if %>
 		$Content.FirstParagraph(html)
-			<a href="$Link">
-				<%t Blog.ReadMoreAbout "Continue reading '{title}'..." title=$Title %>
-			</a>
 		<% if $AudioClip %>
 			<audio src="$AudioClip.Filename" controls="controls"></audio>
 		<% end_if %>
