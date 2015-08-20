@@ -23,11 +23,9 @@
             </h1>
 
             <% if $CurrentTag.Title == "podcast" %>
-                <p>Tune in to <a href="https://itunes.apple.com/us/podcast/bijou-banter/id924764855?mt=2" target="_blank">Bijou Banter Podcast (iTunes)</a>&nbsp;every Wednesday at 6 pm on KRUI!</p>
-                <p>With&nbsp;<a style="line-height: 25.6000003814697px;" href="[sitetree_link,id=11]">Leah Vonderheide</a>,&nbsp;<a style="line-height: 25.6000003814697px;" href="[sitetree_link,id=12]">Katherine Steinbach</a>, and&nbsp;<a style="line-height: 25.6000003814697px;" href="[sitetree_link,id=23]">Chang-Min Yu</a></p>
+                <div class="content">$Content</div>
             <% end_if %>
 
-            <div class="content">$Content</div>
 
             <% if $PaginatedList.Exists %>
                 <% loop $PaginatedList %>
