@@ -54,5 +54,5 @@ HtmlEditorConfig::get('cms')->setOption('paste_strip_class_attributes','true');
 GD::set_default_quality(80);
 
 if(Director::isLive()) {
-	Director::forceSSL(array('/^'));
+	Director::forceSSL(array('/'));
 }
