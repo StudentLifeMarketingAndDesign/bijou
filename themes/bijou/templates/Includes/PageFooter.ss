@@ -18,6 +18,7 @@
 	</div>
 	<div class="large-5 large-pull-7 columns white">
 		<div id="fb-root"></div>
-		<div class="fb-page" data-href="https://www.facebook.com/bijoufilm" data-height="290px" data-width="500px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/bijoufilm"><a href="https://www.facebook.com/bijoufilm">Bijou Film Board</a></blockquote></div></div>
+		<% include FbPage %>
+
 	</div>
 </div>
