@@ -14,6 +14,11 @@
 		</p>
 	<% end_if %>
 		$Content.FirstParagraph(html)
+		<p>	<a href="$Link">
+				Continue reading....
+			</a>
+		</p>
+		<h3>Audio:</h3>
 		<% if $AudioClip %>
 			<audio src="$AudioClip.Filename" controls="controls" preload="none"></audio>
 		<% end_if %>
