@@ -268,12 +268,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/cfo-project.git",
-                "reference": "1028f46bd47d0e0aceee8309df0790d3377a72ee"
+                "reference": "73843fe2a261c688d2396a2d74d66818ac5fe380"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/cfo-project/zipball/1028f46bd47d0e0aceee8309df0790d3377a72ee",
-                "reference": "1028f46bd47d0e0aceee8309df0790d3377a72ee",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/cfo-project/zipball/73843fe2a261c688d2396a2d74d66818ac5fe380",
+                "reference": "73843fe2a261c688d2396a2d74d66818ac5fe380",
                 "shasum": ""
             },
             "require": {
@@ -312,7 +312,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/cfo-project/tree/3.4.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/cfo-project/issues"
             },
-            "time": "2016-08-30 16:37:36"
+            "time": "2016-08-31 17:23:11"
         },
         {
             "name": "md/division-bar",
@@ -320,12 +320,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar.git",
-                "reference": "c9ea42169d6d3103b4de218e692dc70b251cc220"
+                "reference": "d100083910e7b4b760d7686cef0f0aaa3ce81181"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-bar/zipball/c9ea42169d6d3103b4de218e692dc70b251cc220",
-                "reference": "c9ea42169d6d3103b4de218e692dc70b251cc220",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-bar/zipball/d100083910e7b4b760d7686cef0f0aaa3ce81181",
+                "reference": "d100083910e7b4b760d7686cef0f0aaa3ce81181",
                 "shasum": ""
             },
             "require": {
@@ -341,10 +341,10 @@
             },
             "description": "The University of Iowa Division of Student Life Bar",
             "support": {
-                "source": "https://github.com/StudentLifeMarketingAndDesign/division-bar/tree/accessibility-fixes",
+                "source": "https://github.com/StudentLifeMarketingAndDesign/division-bar/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-bar/issues"
             },
-            "time": "2016-06-24 18:20:18"
+            "time": "2016-08-31 18:05:37"
         },
         {
             "name": "rywa/silverstripe-foundation-forms",
@@ -1221,12 +1221,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplepie/simplepie.git",
-                "reference": "b6a4f48c3e69cb3bc58fd4d6cb926d5fbd5ffbb7"
+                "reference": "a93fb64517b7b7a4a13df481a436d06c53b33428"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplepie/simplepie/zipball/b6a4f48c3e69cb3bc58fd4d6cb926d5fbd5ffbb7",
-                "reference": "b6a4f48c3e69cb3bc58fd4d6cb926d5fbd5ffbb7",
+                "url": "https://api.github.com/repos/simplepie/simplepie/zipball/a93fb64517b7b7a4a13df481a436d06c53b33428",
+                "reference": "a93fb64517b7b7a4a13df481a436d06c53b33428",
                 "shasum": ""
             },
             "require": {
@@ -1270,7 +1270,7 @@
                 "feeds",
                 "rss"
             ],
-            "time": "2016-08-29 00:39:58"
+            "time": "2016-08-31 01:21:39"
         },
         {
             "name": "unclecheese/betterbuttons",
