@@ -1,5 +1,6 @@
 body {
 	background: $bijoublue url(../images/background.png) no-repeat 10% 0;
+	color: #333;
 }
 .division-column {
 	position: relative;
@@ -50,9 +51,12 @@ small {
 h1, h2 {
 	text-transform: uppercase;
 }
+p {
+	font-size: 18px;
+}
 
 .subtitle {
-	font-size: rem-calc(15);
+	font-size: rem-calc(18);
 	font-weight: 600;
 	letter-spacing: 1px;
 	margin: 0.5rem;
@@ -107,6 +111,7 @@ h1, h2 {
 	& li {
 		@media #{$large-up} {
 			float: left;
+			margin-right: 3px;
 		}
 	}
 	& a {
@@ -144,6 +149,7 @@ h1, h2 {
 	width: 100%;
 	& li {
 		float: left;
+		margin-right: 4px;
 		padding-bottom: 0;
 	}
 	& a {
@@ -214,11 +220,13 @@ h1, h2 {
 	list-style-type: none;
 	& li {
 		border-bottom: 1px solid #ddd;
+		font-size: 17px;
 		margin: 0;
+		padding: 5px 0;
 	}
 	& li a:not(.button) {
 		display: block;
-		font-weight: bold;
+		font-weight: normal;
 		margin: 0;
 		padding: 12px 5px;
 	}
@@ -253,7 +261,7 @@ h1, h2 {
 	}
 	& a {
 		display: block;
-		padding: 8px 30px 8px 5px;
+		padding: 14px 30px 14px 5px;
 		position: relative;
 		-webkit-transition: background .1s linear;
 		-moz-transition: background .1s linear;
@@ -275,7 +283,7 @@ h1, h2 {
 	}
 	& .quicklinks-title {
 		color: #fff;
-		font-size: rem-calc(18);
+		font-size: rem-calc(20);
 		letter-spacing: .5px;
 		font-weight: 600;
 		text-shadow: 1px 1px 1px rgba(0,0,0,.3);
@@ -283,7 +291,7 @@ h1, h2 {
 			color: #0e2e39;
 			display: block;
 			font-family: $body-font-family;
-			font-size: rem-calc(14);
+			font-size: rem-calc(16);
 			letter-spacing: 0;
 			text-shadow: none;
 		}
@@ -356,13 +364,13 @@ h1, h2 {
 
 /* Our Programs ======================================================== */
 .our-programs {
-	padding: 2em 0;
+	padding: 3em 0;
 	& .subtitle {
 		padding-bottom: 2em;
 	}
 	& p {
 		color: #666;
-		font-size: rem-calc(14);
+		font-size: rem-calc(15);
 	}
 }
 .program-img {
@@ -377,9 +385,8 @@ h1, h2 {
 	}
 }
 .photo .program-content {
-
 	@media #{$medium-up} {
-		margin-left: 230px;
+		margin-left: 240px;
 	}
 }
 .program-events {
@@ -388,7 +395,7 @@ h1, h2 {
 	padding: 0;
 	& li {
 		border-top: 1px solid #ddd;
-		padding: 1em .5em;
+		padding: 2em .5em;
 	}
 	& li:last-of-type {
 		border-bottom: 1px solid #ddd;
@@ -397,7 +404,7 @@ h1, h2 {
 		font-weight: bold;
 	}
 	& p {
-		font-size: rem-calc(14);
+		font-size: rem-calc(17);
 		margin-bottom: 10px;
 	}
 	& .button {
@@ -419,13 +426,13 @@ h1, h2 {
 	font-size: rem-calc(18);
 	line-height: 180%;
 	margin: 0;
-	padding: 3em 2em;
+	padding: 6em 3em;
 	position: relative;
 	text-align: center;
 	z-index: 1;
 	& p {
-		font-size: rem-calc(18);
-		line-height: 180%;
+		font-size: rem-calc(22);
+		line-height: 200%;
 		margin: 0;
 	}
 	&:before, &:after {
@@ -448,7 +455,7 @@ h1, h2 {
 
 .board-list {
 	background-color: #fff;
-	padding: 3em 0 2em;
+	padding: 3em 0 3em;
 	& ul img {
 		border-radius: 50%;
 		display: block;
@@ -456,7 +463,7 @@ h1, h2 {
 	}
 	& li a {
 		display: block;
-		font-size: rem-calc(13);
+		font-size: rem-calc(16);
 		text-align: center;
 	}
 }
@@ -495,6 +502,10 @@ h1, h2 {
 }
 
 /*  Blog ========================================================= */
+.blog-post-meta {
+	font-size: 16px;
+	margin-top: 1em;
+}
 .social-blog {
 	overflow: hidden;
 	position: relative;
@@ -516,27 +527,35 @@ h1, h2 {
 .blogsnippit {
 	padding: 15px 0;
 	& .intro {
-		 font-size: rem-calc(12);
+		 font-size: rem-calc(16);
 		 margin-bottom: 2em;
+		 letter-spacing: 1px;
 		 text-transform: uppercase;
 	}
 	& .title {
-		font-size: rem-calc(20);
+		font-size: rem-calc(22);
 	}
 	& p {
-		font-size: rem-calc(13);
+		font-size: rem-calc(16);
 	}
 	& .anchor {
-		font-size: rem-calc(13);
+		font-size: rem-calc(14);
 	}
 }
+.post-image {
+	margin: 0;
+}
 .post-summary h2 {
-	font-size: 1.6em;
+	font-size: 1.8em;
 }
 .post-summary {
 	border-top: 1px solid #ddd;
 	margin-top: .5em;
-	padding-top: 1.5em;
+	padding-top: 2em;
+	padding-bottom: .5em;
+}
+.audioclip {
+	padding: 1.5em 0;
 }
 
 /* Footer ========================================================= */

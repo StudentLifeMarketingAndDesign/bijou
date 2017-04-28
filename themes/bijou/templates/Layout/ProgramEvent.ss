@@ -6,7 +6,7 @@
 			<% if $Photo %>
 				<div class="row">
 					<div class="large-6 columns">
-						<img src="$Photo.URL" alt="$Title" class="program-img">
+						<img src="$Photo.SetWidth(410).URL" alt="$Title" class="program-img">
 					</div>
 					<div class="large-6 columns">
 						<% if $DateAndTime %><h4>$DateAndTime.format("F j, g:i A")</h4><% end_if %>

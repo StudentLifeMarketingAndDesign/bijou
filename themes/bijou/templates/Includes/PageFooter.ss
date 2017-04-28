@@ -9,7 +9,7 @@
 							<h5 class="intro">From the Blog</h5>
 							<h3 class="title"><a href="$Link">$Title</a></h3>
 							<p>$Content.LimitCharacters(180)</p>
-							<a href="$Link" class="anchor">read more</a>
+							<a href="$Link" class="anchor">Continue Reading</a>
 						</div>
 					</div>
 				<% end_loop %>

@@ -9,7 +9,7 @@
 	<% if $FeaturedImage %>
 		<p class="post-image">
 			<a href="$Link">
-				<img src="$FeaturedImage.setWidth(200).URL" alt="$Title" class="right">
+				<img src="$FeaturedImage.setWidth(350).URL" alt="$Title" class="right">
 			</a>
 		</p>
 	<% end_if %>
@@ -18,7 +18,7 @@
 				Continue reading....
 			</a>
 		</p>
-		<h3>Audio:</h3>
+		<h4>Audio:</h4>
 		<% if $AudioClip %>
 			<audio src="$AudioClip.Filename" controls="controls" preload="none"></audio>
 		<% end_if %>
