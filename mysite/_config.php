@@ -25,9 +25,6 @@ HtmlEditorConfig::get('cms')->insertButtonsBefore(
     'removeformat'
 );
 
-if(Director::isLive()) {
-	Director::forceSSL(array('/^Security/','/^admin/'));
-}
 
 // tell the button which tags it may remove
 HtmlEditorConfig::get('cms')->setOption(
@@ -53,6 +50,7 @@ HtmlEditorConfig::get('cms')->setOption('paste_remove_styles_if_webkit','true');
 HtmlEditorConfig::get('cms')->setOption('paste_strip_class_attributes','true');
 GD::set_default_quality(80);
 
+Authenticator::set_default_authenticator('SAMLAuthenticator');
 if(Director::isLive()) {
 	Director::forceSSL();
 }
