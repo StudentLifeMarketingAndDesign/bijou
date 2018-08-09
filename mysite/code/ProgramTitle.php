@@ -1,4 +1,9 @@
 <?php
+
+use SilverStripe\Forms\TextareaField;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Forms\CheckboxSetField;
+use SilverStripe\ORM\DataObject;
 class ProgramTitle extends DataObject {
 
 	private static $db = array(

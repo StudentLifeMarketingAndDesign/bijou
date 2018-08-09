@@ -1,4 +1,10 @@
 <?php
+
+use SilverStripe\CMS\Model\VirtualPage;
+use SilverStripe\Forms\CheckboxSetField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
+use SilverStripe\Forms\GridField\GridField;
+use PageController;
 class ProgramHolderPage extends Page {
 
 	private static $db = array(
@@ -13,7 +19,7 @@ class ProgramHolderPage extends Page {
 		"Titles" => "ProgramTitle"
 	);
 
-	private static $allowed_children = array("ProgramEvent", "VirtualPage");
+	private static $allowed_children = array("ProgramEvent", VirtualPage::class);
 
 	public function getCMSFields(){
 		$f = parent::getCMSFields();
@@ -40,7 +46,7 @@ class ProgramHolderPage extends Page {
 		return $titles;
 	}
 }
-class ProgramHolderPage_Controller extends Page_Controller {
+class ProgramHolderPage_Controller extends PageController {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the

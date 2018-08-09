@@ -1,0 +1,32 @@
+body{
+	background-size: cover;
+	background-color: $highlight;
+	background-position-y: 170px;
+}
+.main-content__container{
+	background: white;
+	box-shadow: inset 0px 10px 13px -7px rgba(0,0,0,0.31);
+}
+
+.sidenav__section-title{
+	border-color: darken($highlight,10);
+}
+
+
+
+.button, input.action {
+	color: #e2393e;
+	background: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: rem-calc(22);
+}
+
+
+#uiowa-bar #uiowa-search .links a{
+	color: white;
+}
+
+.background-image{
+	box-shadow: inset -2px 12px 26px -10px rgba(0,0,0,0.63);
+}

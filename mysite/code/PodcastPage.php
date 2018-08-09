@@ -1,4 +1,7 @@
 <?php
+
+use SilverStripe\Assets\Image;
+use PageController;
 class PodcastPage extends Page {
 
 	private static $db = array(
@@ -6,7 +9,7 @@ class PodcastPage extends Page {
 	);
 
 	private static $has_one = array(
-		"Photo" => "Image",
+		"Photo" => Image::class,
 	);
 
 	private static $belongs_many_many = array (
@@ -29,7 +32,7 @@ class PodcastPage extends Page {
 	//private static $allowed_children = array("");
 
 }
-class PodcastPage_Controller extends Page_Controller {
+class PodcastPage_Controller extends PageController {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the

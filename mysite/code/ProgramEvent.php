@@ -1,4 +1,13 @@
 <?php
+
+use SilverStripe\Assets\Image;
+use SilverStripe\Control\Director;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\DatetimeField;
+use SilverStripe\Forms\CheckboxSetField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use PageController;
 class ProgramEvent extends Page {
 
 	private static $db = array(
@@ -12,7 +21,7 @@ class ProgramEvent extends Page {
 	);
 
 	private static $has_one = array(
-		"Photo" => "Image",
+		"Photo" => Image::class,
 	);
 
 	private static $belongs_many_many = array (
@@ -26,7 +35,7 @@ class ProgramEvent extends Page {
 		$fields->removeByName("Metadata");
 		$fields->removeByName("BackgroundImage");
 
-		$fields->addFieldToTab("Root.Main", new TextField("Director", "Director"));
+		$fields->addFieldToTab("Root.Main", new TextField(Director::class, Director::class));
 		$fields->addFieldToTab("Root.Main", new TextField("Year", "Year"));
 		$fields->addFieldToTab("Root.Main", new TextField("Runtime", "Runtime (minutes)"));
 		$fields->addFieldToTab("Root.Main", new TextField("Rating", "Rating (PG, PG-13, R, NR)"));
@@ -56,7 +65,7 @@ class ProgramEvent extends Page {
 	//private static $allowed_children = array("");
 
 }
-class ProgramEvent_Controller extends Page_Controller {
+class ProgramEvent_Controller extends PageController {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the

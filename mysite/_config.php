@@ -1,5 +1,14 @@
 <?php
 
+use SilverStripe\View\SSViewer;
+use SilverStripe\i18n\i18n;
+use SilverStripe\ORM\Search\FulltextSearchable;
+use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\View\Requirements;
+use SilverStripe\Security\MemberAuthenticator\MemberAuthenticator;
+use SilverStripe\Security\Authenticator;
+use SilverStripe\Control\Director;
+
 global $project;
 $project = 'mysite';
 
@@ -15,7 +24,7 @@ SSViewer::set_theme('bijou');
 i18n::set_locale('en_US');
 FulltextSearchable::enable();
 // Enable nested URLs for this site (e.g. page/sub-page/)
-if (class_exists('SiteTree')) SiteTree::enable_nested_urls();
+if (class_exists(SiteTree::class)) SiteTree::enable_nested_urls();
 
 Requirements::set_force_js_to_bottom(true);
 
@@ -50,7 +59,7 @@ HtmlEditorConfig::get('cms')->setOption('paste_remove_styles_if_webkit','true');
 HtmlEditorConfig::get('cms')->setOption('paste_strip_class_attributes','true');
 GD::set_default_quality(80);
 
-Authenticator::unregister('MemberAuthenticator');
+Authenticator::unregister(MemberAuthenticator::class);
 Authenticator::set_default_authenticator('SAMLAuthenticator');
 if(Director::isLive()) {
 	Director::forceSSL();
