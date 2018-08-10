@@ -34,8 +34,8 @@
             "web.config"
         ],
         "expose": [
-            "themes/cfo-subtheme/dist/",
-            "themes/cfo-subtheme/css/"
+            "themes/cfo-subtheme/dist",
+            "themes/cfo-subtheme/css"
         ]
     },
     "repositories": [

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cc2c79d3b058cded96f648b344098552",
+    "content-hash": "ac4e1d2c858ef3e180a54df7030426ca",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1001,12 +1001,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events.git",
-                "reference": "fd35254b69f3562fed2a662e56b27134e04fbada"
+                "reference": "3a71d4a125acfe087bdb9bfee5fcf576d399dd05"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/fd35254b69f3562fed2a662e56b27134e04fbada",
-                "reference": "fd35254b69f3562fed2a662e56b27134e04fbada",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/3a71d4a125acfe087bdb9bfee5fcf576d399dd05",
+                "reference": "3a71d4a125acfe087bdb9bfee5fcf576d399dd05",
                 "shasum": ""
             },
             "require": {
@@ -1017,8 +1017,8 @@
             "type": "silverstripe-vendormodule",
             "extra": {
                 "expose": [
-                    "js/",
-                    "css/"
+                    "js",
+                    "css"
                 ]
             },
             "description": "After Class JSON Display Module",
@@ -1026,7 +1026,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/tree/ss4.x-ui",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/issues"
             },
-            "time": "2018-07-19T17:44:21+00:00"
+            "time": "2018-08-10T15:15:09+00:00"
         },
         {
             "name": "md/division-analytics",
@@ -1839,16 +1839,16 @@
         },
         {
             "name": "silverstripe/blog",
-            "version": "3.2.0",
+            "version": "3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-blog.git",
-                "reference": "69e39e94e6c69d00d8bf159a2558c1031d15e20a"
+                "reference": "991000dddf04b83a5a3885fcc310f01b8bc8fd88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/69e39e94e6c69d00d8bf159a2558c1031d15e20a",
-                "reference": "69e39e94e6c69d00d8bf159a2558c1031d15e20a",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/991000dddf04b83a5a3885fcc310f01b8bc8fd88",
+                "reference": "991000dddf04b83a5a3885fcc310f01b8bc8fd88",
                 "shasum": ""
             },
             "require": {
@@ -1898,7 +1898,7 @@
                 "news",
                 "silverstripe"
             ],
-            "time": "2018-06-19T20:54:39+00:00"
+            "time": "2018-07-09T21:35:13+00:00"
         },
         {
             "name": "silverstripe/campaign-admin",
@@ -2822,16 +2822,16 @@
         },
         {
             "name": "silverstripe/userforms",
-            "version": "5.2.0",
+            "version": "5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-userforms.git",
-                "reference": "6df941065f9dd2556b18fa89f512c9ba14eeeb90"
+                "reference": "7e91be9cb42c5430f67953ff809f78c79abdea9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/6df941065f9dd2556b18fa89f512c9ba14eeeb90",
-                "reference": "6df941065f9dd2556b18fa89f512c9ba14eeeb90",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/7e91be9cb42c5430f67953ff809f78c79abdea9c",
+                "reference": "7e91be9cb42c5430f67953ff809f78c79abdea9c",
                 "shasum": ""
             },
             "require": {
@@ -2894,7 +2894,7 @@
                 "silverstripe",
                 "userforms"
             ],
-            "time": "2018-06-20T05:48:07+00:00"
+            "time": "2018-07-26T03:17:22+00:00"
         },
         {
             "name": "silverstripe/vendor-plugin",
