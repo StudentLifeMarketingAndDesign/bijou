@@ -1,7 +1,12 @@
+<% if $ClassName != "HomePage" %>
+	<% include UiowaBar %>
+<% end_if %>
 <div class="header__container header__container--{$HeaderType}" id="header__container">
-	<% include DivisionBar %>
+	<% if $ClassName == "HomePage" %>
+		<% include DivisionBar %>
+	<% end_if %>
 	<div itemscope="" itemtype="http://schema.org/Organization" id="header__title-container">
-		<h1 class="header__site-title header__site-title--{$DarkLight}" itemprop="name"><a href="$AbsoluteBaseURL" class="header__link header__link--{$DarkLight}" itemprop="url">$SiteConfig.Title</a></h1>
+		<h1 class="header__site-title header__site-title--{$DarkLight} header__site-title--{$ClassName}" itemprop="name"><a href="$AbsoluteBaseURL" class="header__link header__link--{$DarkLight}" itemprop="url">$SiteConfig.Title</a></h1>
 		<ul class="nav nav--{$DarkLight} nav--{$HeaderType} clearfix main-nav" id="nav">
 			<% include SiteSearch %>
 		</ul>

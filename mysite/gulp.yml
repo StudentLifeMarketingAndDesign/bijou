@@ -30,6 +30,7 @@ PATHS:
   # Paths to Sass libraries, which can then be loaded with @import
   sass:
     - "src/scss/"
+    - "../../../vendor/md/uiowa-bar/scss"
   # Paths to JavaScript libraries, which are compined into one file
   javascript:
     # Core Foundation files
