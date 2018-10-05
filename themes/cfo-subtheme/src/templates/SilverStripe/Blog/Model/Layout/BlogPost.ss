@@ -74,59 +74,7 @@ $Header
 						    </span>
 						  </div>
 						</div>
-						<script> 
-						this.AudioPlayer = (function() {
 
-					    AudioPlayer.States = {
-					      Ready: 0,
-					      Playing: 1,
-					      Loading: 2,
-					      Error: 3
-					    };
-
-					    function AudioPlayer(options) {
-					      this.setOptions(options);
-					    }
-
-					    AudioPlayer.prototype.setOptions = function(options) {
-					      var key, value;
-					      if (options == null) {
-					        options = {};
-					      }
-					      for (key in options) {
-					        value = options[key];
-					        this[key] = value;
-					      }
-					      if (options.el) {
-					        return this.setEl(options.el);
-					      }
-					    };
-
-					    AudioPlayer.prototype.setEl = function(el) {
-					      if (this.el) {
-					        this._unbindEvents();
-					      }
-					      this.el = el;
-					      return this._bindEvents();
-					    };
-
-					  return AudioPlayer;
-					})();
-
-					updateState:  (e) ->
-					    state = if @isErrored()
-					      AudioPlayer.States.Error
-					    else if @isLoading()
-					      AudioPlayer.States.Loading
-					    else if @isPlaying()
-					      AudioPlayer.States.Playing
-					    else
-					      AudioPlayer.States.Ready
-
-					    if @state != state
-					      @state = state
-					      @ui?.AudioPlayerUpdateState(state) 
-					</script>
 					<% end_if %>
 					$Content
 					<% if $ExternalURL %>
