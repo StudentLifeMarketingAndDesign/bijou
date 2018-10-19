@@ -85,7 +85,7 @@
 // @include foundation-flex-classes;
 // @include motion-ui-transitions;
 // @include motion-ui-animations;
-@import "uiowa-bar"; 
+@import "uiowa-bar";
 // Base
 @import "base/mixins";
 @import "base/main";
@@ -153,5 +153,10 @@
 @import "components/nav";
 @import "components/header";
 @import "components/offcanvas";
+@import "components/sidenav-cfo";
+@import "components/audio-player";
+@import "components/blog-cfo";
 @import "components/site-search-cfo";
+
+
 @import "layout/theme";
