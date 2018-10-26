@@ -730,6 +730,8 @@ window.Modernizr = function(a, b, c) {
         return -1;
     };
 
+
+    //Audio player//
     this.AudioPlayer = (function() {
 
         AudioPlayer.States = {
