@@ -67,3 +67,29 @@ body{
 .featuredpageblock__button a{
   color:#fff;
 }
+.staff__button{
+	background: #0e64b0;
+    color: #fff;
+    border: .5px solid #f3f3f3;
+    padding: 12px 24px;
+    font-weight: 700;      
+    font-size: .75rem;
+    letter-spacing:1px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 5px;
+    -moz-box-shadow: 0px 0px 0px 6px #0e64b0;
+    -webkit-box-shadow: 0px 0px 0px 6px #0e64b0;
+    box-shadow: 0px 0px 0px 6px #0e64b0;
+    &:hover,&:active,&:focus{
+    	color:#fff;
+    	background-color:#000;
+    	box-shadow: 0 0 0 6px #000;
+    }
+
+     
+}
+
+.staff__buttoncontainer{
+    text-align: center; 
+    }
