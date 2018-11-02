@@ -87,6 +87,7 @@ $Header
 			$Form
 		</article>
 		<aside class="sidebar dp-sticky">
+			<% include PodcastWidget %>
 			<% include SideNav %>
 			<% if $SideBarView %>
 				$SideBarView
