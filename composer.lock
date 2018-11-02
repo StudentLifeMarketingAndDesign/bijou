@@ -410,16 +410,16 @@
         },
         {
             "name": "embed/embed",
-            "version": "v3.3.6",
+            "version": "v3.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/Embed.git",
-                "reference": "4b4ab5f5a02563ba4a0707baad00eef2e376108a"
+                "reference": "9666691c78b25047bc6ee7e94823de3eaadce0c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/4b4ab5f5a02563ba4a0707baad00eef2e376108a",
-                "reference": "4b4ab5f5a02563ba4a0707baad00eef2e376108a",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/9666691c78b25047bc6ee7e94823de3eaadce0c6",
+                "reference": "9666691c78b25047bc6ee7e94823de3eaadce0c6",
                 "shasum": ""
             },
             "require": {
@@ -459,7 +459,7 @@
                 "opengraph",
                 "twitter cards"
             ],
-            "time": "2018-09-13T19:10:15+00:00"
+            "time": "2018-10-22T21:59:03+00:00"
         },
         {
             "name": "gorriecoe/silverstripe-webfonts",
@@ -1116,12 +1116,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events.git",
-                "reference": "56fbc0e2814efd6b2fb1fd623d5b0baef1418987"
+                "reference": "37658a3fd811ce238ccfbb6cb7af29babc5bd897"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/56fbc0e2814efd6b2fb1fd623d5b0baef1418987",
-                "reference": "56fbc0e2814efd6b2fb1fd623d5b0baef1418987",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/37658a3fd811ce238ccfbb6cb7af29babc5bd897",
+                "reference": "37658a3fd811ce238ccfbb6cb7af29babc5bd897",
                 "shasum": ""
             },
             "require": {
@@ -1141,7 +1141,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/tree/ss4.x-ui",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/issues"
             },
-            "time": "2018-10-11T18:59:31+00:00"
+            "time": "2018-10-22T17:49:15+00:00"
         },
         {
             "name": "md/division-analytics",
