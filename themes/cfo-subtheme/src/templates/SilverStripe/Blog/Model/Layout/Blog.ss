@@ -71,9 +71,14 @@ $Header
 
 
 		<aside class="sidebar dp-sticky">
-			<%-- <% include PodcastWidget %> --%>
-				<div class="podcast-widget">
-					<a href="https://itunes.apple.com/us/podcast/bijou-banter/id924764855?mt=2"><img src="$ThemeDir/dist/images/podcasticon.png"></img> Subscribe to Bijou Banter!</a>
+			<%-- <% include PodcastWidget %> --%><a href="https://itunes.apple.com/us/podcast/bijou-banter/id924764855?mt=2">
+				<div class="grid-x podcast-widget">
+
+
+  <div class="cell small-5"><img src="$ThemeDir/dist/images/podcasticon.png"></img></div>
+  <div class="cell small-7"><span>Subscribe to Bijou Banter!</span></div>
+</div>
+					 </a>
 				</div>
 			<% include SideNav %>
 			<% if $SideBarView %>
