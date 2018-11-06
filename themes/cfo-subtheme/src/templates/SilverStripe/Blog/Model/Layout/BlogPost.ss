@@ -34,7 +34,7 @@ $Header
 	$BeforeContent
 
 	<div class="row">
-		<article role="main" class="main-content main-content--with-padding <% if $Children || $Menu(2) || $Sidebar ||  $SidebarView.Widgets %>main-content--with-sidebar<% else %>main-content--full-width<% end_if %>">
+		<article role="main" class="main-content main-content--with-padding main-content--with-sidebar">
 			$BeforeContentConstrained
 			<div class="main-content__text">
 				<% if $FeaturedImage %>
@@ -92,6 +92,7 @@ $Header
 			$Form
 		</article>
 		<aside class="sidebar dp-sticky">
+			<% include PodcastWidget %>
 			<% include SideNav %>
 			<% if $SideBarView %>
 				$SideBarView
