@@ -60,7 +60,7 @@ $Header
 							<img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.URL" alt="" class="right post-image">
 						<% end_if %>
 					<% end_if %>
-					<% if $AudioClip %>
+<%-- 					<% if $AudioClip %>
 						<div id="audio-player" class="audio-player-wrapper">
 
 						  <div class="audio-player-controls">
@@ -75,11 +75,16 @@ $Header
 						  </div>
 						</div>
 
-					<% end_if %>
+					<% end_if %> --%>
+
 					$Content
 					<% if $ExternalURL %>
 						<p><a href="$ExternalURL" class="button--shaded" target="_blank">$ExternalURLText</a></p>
 					<% end_if %>
+                    <h2>Listen to this episode:</h2>
+                    <% if $AudioClip %>
+                        <audio src="$AudioClip.URL" controls="controls" preload="none"></audio>
+                    <% end_if %>
 				</div>
 				$AfterContentConstrained
 				<% include TagsCategories %>
