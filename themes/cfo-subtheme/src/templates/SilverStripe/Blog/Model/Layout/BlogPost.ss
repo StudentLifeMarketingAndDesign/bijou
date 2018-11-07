@@ -60,22 +60,10 @@ $Header
 							<img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.URL" alt="" class="right post-image">
 						<% end_if %>
 					<% end_if %>
-<%-- 					<% if $AudioClip %>
-						<div id="audio-player" class="audio-player-wrapper">
-
-						  <div class="audio-player-controls">
-						    <span class="audio-player-progress">
-						      <span class="audio-player-progress-bar"></span>
-						    </span>
-						    <span class="audio-player-button-wrappers">
-						      <a role="button" class="audio-player-button small icon-backward" ><img src="{$ThemeDir}/dist/images/backward.png "></a>
-						      <a role="button" class="audio-player-button audio-player-place-pause-button icon-play" ><img src="{$ThemeDir}/dist/images/play.png "></a>
-						      <a role="button" class="audio-player-button small icon-forward"><img src="{$ThemeDir}/dist/images/forward.png "></a>
-						    </span>
-						  </div>
-						</div>
-
-					<% end_if %> --%>
+                    <% if $AudioClip %>
+                        <h4>Listen to this episode:</h4>
+                        <audio src="$AudioClip.URL" controls="controls" preload="none"></audio>
+                    <% end_if %>
 
 					$Content
 					<% if $ExternalURL %>
