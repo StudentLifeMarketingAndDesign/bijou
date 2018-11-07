@@ -81,8 +81,9 @@ $Header
 					<% if $ExternalURL %>
 						<p><a href="$ExternalURL" class="button--shaded" target="_blank">$ExternalURLText</a></p>
 					<% end_if %>
-                    <h2>Listen to this episode:</h2>
+
                     <% if $AudioClip %>
+                        <h2>Listen to this episode:</h2>
                         <audio src="$AudioClip.URL" controls="controls" preload="none"></audio>
                     <% end_if %>
 				</div>

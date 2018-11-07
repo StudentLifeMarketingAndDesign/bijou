@@ -26,7 +26,7 @@ class StaffHolderBlock extends BaseElement{
 
     public function getType()
     {
-        return 'StaffHolderBlock';
+        return 'Staff Holder Block';
     }
 
     public function StaffPages() {
@@ -52,16 +52,16 @@ class StaffHolderBlock extends BaseElement{
 			  'Maximum tile grid size on large displays',
 			  singleton('TileGridBlock')->dbObject('MaxSize')->enumValues()
 			)
-			
+
 		));
 
 
 
 		return $f;
 
-		
+
 
 	}
-	
+
 
 }

@@ -1,0 +1,95 @@
+$Header
+<main class="main-content__container" id="main-content__container">
+    <% if $BackgroundImage %>
+        <% include FeaturedImage %>
+    <% end_if %>
+
+
+    $Breadcrumbs
+
+    <% if not $BackgroundImage %>
+        <div class="column row">
+            <div class="main-content__header">
+                <h1>$Title</h1>
+                <% if $Summary %>
+                    <div class="blogpost__summary">$Summary</div>
+                <% end_if %>
+            </div>
+        </div>
+    <% end_if %>
+
+
+    <div class="row">
+        <article role="main" class="main-content main-content--with-padding main-content--with-sidebar">
+                $BeforeContent
+    <% if $TrailerVideoID %>
+        <div class="responsive-embed">
+            <iframe width="1280" height="720" src="https://www.youtube.com/embed/{$TrailerVideoID}">
+            </iframe>
+        </div>
+    <% end_if %>
+            $BeforeContentConstrained
+            <div class="main-content__text">
+            <% if $FeaturedImage %>
+
+                        <p class="post-image"><img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.SetWidth(840).URL" alt="" role="presentation" width="840" height="$FeaturedImage.SetWidth(840).Height" /></p>
+
+                <% end_if %>
+                <div class="content">
+
+                    <div class="blogmeta clearfix">
+                        <ul class="blogmeta__social">
+                            <li><a href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u=$AbsoluteLink', '_blank', 'width=400,height=500');void(0);"  title="Share on Facebook"><img src="{$ThemeDir}/dist/images/icon_facebook.png" alt="Share on Facebook"></a>
+                            </li>
+                            <li><a href="https://twitter.com/intent/tweet?text=$AbsoluteLink" title="Share on Twitter" target="_blank"><img src="{$ThemeDir}/dist/images/icon_twitter.png" alt="Share on Twitter"></a></li>
+                            <li><a href="javascript:window.open('https://www.linkedin.com/cws/share?url=$AbsoluteLink', '_blank', 'width=400,height=500');void(0);" title="Share on LinkedIn" target="_blank"><img src="{$ThemeDir}/dist/images/icon_linkedin.png" alt="share on linkedid"></a></li>
+                        </ul>
+                    </div>
+                    <% if $FeaturedImage %>
+                        <% if FeaturedImage.Width < 700 %>
+                            <img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.URL" alt="" class="right post-image">
+                        <% end_if %>
+                    <% end_if %>
+
+
+                    $Content
+                    <% if $ExternalURL %>
+                        <p><a href="$ExternalURL" class="button--shaded" target="_blank">$ExternalURLText</a></p>
+                    <% end_if %>
+                </div>
+                $AfterContentConstrained
+                <% include TagsCategories %>
+            </div>
+            $Form
+        </article>
+        <aside class="sidebar dp-sticky">
+            <h2>Date:</h2>
+            $ShowingDate.Nice
+            <h2>Showtimes:</h2>
+            $ShowingTimes
+
+        </aside>
+    </div>
+    $AfterContent
+</main>
+
+<% if $RelatedNewsEntries %>
+<div class="block_area block_area_aftercontent">
+    <section class="content-block__container recentnews" aria-labelledby="RelatedNewsSection">
+        <div class="content-block row">
+            <div class="newsblock">
+                <div class="column">
+                    <h3 class="newsblock-title text-center" id="RelatedNewsSection">Related News</h3>
+                </div>
+                <ul class="medium-up-3 ">
+                    <% loop $RelatedNewsEntries.limit(3) %>
+                        <li class="column column-block">
+                            <% include BlogCard %>
+                        </li>
+                    <% end_loop %>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+<% end_if %>

@@ -23,10 +23,10 @@
                 <item>
                     <title>$Title.XML</title>
                     <link>$AbsoluteLink</link>
-                    <% if $Summary %><description>$Summary.NoHTML</description><% end_if %>
+                    <% if $Description %><description>$Description.CDATA</description><% end_if %>
                     <itunes:author>Bijou Film Board</itunes:author>
-                    <itunes:subtitle>$Content.NoHTML.LimitCharacters(180)</itunes:subtitle>
-                    <itunes:summary>$Content.NoHTML</itunes:summary>
+                    <itunes:subtitle>$Description.NoHTML.LimitCharacters(180)</itunes:subtitle>
+                    <itunes:summary>$Description.NoHTML</itunes:summary>
                     <enclosure url="$AudioClip.AbsoluteURL" length="0" type="audio/x-m4a" />
                     <% if $Date %><pubDate>$Date.Rfc822</pubDate>
                     <% else %><pubDate>$Created.Rfc822</pubDate><% end_if %>
