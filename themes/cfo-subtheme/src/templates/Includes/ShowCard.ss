@@ -26,7 +26,7 @@
         <% if $Summary %>
             <div class="bloglistitem__desc">$Summary</div>
         <% else %>
-            <p class="bloglistitem__desc">$Content.LimitCharacters(150) <%-- <a href="$Link">Continue reading</a> --%></p>
+            <p class="bloglistitem__desc">$Content.LimitCharacters(150) <a href="$Link">Continue reading</a></p>
         <% end_if %>
 
         <div class="row">
@@ -35,7 +35,7 @@
             $ShowingDate.Nice
             </div>
             <div class="large-6 column">
-            <h4>Showtimes:</h4>
+            <h4>Time(s):</h4>
             $ShowingTimes
 
             </div>

@@ -31,7 +31,7 @@ class ShowsBlock extends BaseElement{
 
 
     public function Shows() {
-        $shows = ShowPage::get()->sort('ShowingDate DESC')->limit(4);
+        $shows = ShowPage::get()->sort('ShowingDate DESC')->limit(3);
         return $shows;
     }
 
