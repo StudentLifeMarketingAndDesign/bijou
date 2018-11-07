@@ -1,13 +1,9 @@
 $Header
 <main class="main-content__container" id="main-content__container">
-    <% if $BackgroundImage %>
-        <% include FeaturedImage %>
-    <% end_if %>
-
 
     $Breadcrumbs
 
-    <% if not $BackgroundImage %>
+
         <div class="column row">
             <div class="main-content__header">
                 <h1>$Title</h1>
@@ -16,18 +12,23 @@ $Header
                 <% end_if %>
             </div>
         </div>
-    <% end_if %>
+        <% if $TrailerVideoID %>
+            <div class="row">
+                <div class="large-12 columns">
 
+                    <div class="responsive-embed">
+                        <iframe width="1280" height="720" src="https://www.youtube.com/embed/{$TrailerVideoID}">
+                        </iframe>
+                    </div>
 
+                </div>
+
+            </div>
+         <% end_if %>
     <div class="row">
         <article role="main" class="main-content main-content--with-padding main-content--with-sidebar">
                 $BeforeContent
-    <% if $TrailerVideoID %>
-        <div class="responsive-embed">
-            <iframe width="1280" height="720" src="https://www.youtube.com/embed/{$TrailerVideoID}">
-            </iframe>
-        </div>
-    <% end_if %>
+
             $BeforeContentConstrained
             <div class="main-content__text">
             <% if $FeaturedImage %>
@@ -51,7 +52,6 @@ $Header
                         <% end_if %>
                     <% end_if %>
 
-
                     $Content
                     <% if $ExternalURL %>
                         <p><a href="$ExternalURL" class="button--shaded" target="_blank">$ExternalURLText</a></p>
@@ -63,10 +63,28 @@ $Header
             $Form
         </article>
         <aside class="sidebar dp-sticky">
-            <h2>Date:</h2>
-            $ShowingDate.Nice
-            <h2>Showtimes:</h2>
-            $ShowingTimes
+            <div class="row">
+                <div class="large-6 column">
+                    <h4>Date:</h4>
+                    $ShowingDate.Nice
+                </div>
+                <div class="large-6 column">
+                    <h4>Time(s):</h4>
+                    $ShowingTimes
+                </div>
+            </div>
+            <hr />
+            <h2>Location:</h2>
+
+            <a href="https://maps.apple.com/place?address=118%20E%20College%20St%2C%20Iowa%20City%2C%20IA%20%2052240%2C%20United%20States&auid=15116029753464522765&ll=41.659294%2C-91.533791&q=FilmScene">
+            <img src="{$ThemeDir}/dist/images/filmscenemap.png" />
+
+            </a>
+            <hr />
+            <div class="featuredpageblock__button"><a href="/bijou/our-programs/" class="border-effect">FilmScene</a></div>
+
+
+
 
         </aside>
     </div>
