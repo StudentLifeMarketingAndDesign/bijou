@@ -60,10 +60,7 @@ $Header
 							<img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.URL" alt="" class="right post-image">
 						<% end_if %>
 					<% end_if %>
-                    <% if $AudioClip %>
-                        <h4>Listen to this episode:</h4>
-                        <audio src="$AudioClip.URL" controls="controls" preload="none"></audio>
-                    <% end_if %>
+
 
 					$Content
 					<% if $ExternalURL %>
