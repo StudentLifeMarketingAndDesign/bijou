@@ -120,7 +120,7 @@
 		<% end_if %>
 	
 	<div class="fs__logo">
-		<a href="http://www.icfilmscene.org"><img class="fs-logo-footer" src="{$ThemeDir}/dist/images/fs-logo.png" alt="$SiteConfig.Title.ATT">
+		<a href="http://www.icfilmscene.org"><img class="fs-logo-footer" src="{$ThemeDir}/dist/images/fs-logo.png" alt="$SiteConfig.Title.ATT"><p>For more showings and screenings visit FilmScene</p>
 			</a>
 	</div>
 	

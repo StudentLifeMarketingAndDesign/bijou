@@ -28,7 +28,7 @@ class ProgramHolderPage extends Page {
 
 		//$f->removeByName("Content");
 		$gridFieldConfig = GridFieldConfig_RecordEditor::create();
-		$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
+		// $gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
 
 
 		$gridField = new GridField("ProgramTitle", "Program Titles", ProgramTitle::get(), $gridFieldConfig);
