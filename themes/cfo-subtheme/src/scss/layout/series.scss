@@ -12,7 +12,7 @@
 .series {
     display: flex;
     align-items: center;
-    width: 400px;
+    width: 100%;
     min-height: 300px;
     font-family:Kollektif;
     color: white;
@@ -20,8 +20,6 @@
     position: relative;
     z-index: 10;
     justify-content: center;
-    margin-top:20px;
-    margin-bottom:20px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px; 

@@ -16,7 +16,7 @@ $Header
           <div class="grid-x grid-margin-x grid-padding-x grid-padding-y">
                 
                 <% loop $Children %>
-                <div class="cell large-6">
+                <div class="cell large-12">
                     <div style="position:relative;">
                         <a href="$Link" class=" series series-{$URLSegment}">
                             <span>$Title</span>
