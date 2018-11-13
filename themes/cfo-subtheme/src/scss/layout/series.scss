@@ -12,20 +12,27 @@
 .series {
     display: flex;
     align-items: center;
-    width: 300px;
+    width: 400px;
     min-height: 300px;
     font-family:Kollektif;
-    color: #fff;
+    color: white;
     text-align: center;
     position: relative;
     z-index: 10;
     justify-content: center;
+    margin-top:20px;
+    margin-bottom:20px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; 
     & span {
         z-index: 20;
         position: relative;
+        font-weight: bold;
+        font-size: 50px;
     }
     &:before {
-        background-color: pink;
+        background-color: rgba(#353223, 0.75);
         height: 100%;
         top: 0;
         content: '';
@@ -34,12 +41,29 @@
         width: 0;
         position: absolute;
         transition: all .5s ease-in-out;
-        z-index: 9;
+        z-index: 7;
     }
     &:hover, &:focus {
-        color: black;
+        color: white;
+        z-index: 8;
         &:before {
             width: 100%;
         }
     }
+}
+
+.series-horizons{
+    background-color: #0049ad;
+}
+.series-after-hours{
+    background-color: #c40003;
+}
+.series-bijou-thursdays{
+    background-color: #00b506;
+}
+.series-film-forum{
+    background-color: #efde00;
+}
+.series-bijou-open-screen{
+    background-color: #00b506;
 }

@@ -19,7 +19,7 @@ $Header
                 <div class="cell large-6">
                     <div style="position:relative;">
                         <a href="$Link" class=" series series-{$URLSegment}">
-                            $Title
+                            <span>$Title</span>
                         </a>
                     </div>
                 </div>
