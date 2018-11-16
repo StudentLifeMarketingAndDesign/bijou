@@ -12,6 +12,10 @@ class ShowPage extends BlogPost {
         'ShowingDate' => 'Date',
         'ShowingTimes' => 'Text',
         'TrailerVideoID' => 'Varchar(11)',
+        'TicketsLink' => 'Varchar',
+        'FacebookEventLink' => 'Varchar',
+        'FilmSceneLink' => 'Varchar',
+
     );
 
     private static $has_one = array(
@@ -33,6 +37,9 @@ class ShowPage extends BlogPost {
         $fields->addFieldToTab('Root.Main', new DateField('ShowingDate', 'Show date for this instance'), 'Content');
         $fields->addFieldToTab('Root.Main', new TextareaField('ShowingTimes', 'Time(s) for this instance'), 'Content');
         $fields->addFieldToTab('Root.Main', new YouTubeField('TrailerVideoID', 'YouTube Video'), 'Content');
+        $fields->addFieldToTab('Root.Main', new TextareaField('TicketsLink', 'Ticket Link'), 'Content');
+        $fields->addFieldToTab('Root.Main', new TextareaField('FacebookEventsLink', 'Facebook Event Link'), 'Content');
+        $fields->addFieldsToTab('Root.Main', new TextareaField('FilmSceneLink', 'FilmScene Link'), 'Content');
         return $fields;
     }
 

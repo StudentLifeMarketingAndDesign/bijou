@@ -72,6 +72,18 @@ $Header
                     <h4>Time(s):</h4>
                     $ShowingTimes
                 </div>
+                <div class= "large-6 column">
+                    <h4>Tickets Link:</h4>
+                    $TicketsLink
+                </div>
+                <div class="large-6 column">
+                    <h4>Facebook Event Link:</h4>
+                    $FacebookEventLink
+                </div>
+                <div class="large-6 column">
+                    <h4>FilmScene Link:</h4>
+                    $FilmSceneLink
+                </div>
             </div>
             <hr />
             <h2>Location:</h2>
