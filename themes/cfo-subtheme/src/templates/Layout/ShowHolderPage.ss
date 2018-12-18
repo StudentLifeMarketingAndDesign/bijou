@@ -40,6 +40,10 @@ $Header
         <div role="main" class="main-content main-content--with-padding main-content--with-sidebar">
             $BeforeContentConstrained
             <div class="main-content__text">
+
+                <% loop $UpcomingDates %>
+                    <p>$Date - </p>
+                <% end_loop %>
                 $Content
 
                 <% if $Action == "index" %>
