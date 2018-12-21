@@ -23,9 +23,9 @@ class ShowDateTransient extends DataObject{
         'Times' => 'Text'
 
     );
-    private static $has_many = array(
-        'Shows' => 'ShowPages'
-    );
+    // private static $has_many = array(
+    //     'Shows' => 'ShowPage'
+    // );
 
     private static $summary_fields = array('Date');
 

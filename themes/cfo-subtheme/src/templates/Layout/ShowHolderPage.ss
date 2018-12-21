@@ -41,8 +41,31 @@ $Header
             $BeforeContentConstrained
             <div class="main-content__text">
 
+                <h2>Upcoming dates</h2>
                 <% loop $UpcomingDates %>
-                    <p>$Date - </p>
+                <p>$Date.Nice</p>
+                <ul>
+                    <% loop $ShowsTransient %>
+                        <li>$Title<br />
+                            $Times
+                        </li>
+
+<%--                         <% loop $DateTimes($Up.Date) %>
+                            $Me.Nice
+                        <% end_loop %> --%>
+                    <% end_loop %>
+                </ul>
+
+                <% end_loop %>
+
+                <h2>Upcoming shows</h2>
+                <% loop $UpcomingShows %>
+                    <p>$Title</p>
+                    <ul>
+                    <% loop $Dates %>
+                        <li>$Date.Nice - $Times</li>
+                    <% end_loop %>
+                    </ul>
                 <% end_loop %>
                 $Content
 
