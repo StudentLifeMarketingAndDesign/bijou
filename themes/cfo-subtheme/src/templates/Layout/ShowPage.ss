@@ -51,7 +51,9 @@ $Header
                             <img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.URL" alt="" class="right post-image">
                         <% end_if %>
                     <% end_if %>
-
+                    <% if $TicketsLink %>
+                        <p><a href="$TicketsLink">Buy Tickets</a></p>
+                    <% end_if %>
                     $Content
                     <% if $ExternalURL %>
                         <p><a href="$ExternalURL" class="button--shaded" target="_blank">$ExternalURLText</a></p>

@@ -14,6 +14,7 @@ class ShowPage extends BlogPost {
 
     private static $db = array(
         'TrailerVideoID' => 'Varchar(11)',
+        'TicketsLink' => 'Varchar(255)'
     );
 
     private static $has_one = array(
@@ -49,7 +50,7 @@ class ShowPage extends BlogPost {
         }else{
             $fields->addFieldToTab('Root.Main', new LabelField('Please save this show page as a draft before adding a date.'));
         }
-
+        $fields->addFieldToTab('Root.Main', new TextField('TicketsLink', 'Buy tickets link'), 'Content');
         $fields->addFieldToTab('Root.Main', new YouTubeField('TrailerVideoID', 'YouTube Video'), 'Content');
         return $fields;
     }

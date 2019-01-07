@@ -1,10 +1,12 @@
 <?php
 
 use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\ORM\ArrayList;
+
 class Page extends SiteTree {
 
 	private static $db = array(
-		
+
 	);
 
 	private static $has_one = array(
@@ -24,9 +26,39 @@ class Page extends SiteTree {
 
 	public function getCMSFields(){
 		$f = parent::getCMSFields();
-		
+
 		return $f;
 	}
 
-	
+
+    /**
+     * This method converts a {@link DataList} to an {@link ArrayList} with an option to add
+     * an additional column to each list item to be used for sorting. This is particularly useful when you are
+     * trying to group or sort a list by a value on a somehow related object, or not able to query from the database.
+     *
+     * @param DataList $list
+     * @param bool $additionalSortColumn If you have MyObject with a has_one relation to OtherObject
+     *                                      which then has a has_one to ThirdObject,
+     *                                      you would pass the following for column: 'OtherObject.ThirdObject.FieldName
+     *                                      where FieldName is on the ThirdObject
+     * @return ArrayList
+     */
+
+    public static function to_array_list(SilverStripe\ORM\DataList $list, $additionalSortColumn = false)
+    {
+        $arrayList = ArrayList::create();
+
+        $push = function ($item) use (&$arrayList, &$additionalSortColumn) {
+            if ($additionalSortColumn) {
+                $item = self::additional_sort_column($item, $additionalSortColumn);
+            }
+            $arrayList->push($item);
+        };
+
+        $list->each($push);
+
+        return $arrayList;
+    }
+
+
 }
