@@ -54,6 +54,16 @@ $Header
                     <% if $TicketsLink %>
                         <p><a href="$TicketsLink">Buy Tickets</a></p>
                     <% end_if %>
+                    <h4>Date:</h4>
+                    $ShowingDate.Nice
+                    <h4>Time(s):</h4>
+                    $ShowingTimes
+                    <h4>Tickets Link:</h4>
+                    $TicketsLink
+                    <h4>Facebook Event Link:</h4>
+                    $FacebookEventLink
+                    <h4>FilmScene Link:</h4>
+                    $FilmSceneLink
                     $Content
                     <% if $ExternalURL %>
                         <p><a href="$ExternalURL" class="button--shaded" target="_blank">$ExternalURLText</a></p>
@@ -65,17 +75,6 @@ $Header
             $Form
         </article>
         <aside class="sidebar dp-sticky">
-            <div class="row">
-                <div class="large-6 column">
-                    <h4>Date:</h4>
-                    $ShowingDate.Nice
-                </div>
-                <div class="large-6 column">
-                    <h4>Time(s):</h4>
-                    $ShowingTimes
-                </div>
-            </div>
-            <hr />
             <h2>Location:</h2>
 
             <a href="https://maps.apple.com/place?address=118%20E%20College%20St%2C%20Iowa%20City%2C%20IA%20%2052240%2C%20United%20States&auid=15116029753464522765&ll=41.659294%2C-91.533791&q=FilmScene">

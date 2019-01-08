@@ -53,6 +53,7 @@ class ShowHolderPage extends Blog {
             $showWithTimes = new ShowPage();
             $showWithTimes->Title = $show->Title;
             $showWithTimes->Content = $show->Content;
+            $showWithTimes->URLSegment = $show->URLSegment;
             $showWithTimes->Times = $date->Times;
             $showWithTimes->FeaturedImage = $show->FeaturedImage;
 

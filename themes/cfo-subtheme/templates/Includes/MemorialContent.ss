@@ -1,0 +1,1 @@
+<div class="main-content__text"><div class="staffpage"> <% if $Photo %> <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="dp-lazy" data-original="$Photo.ScaleWidth(945).URL" width="945" height="$Photo.ScaleWidth(945).Height" alt="$Title" role="presentation" class="staffpage__img"> <% end_if %> </div>$Content</div>

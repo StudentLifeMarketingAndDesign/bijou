@@ -1,0 +1,12 @@
+.show-list{
+    color: #fff;
+    &__date-header{
+        text-transform: uppercase;
+        font-size: rem-calc(20);
+        text-align: center;
+        background: #111;
+        color: white;
+        padding: rem-calc(5);
+    }
+
+}

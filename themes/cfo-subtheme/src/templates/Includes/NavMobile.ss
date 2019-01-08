@@ -13,6 +13,8 @@
   </ul>
 
   <div class="nav-mobile__info">
+
+    <img class="fs-logo" src="{$ThemeDir}/dist/images/fs-logo.png" alt="$SiteConfig.Title.ATT">
     <% if $SiteConfig.DisableDivisionBranding %>
       <a href="http://uiowa.edu" class="nav-mobile__ui-logo"><img class="dp-lazy" data-original="division-project/images/ui-logo-footer.png" alt="The University of Iowa"></a>
     <% else %>

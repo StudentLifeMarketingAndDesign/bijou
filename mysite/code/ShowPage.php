@@ -4,6 +4,7 @@ use SilverStripe\Assets\Image;
 use SilverStripe\Blog\Model\BlogPost;
 use SilverStripe\Forms\DateField;
 use SilverStripe\Forms\TextareaField;
+use SilverStripe\Forms\TextField;
 use EdgarIndustries\YouTubeField\YouTubeField;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig;
@@ -14,7 +15,10 @@ class ShowPage extends BlogPost {
 
     private static $db = array(
         'TrailerVideoID' => 'Varchar(11)',
-        'TicketsLink' => 'Varchar(255)'
+        'TicketsLink' => 'Varchar(255)',
+        'FacebookEventLink' => 'Varchar(255)',
+        'FilmSceneLink' => 'Varchar(255)',
+
     );
 
     private static $has_one = array(
@@ -52,6 +56,8 @@ class ShowPage extends BlogPost {
         }
         $fields->addFieldToTab('Root.Main', new TextField('TicketsLink', 'Buy tickets link'), 'Content');
         $fields->addFieldToTab('Root.Main', new YouTubeField('TrailerVideoID', 'YouTube Video'), 'Content');
+        $fields->addFieldToTab('Root.Main', new TextField('FacebookEventLink', 'Facebook Event Link'), 'Content');
+        $fields->addFieldsToTab('Root.Main', new TextField('FilmSceneLink', 'FilmScene Link'), 'Content');
         return $fields;
     }
 

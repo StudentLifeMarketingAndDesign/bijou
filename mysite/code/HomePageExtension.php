@@ -34,6 +34,8 @@ class HomePageExtension extends DataExtension {
             $showFeature->Title = $nextShow->Title;
             $showFeature->AssociatedPageID = $nextShow->ID;
             $showFeature->ImageID = $nextShow->FeaturedImageID;
+            $showFeature->ButtonText = "Learn more and buy tickets";
+
             $existingFeaturesArrayList->unshift($showFeature);
         }
 

@@ -43,7 +43,7 @@ class ProgramEvent extends Page {
 		$fields->addFieldToTab("Root.Main", new TextField("Rating", "Rating (PG, PG-13, R, NR)"));
 
 		$dateTimeField = new DatetimeField("DateAndTime", "Enter a date and time");
-		$dateTimeField::create('DateAndTime')->setConfig('dateformat', 'dd-MM-yyyy');
+		//$dateTimeField::create('DateAndTime')->setConfig('dateformat', 'dd-MM-yyyy');
 		$dateTimeField->getDateField()->setConfig('showcalendar', 1);
 
 		$fields->addFieldToTab("Root.Main", $dateTimeField );
