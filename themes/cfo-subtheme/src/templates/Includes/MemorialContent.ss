@@ -49,6 +49,9 @@
 		<a href="https://open.spotify.com/user/ameliamiller-us/playlist/4s8WcOCAVmRTkOyg8GUMAZ?fbclid=IwAR2VaBPNKDkRZU0OOO440tPfYISSVwnbQ0NmQzl4lNp1F_cGdpg0Wfm479U"><b>Sean's Spotify Playlist</b></a><br>
 		<a href="https://letterboxd.com/swu_hoo/"><b>Sean's Blog</b></a>
 
+		<br>
+		<a href="https://studentlife.uiowa.edu/news/sean-wu-scholarships/"><b>Sean Wu Scholarship</b></a>
+
 		</div>
 
         <%-- <% if $Photo %>
