@@ -54,10 +54,19 @@ $Header
                     <% if $TicketsLink %>
                         <p><a href="$TicketsLink">Buy Tickets</a></p>
                     <% end_if %>
-                    <h4>Date:</h4>
+                    <h2>Dates:</h2>
+
+                    <% loop $Dates %>
+                        <p>$Date.Format("E, MMM d")</p>
+                        <% loop $TimesFormatted %>
+                             <time class="show-list__time">$TimeFormatted</time>
+                        <% end_loop %>
+
+                    <% end_loop %>
+<%--                     <h4>Date:</h4>
                     $ShowingDate.Nice
                     <h4>Time(s):</h4>
-                    $ShowingTimes
+                    $ShowingTimes --%>
                     <h4>Tickets Link:</h4>
                     $TicketsLink
                     <h4>Facebook Event Link:</h4>

@@ -15,6 +15,7 @@ use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig;
 use SilverStripe\Forms\GridField\GridFieldDataColumns;
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
+use SilverStripe\ORM\ArrayList;
 
 class ShowDate extends DataObject{
 
@@ -48,5 +49,37 @@ class ShowDate extends DataObject{
         // $fields->push($timeField);
 
         return $fields;
+    }
+    public function TimesFormatted(){
+        if(!$this->Times){
+            return;
+        }
+
+        $times = $this->Times;
+        //$times = strip_tags($times);
+        //Debug::show($times);
+        $timesArray = explode("\n", $times);
+
+        $timesArrayList = new ArrayList();
+
+        foreach($timesArray as $time){
+            //$time = strip_tags($time);
+            $time = trim(preg_replace('/\s+/', ' ', $time));
+
+            $timestamp = strtotime($time);
+
+
+
+            $timeFormatted = date('g:iA', $timestamp);
+
+            $timeObj = new DataObject;
+            $timeObj->TimeFormatted =  $timeFormatted;
+            $timesArrayList->push($timeObj);
+
+            //print_r($timeObj->TimeFormatted);
+        }
+
+        return $timesArrayList;
+
     }
 }
