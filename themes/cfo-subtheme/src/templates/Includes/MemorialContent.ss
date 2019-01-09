@@ -45,12 +45,17 @@
 		
 		<div align="center">
 
+			<iframe src="https://embed.spotify.com/?uri=spotify:user:hfemino:playlist:5wsUfI0EDtbsvoE4yQBXlt" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
 		<a href= "https://www.facebook.com/swu.hoo.1998"><b> Sean's Memorial Facebook Page</b></a><br>
-		<a href="https://open.spotify.com/user/ameliamiller-us/playlist/4s8WcOCAVmRTkOyg8GUMAZ?fbclid=IwAR2VaBPNKDkRZU0OOO440tPfYISSVwnbQ0NmQzl4lNp1F_cGdpg0Wfm479U"><b>Sean's Spotify Playlist</b></a><br>
+
+		<a href="https://studentlife.uiowa.edu/news/sean-wu-scholarships/"><b>Sean Wu Scholarship</b></a>
+		<br>
+		
 		<a href="https://letterboxd.com/swu_hoo/"><b>Sean's Blog</b></a>
 
 		<br>
-		<a href="https://studentlife.uiowa.edu/news/sean-wu-scholarships/"><b>Sean Wu Scholarship</b></a>
+		<a href="https://open.spotify.com/user/ameliamiller-us/playlist/4s8WcOCAVmRTkOyg8GUMAZ?fbclid=IwAR2VaBPNKDkRZU0OOO440tPfYISSVwnbQ0NmQzl4lNp1F_cGdpg0Wfm479U"><b>Sean's Spotify Playlist</b></a><br>
 
 		</div>
 
