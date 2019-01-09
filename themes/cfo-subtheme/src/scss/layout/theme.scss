@@ -20,6 +20,10 @@ body{
 
 .main-content__header{
     border-bottom-color: $highlight;
+
+    h1{
+        color: white;
+    }
 }
 
 .childpages__title{

@@ -2,10 +2,22 @@
     color: #fff;
     &__date-header{
         text-transform: uppercase;
-        font-size: rem-calc(20);
-        text-align: center;
-        background: #111;
+        font-size: rem-calc(28);
         color: white;
+        border-bottom: 4px solid $primary-color;
+    }
+
+    &__show-header{
+        color: white;
+        margin-top: rem-calc(10);
+    }
+
+    &__slide{
+        width: 14.3%;
+    }
+
+    &__time{
+        background: darken($primary-color, 10);
         padding: rem-calc(5);
     }
 

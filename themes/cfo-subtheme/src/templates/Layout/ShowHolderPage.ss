@@ -1,27 +1,30 @@
 $Header
-<h2>Upcoming dates</h2>
-$Content
-<div class="main-content__text grid-x grid-padding-x small-up-2 medium-up-2 large-up-3">
-    <% loop $UpcomingDates %>
-        <div class="cell">
-            <h2 class="show-list__date-header">$Date.Format("E, MMM d")</h2>
-                <div class="show-list">
-                    <% loop $ShowsTransient %>
-                    <a href="$Link" class="show-list__show">
-                        <% if $FeaturedImage %>
-                        <img class="show-list__show-img" src="$FeaturedImage.FocusFill(800, 600).URL" alt="" role="presentation" />
-                        <% end_if %>
-                        <h3 class="show-list__show-header">$Title</h3>
-                        <p class="show-list__times">$Times</p>
-                    </a>
-                    <% end_loop %>
-                </div>
-        </div>
-    <% end_loop %>
+<main class="main-content__container" id="main-content__container">
+    $Breadcrumbs
+<div class="grid-container">
+    <div class="main-content__text">
+        <% loop $UpcomingDates %>
+
+                <h2 class="show-list__date-header">$Date.Format("E, MMM d")</h2>
+                    <div class="show-list grid-x grid-padding-x small-up-2 medium-up-2 large-up-3">
+                        <% loop $ShowsTransient %>
+                        <a href="$Link" class="cell show-list__show">
+                            <% if $FeaturedImage %>
+                            <img class="show-list__show-img" src="$FeaturedImage.FocusFill(800, 600).URL" alt="" role="presentation" />
+                            <% end_if %>
+                            <h3 class="show-list__show-header">$Title</h3>
+                            <p class="show-list__time-list">
+                                <% loop $TimesFormatted %>
+                                    <time class="show-list__time">$TimeFormatted</time>
+                                <% end_loop %></p>
+                        </a>
+                        <% end_loop %>
+                    </div>
+
+        <% end_loop %>
+    </div>
 </div>
-
-
-
+</main>
 
 <%--
 

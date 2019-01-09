@@ -354,12 +354,12 @@ if ($('#topic-tabs').length) {
 }
 
 /* Show slider */
-var $showSlider = $('.show-list').flickity({
-    //adaptiveHeight: true,
-    imagesLoaded: true,
-    lazyLoad: true,
-    pageDots: false
-});
+// var $showSlider = $('.show-list').flickity({
+//     //adaptiveHeight: true,
+//     imagesLoaded: true,
+//     lazyLoad: true,
+//     pageDots: false
+// });
 
 
 
