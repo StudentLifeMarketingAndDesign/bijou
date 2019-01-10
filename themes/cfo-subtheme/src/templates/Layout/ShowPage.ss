@@ -1,4 +1,4 @@
-$Header("dark-header","overlay")
+$Header
 <main class="main-content__container" id="main-content__container">
 
     <!-- $Breadcrumbs -->
