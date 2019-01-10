@@ -9,16 +9,46 @@
 
     &__show-header{
         color: white;
-        margin-top: rem-calc(10);
+        font-size: rem-calc(15);
+        margin: rem-calc(10 0);
     }
-
+    &__show-img {
+        display: block;
+        border: 1px solid rgba(255,255,255,.1);
+        border-radius: 3px;
+    }
     &__slide{
         width: 14.3%;
     }
+    &__show {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        border: 1px solid rgba(255,255,255,.1);
+        background: rgba(255,255,255,.01);
+        padding: rem-calc(8);
+        border-radius: 2px;
+        margin-bottom: rem-calc(20);
+        &:hover, &:focus {
+            border: 1px solid rgba(255,255,255,.3);
+        }
+    }
+    &__content {
 
+    }
+    &__time-list {
+        display: grid;
+        grid-gap: 8px;
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr) ) ;
+    }
     &__time{
+        border-radius: 3px;
+        display: inline-block;
+        font-size: rem-calc(14);
         background: darken($primary-color, 10);
-        padding: rem-calc(5);
+        padding: rem-calc(12 0);
+        text-align: center;
+        text-transform: lowercase;
     }
 
 }

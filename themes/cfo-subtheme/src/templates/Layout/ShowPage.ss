@@ -1,101 +1,74 @@
-$Header
+$Header("dark-header","overlay")
 <main class="main-content__container" id="main-content__container">
 
-    $Breadcrumbs
-
-
-        <div class="column row">
-            <div class="main-content__header">
-                <h1>$Title</h1>
-                <% if $Summary %>
-                    <div class="blogpost__summary">$Summary</div>
-                <% end_if %>
-            </div>
+    <!-- $Breadcrumbs -->
+    
+    <% if $FeaturedImage %>
+        <div class="show-featured" data-interchange="[$FeaturedImage.FocusFill(600,400).URL, small], [$FeaturedImage.FocusFill(1400,800).URL, medium]">
+            <% if $TrailerVideoID %>
+                <a class="popup-youtube show-trailer" href="https://www.youtube.com/watch?v={$TrailerVideoID}">
+                    <svg class="css-18vwi2-playButton" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><title>Play Trailer</title><g opacity=".53"><circle cx="20" cy="20" r="19.5" fill="#4a4a4a"></circle><path d="M20 1c10.5 0 19 8.5 19 19s-8.5 19-19 19S1 30.5 1 20 9.5 1 20 1m0-1C9 0 0 9 0 20s9 20 20 20 20-9 20-20S31 0 20 0z" fill="#fff"></path></g><path fill="#fff" d="M29.6 21.1l-14.1-9.3v18.6z"></path></svg>
+                </a>
+            <% end_if %>          
         </div>
-        <% if $TrailerVideoID %>
-            <div class="row">
-                <div class="large-12 columns">
+    <% end_if %>
 
-                    <div class="responsive-embed">
-                        <iframe width="1280" height="720" src="https://www.youtube.com/embed/{$TrailerVideoID}">
-                        </iframe>
-                    </div>
-
-                </div>
-
-            </div>
-         <% end_if %>
-    <div class="row">
+    <div class="row" style="position: relative;">
         <article role="main" class="main-content main-content--with-padding main-content--with-sidebar">
-                $BeforeContent
-
-            $BeforeContentConstrained
             <div class="main-content__text">
-            <% if $FeaturedImage %>
-
-                        <p class="post-image"><img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.SetWidth(840).URL" alt="" role="presentation" width="840" height="$FeaturedImage.SetWidth(840).Height" /></p>
-
-                <% end_if %>
-                <div class="content">
-
-                    <div class="blogmeta clearfix">
-                        <ul class="blogmeta__social">
-                            <li><a href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u=$AbsoluteLink', '_blank', 'width=400,height=500');void(0);"  title="Share on Facebook"><img src="{$ThemeDir}/dist/images/icon_facebook.png" alt="Share on Facebook"></a>
-                            </li>
-                            <li><a href="https://twitter.com/intent/tweet?text=$AbsoluteLink" title="Share on Twitter" target="_blank"><img src="{$ThemeDir}/dist/images/icon_twitter.png" alt="Share on Twitter"></a></li>
-                            <li><a href="javascript:window.open('https://www.linkedin.com/cws/share?url=$AbsoluteLink', '_blank', 'width=400,height=500');void(0);" title="Share on LinkedIn" target="_blank"><img src="{$ThemeDir}/dist/images/icon_linkedin.png" alt="share on linkedid"></a></li>
-                        </ul>
-                    </div>
-                    <% if $FeaturedImage %>
-                        <% if FeaturedImage.Width < 700 %>
-                            <img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.URL" alt="" class="right post-image">
-                        <% end_if %>
-                    <% end_if %>
-                    <% if $TicketsLink %>
-                        <p><a href="$TicketsLink">Buy Tickets</a></p>
-                    <% end_if %>
-                    <h2>Dates:</h2>
-
-                    <% loop $Dates %>
-                        <p>$Date.Format("E, MMM d")</p>
-                        <% loop $TimesFormatted %>
-                             <time class="show-list__time">$TimeFormatted</time>
-                        <% end_loop %>
-
-                    <% end_loop %>
-<%--                     <h4>Date:</h4>
-                    $ShowingDate.Nice
-                    <h4>Time(s):</h4>
-                    $ShowingTimes --%>
-                    <h4>Tickets Link:</h4>
-                    $TicketsLink
-                    <h4>Facebook Event Link:</h4>
-                    $FacebookEventLink
-                    <h4>FilmScene Link:</h4>
-                    $FilmSceneLink
+                <div class="">
+                    <h1 class="showpage__title">$Title</h1>
                     $Content
-                    <% if $ExternalURL %>
-                        <p><a href="$ExternalURL" class="button--shaded" target="_blank">$ExternalURLText</a></p>
-                    <% end_if %>
+                    <h2>Showtimes for $Title:</h2>
+                    <div class="show-list">
+                        <% loop $Dates %>
+                            <p class="show-list__date"><strong>$Date.Format("E, MMM d")</strong></p>
+                            <div class="show-list__time-list">
+                                <% loop $TimesFormatted %>
+                                    <time class="show-list__time">$TimeFormatted</time>
+                                <% end_loop %>
+                            </div>
+                        <% end_loop %>
+                    </div>
+                    <br /><br />
                 </div>
                 $AfterContentConstrained
-                <% include TagsCategories %>
             </div>
             $Form
         </article>
         <aside class="sidebar dp-sticky">
-            <h2>Location:</h2>
+            <% if $Poster %>
+                <div class="posterimg">
+                    <img src="$Poster.ScaleWidth(300).URL" alt="$Title poster image" />
+                </div>
+            <% end_if %>
 
-            <a href="https://maps.apple.com/place?address=118%20E%20College%20St%2C%20Iowa%20City%2C%20IA%20%2052240%2C%20United%20States&auid=15116029753464522765&ll=41.659294%2C-91.533791&q=FilmScene">
-            <img src="{$ThemeDir}/dist/images/filmscenemap.png" />
+            <div class="show-meta">
+                <ul class="show-meta__list">
+                    <% if $FilmSceneLink %>
+                        <li class="show-meta__item">
+                            <a href="$FilmSceneLink" target="_blank">View on Film Scene</a>
+                        </li>
+                    <% end_if %>
+                    <% if $FacebookEventLink %>
+                        <li class="show-meta__item">
+                            <a href="$FacebookEventLink" target="_blank">View Event on Facebook</a>
+                        </li>
+                    <% end_if %>
+                    <% if $TicketsLink %>
+                        <li class="show-meta__item">
+                            <a href="$TicketsLink" target="_blank">Buy Tickets</a>
+                        </li>
+                    <% end_if %>
+                    <% if $TrailerVideoID %>
+                        <li class="show-meta__item">
+                            <a class="popup-youtube" href="https://www.youtube.com/watch?v={$TrailerVideoID}">View Trailer</a>
+                        </li>
+                    <% end_if %>
+                </ul>
+            </div>
 
-            </a>
-            <hr />
-            <div class="featuredpageblock__button"><a href="/bijou/our-programs/" class="border-effect">FilmScene</a></div>
-
-
-
-
+            <br />
         </aside>
     </div>
     $AfterContent
