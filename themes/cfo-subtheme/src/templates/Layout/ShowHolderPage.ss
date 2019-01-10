@@ -12,15 +12,17 @@ $Header
                                 <img class="show-list__show-img" src="$Poster.FocusFill(267, 400).URL" alt="$Title poster image" role="presentation" />
                             <% end_if %>
                             <div class="show-list__content">
-                                <p class="show-list__show-header">
-                                    <strong>$Title</strong>
-                                </p>
-                            
-                                <p class="show-list__time-list">
-                                    <% loop $TimesFormatted %>
-                                        <time class="show-list__time">$TimeFormatted</time>
-                                    <% end_loop %>
-                                </p>
+                                <div class="show-list__content-inner">
+                                    <p class="show-list__show-header">
+                                        <strong>$Title</strong>
+                                    </p>
+                                    <p class="show-list__time-list">
+                                        <% loop $TimesFormatted %>
+                                            <time class="show-list__time">$TimeFormatted</time>
+                                        <% end_loop %>
+                                    </p>
+                                </div>
+                                <div class="show-list__moreinfo">More Info</div>
                             </div>
                         </a>
                     <% end_loop %>
