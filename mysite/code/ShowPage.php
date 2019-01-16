@@ -14,6 +14,8 @@ use SilverStripe\Forms\LabelField;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\TagField\TagField;
+
 
 class ShowPage extends BlogPost {
 
@@ -37,9 +39,10 @@ class ShowPage extends BlogPost {
         'Poster'
     );
 
-    private static $belongs_many_many = array (
-
+    private static $many_many = array(
+        'SeriesPages' => 'SeriesPage'
     );
+
 
     public function getCMSFields() {
         $fields = parent::getCMSFields();
@@ -56,6 +59,17 @@ class ShowPage extends BlogPost {
         $dateField = new GridField('Dates', 'Dates', $this->Dates());
         $dateField->setConfig($dateFieldConfig);
 
+
+        $seriesField = TagField::create(
+            'SeriesPages',
+            'Series',
+            SeriesPage::get(),
+            $this->SeriesPages()
+        )
+            ->setShouldLazyLoad(true) // tags should be lazy loaded
+            ->setCanCreate(false);     // new tag DataObjects can be created
+
+        $fields->addFieldToTab('Root.Main', $seriesField, 'Content');
 
         if($this->ID !=0){
           $fields->addFieldToTab('Root.Main', $dateField, 'Content');
