@@ -26,11 +26,15 @@ class ShowPage extends BlogPost {
     );
 
     private static $has_one = array(
-
+        "Poster" => Image::class,
     );
 
     private static $has_many = array(
         'Dates' => 'ShowDate'
+    );
+
+    private static $owns = array(
+        'Poster'
     );
 
     private static $belongs_many_many = array (
@@ -62,6 +66,7 @@ class ShowPage extends BlogPost {
         $fields->addFieldToTab('Root.Main', new YouTubeField('TrailerVideoID', 'YouTube Video'), 'Content');
         $fields->addFieldToTab('Root.Main', new TextField('FacebookEventLink', 'Facebook Event Link'), 'Content');
         $fields->addFieldsToTab('Root.Main', new TextField('FilmSceneLink', 'FilmScene Link'), 'Content');
+        $fields->addFieldsToTab('Root.Main', new UploadField('Poster', 'Poster Image'), 'Content');
         $fields->addFieldsToTab('Root.Main', new UploadField('FeaturedImage', 'Featured Image'), 'Content');
         return $fields;
     }
