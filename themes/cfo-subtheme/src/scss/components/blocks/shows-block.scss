@@ -1,0 +1,67 @@
+/* Shows Block */
+.showsblock {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    &__title {
+        color: #fff;
+        margin-top: 0;
+        text-transform: uppercase;
+    }
+    &__cards {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-gap: 32px;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+}
+
+/* Shows Card */
+.showcard {
+    &__category {
+        color: rgba(255,255,255,.8);
+        text-transform: uppercase;
+        font-style: normal;
+        font-size: rem-calc(12);
+        letter-spacing: 1px;
+        line-height: 1;
+        margin-bottom: rem-calc(12);
+        &:hover, &:focus {
+            color: #fff;
+        }
+    }
+    &__img {
+        border-radius: 3px;
+        display: block;
+        overflow: hidden;
+    }
+    &__heading {
+        font-size: rem-calc(18);
+        margin-top: rem-calc(12);
+    }
+    &__desc {
+        color: rgba(255,255,255,.8);
+        font-size: rem-calc(15) !important;
+    }
+    &__heading {
+        a {
+            color: #fff;
+        }
+    }
+}
+
+.showcard .show-list__date {
+    color: #fff;
+    font-size: rem-calc(13);
+}
+.showcard .show-list__time {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    text-align: left;
+}
+.showcard .show-list__time-list {
+    padding-bottom: rem-calc(15);
+    margin-bottom: rem-calc(15);
+}
