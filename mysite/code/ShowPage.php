@@ -275,7 +275,13 @@ class ShowPage extends BlogPost {
         $videosArray = $movieRepo->getVideos($filmId)->toArray();
         $firstVideo = reset($videosArray);
 
-        $infoArray['TrailerVideoID'] = $firstVideo->getKey();
+        if($firstVideo){
+
+            $infoArray['TrailerVideoID'] = $firstVideo->getKey();
+
+        }
+
+
 
         //print_r($infoArray);
         return $infoArray;
