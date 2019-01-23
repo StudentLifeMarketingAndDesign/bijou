@@ -27,6 +27,28 @@ class SeriesPage extends Page {
         return $fields;
     }
 
+    public function UpcomingShows($count = 5){
+        $now = date('Y-m-d');
+        $dates = ShowDate::get()->filter(array(
+            'Date:GreaterThanOrEqual' => $now
+            ))->sort('Date')->limit($count);
+
+        $shows = new ArrayList();
+
+        foreach($dates as $date){
+            $showPage = ShowPage::get()->filter(array('ID' => 472))->First();
+
+
+            if($showPage){
+                $shows->push($showPage);
+            }
+
+        }
+
+
+        return $shows;
+    }
+
     //private static $allowed_children = array("");
 
 }

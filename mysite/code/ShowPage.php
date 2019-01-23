@@ -102,17 +102,14 @@ class ShowPage extends BlogPost {
 
 
 
-
-
-        $fields->addFieldToTab('Root.FilmInfo', new LiteralField('TmdbBgURL','Background Image (from TMDB)'));
+        $fields->addFieldToTab('Root.FilmInfo', new ReadonlyField('TmdbBgURL','Background Image (from TMDB)'));
         $fields->addFieldToTab('Root.FilmInfo', new ReadonlyField('TmdbPosterURL', 'Poster Image (from TMDB)'));
         $fields->addFieldsToTab('Root.FilmInfo', new UploadField('Poster', 'Override Poster Image'));
         $fields->addFieldsToTab('Root.FilmInfo', new UploadField('FeaturedImage', 'Override Background Image '));
         $fields->addFieldToTab('Root.FilmInfo', new YouTubeField('TrailerVideoID', 'YouTube Video'));
-        $fields->addFieldToTab('Root.FilmInfo', new TextField('FilmTitle'));
-        $fields->addFieldToTab('Root.FilmInfo', new TextField('FilmYear'));
-        $fields->addFieldToTab('Root.FilmInfo', new TextField('FilmRating'));
-        $fields->addFieldToTab('Root.FilmInfo', new HTMLEditorField('FilmSummary'));
+
+        $fields->addFieldToTab('Root.FilmInfo', new ReadonlyField('FilmYear'));
+        $fields->addFieldToTab('Root.FilmInfo', new ReadonlyField('FilmSummary'));
         return $fields;
     }
 
