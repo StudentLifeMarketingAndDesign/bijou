@@ -91,7 +91,7 @@
     border: 1px solid rgba(255,255,255,.1);
     border-radius: 3px;
     font-size: rem-calc(15);
-    &__list { 
+    &__list {
         list-style: none;
         margin: 0;
         padding: 0;
@@ -103,15 +103,15 @@
             border-bottom: none;
         }
     }
-    
+
 }
 
 /* Magnific popup fade transition
 =============================================================== */
  .mfp-fade.mfp-bg {
 	opacity: 0;
-	-webkit-transition: all 0.15s ease-out; 
-	-moz-transition: all 0.15s ease-out; 
+	-webkit-transition: all 0.15s ease-out;
+	-moz-transition: all 0.15s ease-out;
 	transition: all 0.15s ease-out;
 }
 .mfp-fade.mfp-bg.mfp-ready {
@@ -122,8 +122,8 @@
 }
 .mfp-fade.mfp-wrap .mfp-content {
 	opacity: 0;
-	-webkit-transition: all 0.15s ease-out; 
-	-moz-transition: all 0.15s ease-out; 
+	-webkit-transition: all 0.15s ease-out;
+	-moz-transition: all 0.15s ease-out;
 	transition: all 0.15s ease-out;
 }
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
