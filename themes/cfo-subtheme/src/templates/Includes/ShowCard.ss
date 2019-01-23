@@ -8,9 +8,9 @@
         </p>
     <% end_if %>
 
-    <% if $Poster %>
+    <% if $TmdbPoster %>
         <a href="$Link" class="showcard__img">
-            <img class="dp-lazy" data-original="$Poster.FocusFill(267, 400).URL" width="267" height="400" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="$Title">
+            <img class="dp-lazy" data-original="$TmdbPoster.FocusFill(267, 400).URL" width="267" height="400" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="$Title">
         </a>
     <% end_if %>
 
