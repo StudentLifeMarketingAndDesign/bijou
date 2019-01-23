@@ -55,7 +55,7 @@ class ShowHolderPage extends Blog {
             $showWithTimes->Content = $show->Content;
             $showWithTimes->URLSegment = $show->URLSegment;
             $showWithTimes->Times = $date->Times;
-            $showWithTimes->Poster = $show->Poster;
+            $showWithTimes->TmdbPosterURL = $show->TmdbPosterURL;
 
             $masterDateToUse = $masterDates->find('Date', $date->Date);
 
