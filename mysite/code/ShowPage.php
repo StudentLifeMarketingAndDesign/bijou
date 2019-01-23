@@ -16,9 +16,13 @@ use SilverStripe\ORM\DataObject;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\TagField\TagField;
 use SilverStripe\Forms\ReadonlyField;
+use SilverStripe\Forms\LiteralField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Core\Environment;
-
+use OP\AutocompleteSuggestField;
+use SilverStripe\CMS\Controllers\ModelAsController;
+use SilverStripe\Control\HTTPRequest;
+use SilverStripe\View\Requirements;
 class ShowPage extends BlogPost {
 
     private static $db = array(
@@ -65,8 +69,9 @@ class ShowPage extends BlogPost {
         $fields->removeByName('CustomSummary');
         $fields->removeByName('AudioClip');
         $fields->removeByName('FeaturedImage');
-
-
+        $suggestedFilm = AutocompleteSuggestField::create('FilmID', FilmSuggestController::create(), 'Film Title', null, $this);
+        $suggestedFilm->setDescription('Enter text to search for a film');
+        $fields->addFieldToTab('Root.Main', $suggestedFilm,'Content');
         $dateFieldConfig = GridFieldConfig_RelationEditor::create();
         $dateField = new GridField('Dates', 'Dates', $this->Dates());
         $dateField->setConfig($dateFieldConfig);
@@ -88,18 +93,22 @@ class ShowPage extends BlogPost {
         }else{
             $fields->addFieldToTab('Root.Main', new LabelField('Please save this show page as a draft before adding a date.'));
         }
+
         $fields->addFieldToTab('Root.Main', new TextField('TicketsLink', 'Buy tickets link'), 'Content');
-        $fields->addFieldToTab('Root.Main', new YouTubeField('TrailerVideoID', 'YouTube Video'), 'Content');
+
         $fields->addFieldToTab('Root.Main', new TextField('FacebookEventLink', 'Facebook Event Link'), 'Content');
         $fields->addFieldsToTab('Root.Main', new TextField('FilmSceneLink', 'FilmScene Link'), 'Content');
-        $fields->addFieldsToTab('Root.Main', new UploadField('Poster', 'Poster Image'), 'Content');
-        $fields->addFieldsToTab('Root.Main', new UploadField('FeaturedImage', 'Featured Image'), 'Content');
 
 
 
-        $fields->addFieldToTab('Root.FilmInfo', new ReadonlyField('TmdbBgURL'));
-        $fields->addFieldToTab('Root.FilmInfo', new ReadonlyField('TmdbPosterURL'));
 
+
+
+        $fields->addFieldToTab('Root.FilmInfo', new LiteralField('TmdbBgURL','Background Image (from TMDB)'));
+        $fields->addFieldToTab('Root.FilmInfo', new ReadonlyField('TmdbPosterURL', 'Poster Image (from TMDB)'));
+        $fields->addFieldsToTab('Root.FilmInfo', new UploadField('Poster', 'Override Poster Image'));
+        $fields->addFieldsToTab('Root.FilmInfo', new UploadField('FeaturedImage', 'Override Background Image '));
+        $fields->addFieldToTab('Root.FilmInfo', new YouTubeField('TrailerVideoID', 'YouTube Video'));
         $fields->addFieldToTab('Root.FilmInfo', new TextField('FilmTitle'));
         $fields->addFieldToTab('Root.FilmInfo', new TextField('FilmYear'));
         $fields->addFieldToTab('Root.FilmInfo', new TextField('FilmRating'));
@@ -108,7 +117,7 @@ class ShowPage extends BlogPost {
     }
 
     public function TimesFormatted(){
-        $this->getMovieInfo('Where the wild things are');
+        //$this->getMovieInfo('Where the wild things are');
         if(!$this->Times){
             return;
         }
@@ -146,22 +155,23 @@ class ShowPage extends BlogPost {
     public function onBeforeWrite()
     {
         // check on first write action, aka "database row creation" (ID-property is not set)
-        if(!$this->isInDb()) {
+        if($this->FilmID != 0) {
+            $film = $this->getMovieInfo($this->FilmID);
 
+            if($film){
+
+                 $this->FilmTitle = $film['FilmTitle'];
+                 $this->FilmYear = $film['FilmYear'];
+                 $this->FilmSummary = $film['FilmSummary'];
+                 $this->TmdbBgURL = $film['TmdbBgURL'];
+                 $this->TmdbPosterURL = $film['TmdbPosterURL'];
+                 $this->TrailerVideoID = $film['TrailerVideoID'];
+
+            }
 
         }
 
-        $film = $this->getMovieInfo($this->FilmTitle);
 
-        if($film){
-
-             $this->FilmYear = $film['Year'];
-             $this->FilmSummary = $film['Summary'];
-             $this->TmdbBgURL = $film['TmdbBgURL'];
-             $this->TmdbPosterURL = $film['TmdbPosterURL'];
-             $this->TrailerVideoID = $film['Video'];
-
-        }
 
         // check on every write action
         // if(!$this->record['TeamID']) {
@@ -174,7 +184,7 @@ class ShowPage extends BlogPost {
         parent::onBeforeWrite();
     }
 
-    public function getMovieInfo($filmTitle){
+    public function getMovieInfo($filmID){
 
         $token  = new \Tmdb\ApiToken(Environment::getEnv('TMDB_API_KEY'));
 
@@ -199,11 +209,11 @@ class ShowPage extends BlogPost {
         $configImages = $config->getImages();
 
 
-        $find = $searchRepo->searchMovie($filmTitle, $query);
+        $firstFilm = $movieRepo->load($filmID);
 
-        $findArray = $find->toArray();
+        // $findArray = $find->toArray();
 
-        $firstFilm = reset($findArray);
+        // $firstFilm = reset($findArray);
 
 
         if(!$firstFilm){
@@ -219,6 +229,13 @@ class ShowPage extends BlogPost {
 
         $infoArray['ID'] = $filmId;
 
+
+        //***********
+        //Get title
+        //************
+
+        $infoArray['FilmTitle'] = $firstFilm->getTitle();
+
         //****************
         //Get release year
         //****************
@@ -226,13 +243,13 @@ class ShowPage extends BlogPost {
         $releaseDate = $firstFilm->getReleaseDate();
         $releaseYear = $releaseDate->format('Y');
 
-        $infoArray['Year'] = $releaseYear;
+        $infoArray['FilmYear'] = $releaseYear;
 
         //***********
         //Get summary
         //***********
 
-        $infoArray['Summary'] = $firstFilm->getOverview();
+        $infoArray['FilmSummary'] = $firstFilm->getOverview();
 
 
         //**********
@@ -261,7 +278,7 @@ class ShowPage extends BlogPost {
         $videosArray = $movieRepo->getVideos($filmId)->toArray();
         $firstVideo = reset($videosArray);
 
-        $infoArray['Video'] = $firstVideo->getKey();
+        $infoArray['TrailerVideoID'] = $firstVideo->getKey();
 
         //print_r($infoArray);
         return $infoArray;

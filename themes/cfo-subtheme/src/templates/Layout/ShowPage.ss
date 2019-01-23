@@ -19,6 +19,10 @@ $Header
                 <div class="">
                     <h1 class="showpage__title">$FilmTitle</h1>
                     $Content
+
+                    <hr />
+
+                    $FilmSummary
                     <h2>Showtimes for $FilmTitle:</h2>
                     <div class="show-list">
                         <% loop $Dates %>
@@ -37,7 +41,7 @@ $Header
             $Form
         </article>
         <aside class="sidebar dp-sticky">
-            <% if $Poster %>
+            <% if $TmdbPosterURL %>
                 <div class="posterimg">
                     <img src="$TmdbPosterURL" alt="$Title poster image" />
                 </div>
