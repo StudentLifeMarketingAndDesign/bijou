@@ -8,7 +8,7 @@
         </p>
     <% end_if %>
 
-    <% if $TmdbPoster %>
+    <% if $TmdbPosterURL %>
         <a href="$Link" class="showcard__img">
             <img class="dp-lazy" data-original="$TmdbPosterURL" width="267" height="400" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="$Title">
         </a>
