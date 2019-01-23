@@ -8,8 +8,8 @@ $Header
                 <div class="show-list grid-x grid-margin-x medium-up-2 large-up-3">
                     <% loop $ShowsTransient %>
                         <a href="$Link" class="cell show-list__show">
-                            <% if $Poster %>
-                                <img class="show-list__show-img" src="$Poster.FocusFill(267, 400).URL" alt="$Title poster image" role="presentation" />
+                            <% if $TmdbPosterURL %>
+                                <img class="show-list__show-img" src="$TmdbPosterURL" alt="$Title poster image" role="presentation" />
                             <% end_if %>
                             <div class="show-list__content">
                                 <div class="show-list__content-inner">
