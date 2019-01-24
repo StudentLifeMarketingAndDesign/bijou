@@ -46,9 +46,12 @@ class FilmSuggestController extends ContentController {
             $findArray = $find->toArray();
 
             foreach($findArray as $findResult){
+            $releaseDate = $findResult->getReleaseDate();
+            $releaseYear = $releaseDate->format('Y');
+
                 $returnarray[] = array(
                     'id' => $findResult->getId(),
-                    'name' => $findResult->getTitle(),
+                    'name' => $findResult->getTitle().' ('.$releaseYear.')',
                 );
             }
 

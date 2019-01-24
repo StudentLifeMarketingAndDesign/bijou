@@ -17,12 +17,14 @@ $Header
         <article role="main" class="main-content main-content--with-padding main-content--with-sidebar">
             <div class="main-content__text">
                 <div class="">
-                    <h1 class="showpage__title">$FilmTitle</h1>
+                    <h1 class="showpage__title">$Title</h1>
                     $Content
 
                     <hr />
 
                     $FilmSummary
+
+                    <% if $FilmTitle %>
                     <h2>Showtimes for $FilmTitle:</h2>
                     <div class="show-list">
                         <% loop $Dates %>
@@ -35,6 +37,7 @@ $Header
                         <% end_loop %>
                     </div>
                     <br /><br />
+                    <% end_if %>
                 </div>
                 $AfterContentConstrained
             </div>
