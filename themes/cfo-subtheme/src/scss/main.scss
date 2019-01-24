@@ -133,8 +133,8 @@
 @import "components/content-blocks/tile-grid";
 
 @import "components/elements/elements";
-// Layouts
 
+// Layouts
 @import "layouts/homepage";
 @import "layouts/footer";
 @import "layouts/landingpage";
@@ -149,7 +149,7 @@
 @import "layouts/default";
 
 
-//SUBTHEME:
+// cfo-subtheme:
 @import "components/nav";
 @import "components/header";
 @import "components/offcanvas";
@@ -157,10 +157,16 @@
 @import "components/audio-player";
 @import "components/blog-cfo";
 @import "components/site-search-cfo";
-
-
 @import "components/show-list";
 
+// Blocks
+@import "components/blocks/shows-block";
+@import "components/blocks/news";
+@import "components/blocks/featuredpage";
+@import "components/blocks/staff-members";
+@import "components/blocks/tagline";
+
+// Layouts
 @import "layout/theme";
 @import "layout/series";
 @import "layout/showing";
