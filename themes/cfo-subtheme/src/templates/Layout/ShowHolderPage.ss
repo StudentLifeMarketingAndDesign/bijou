@@ -10,6 +10,9 @@ $Header
                         <a href="$Link" class="cell show-list__show">
                             <% if $TmdbPosterURL %>
                                 <img class="show-list__show-img" src="$TmdbPosterURL" alt="$Title poster image" role="presentation" />
+                            <% else_if $Poster %>
+                                <img class="show-list__show-img" src="$Poster.FocusFill(267, 400)" alt="$Title poster image" role="presentation" />
+
                             <% end_if %>
                             <div class="show-list__content">
                                 <div class="show-list__content-inner">

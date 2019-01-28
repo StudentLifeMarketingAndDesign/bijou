@@ -11,6 +11,14 @@ $Header
                 </a>
             <% end_if %>
         </div>
+    <% else_if $FeaturedImage %>
+        <div class="show-featured" data-interchange="[$FeaturedImage.FocusFill(600,400).URL, small], [$FeaturedImage.FocusFill(1400,800).URL, medium]">
+            <% if $TrailerVideoID %>
+                <a class="popup-youtube show-trailer" href="https://www.youtube.com/watch?v={$TrailerVideoID}">
+                    <svg class="css-18vwi2-playButton" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><title>Play Trailer</title><g opacity=".53"><circle cx="20" cy="20" r="19.5" fill="#4a4a4a"></circle><path d="M20 1c10.5 0 19 8.5 19 19s-8.5 19-19 19S1 30.5 1 20 9.5 1 20 1m0-1C9 0 0 9 0 20s9 20 20 20 20-9 20-20S31 0 20 0z" fill="#fff"></path></g><path fill="#fff" d="M29.6 21.1l-14.1-9.3v18.6z"></path></svg>
+                </a>
+            <% end_if %>
+        </div>
     <% end_if %>
 
     <div class="row" style="position: relative;">

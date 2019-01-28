@@ -16,7 +16,7 @@ use SilverStripe\Forms\GridField\GridFieldConfig;
 use SilverStripe\Forms\GridField\GridFieldDataColumns;
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use SilverStripe\ORM\ArrayList;
-
+use SilverStripe\Versioned\Versioned;
 class ShowDate extends DataObject{
 
     private static $db = array(
@@ -32,8 +32,15 @@ class ShowDate extends DataObject{
         // 'Times' => 'ShowTime'
     );
 
+    private static $many_many = array(
+        'SeriesPages' => 'SeriesPage'
+    );
+
     private static $summary_fields = array('Date');
 
+    private static $extensions = [
+        Versioned::class,
+    ];
 
     public function getCMSFields() {
 
@@ -50,6 +57,16 @@ class ShowDate extends DataObject{
 
         return $fields;
     }
+
+
+    // public function onBeforeWrite()
+    // {
+
+
+    //     $this->SeriesPages = $this->ShowPage()->SeriesPages();
+
+    //     parent::onBeforeWrite();
+    // }
     public function TimesFormatted(){
         if(!$this->Times){
             return;

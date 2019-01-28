@@ -29,17 +29,19 @@ $BeforeContent
 		$AfterContentConstrained
 		$Form
 
-		
+
 				<%-- $Header --%>
     <div class="grid-container">
         <div class="main-content__text">
-           
+
 
                <%--  <h2 class="show-list__date-header">$Date.Format("E, MMM d")</h2> --%>
                 <div class="show-list grid-x grid-margin-x medium-up-2 large-up-3">
-                   <% loop ShowPages %>
+                   <% loop UpcomingShows %>
                         <a href="$Link" class="cell show-list__show">
-                            <% if $Poster %>
+                            <% if $TmdbPosterURL %>
+                                <img class="show-list__show-img" src="$TmdbPosterURL" alt="$Title poster image" role="presentation" />
+                            <% else_if $Poster %>
                                 <img class="show-list__show-img" src="$Poster.FocusFill(267, 400).URL" alt="$Title poster image" role="presentation" />
                             <% end_if %>
                             <div class="show-list__content">
@@ -58,12 +60,12 @@ $BeforeContent
                         </a>
                     <% end_loop %>
                 </div><br />
-           
+
         </div>
     </div>
 
 
-		
+
 		<% if $ShowChildPages %>
 			<% include ChildPages %>
 		<% end_if %>
