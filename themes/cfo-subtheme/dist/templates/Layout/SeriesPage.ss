@@ -1,4 +1,12 @@
 $Header
+
+<% if $AccentColor %>
+<style>
+    .main-content__header {
+        border-bottom-color: $AccentColor;
+    }
+</style>
+<% end_if %>
 <main class="main-content__container" id="main-content__container">
 
 	<!-- Background Image Feature -->
@@ -60,6 +68,27 @@ $BeforeContent
                         </a>
                     <% end_loop %>
                 </div><br />
+               <% if $Thanks %>
+               		<p class="thanks">
+               			$Thanks
+               		</p>
+
+               <% end_if %>
+
+
+               <ul class="accordion" data-allow-all-closed="true" data-accordion>
+				  <li class="accordion-item" data-accordion-item>
+				    <!-- Accordion tab title -->
+				    <a href="#" class="accordion-title">Have a movie suggestion? Let us know!</a>
+
+				    	<div class="accordion-content" data-tab-content>
+			      			$SuggestionForm
+
+			    </div>
+			  </li>
+
+			</ul>
+
 
         </div>
     </div>

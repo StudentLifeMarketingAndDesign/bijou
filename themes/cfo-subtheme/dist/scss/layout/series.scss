@@ -23,6 +23,7 @@
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
+    background-position: 50% 50%;
     & span {
         z-index: 20;
         position: relative;
@@ -50,27 +51,18 @@
     }
 }
 
-.series-horizons{
+// .series-horizons{
 
-  background:
-    /* top, transparent red, faked with gradient */
-    linear-gradient(
-      rgba(#0049ad, 0.75),
-      rgba(#0049ad, 0.75)
-    );
-
-    background-image: url(https://image.tmdb.org/t/p/w1280/Qgr34pvsP2b395CKn0YQJjba9n.jpg);
-
-}
-.series-after-hours{
-    background-color: #c40003;
-}
-.series-bijou-thursdays{
-    background-color: #00b506;
-}
-.series-film-forum{
-    background-color: #efde00;
-}
-.series-bijou-open-screen{
-    background-color: #00b506;
-}
+// }
+// .series-after-hours{
+//     background-color: #c40003;
+// }
+// .series-bijou-thursdays{
+//     background-color: #00b506;
+// }
+// .series-film-forum{
+//     background-color: #efde00;
+// }
+// .series-bijou-open-screen{
+//     background-color: #00b506;
+// }
