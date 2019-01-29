@@ -68,6 +68,12 @@ $BeforeContent
                         </a>
                     <% end_loop %>
                 </div><br />
+               <% if $Thanks %>
+               		<p class="thanks">
+               			$Thanks
+               		</p>
+               <% end_if %>
+           	$SuggestionForm
 
         </div>
     </div>
