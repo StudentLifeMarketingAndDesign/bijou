@@ -116,3 +116,20 @@ body{
     width:45px;
     height:40px;
 }
+.left{
+    color: rgba(255,255,255,.8);
+}
+.button, input.action{
+    color:#ddd;
+    background-color:#0e64b0;
+    border:none;
+    margin: 30px 0px;
+}
+.button:focus, .button:hover{
+    color:#ddd;
+    text-decoration:none;
+}
+.thanks{
+    background-color:#0e64b0;
+    padding: 5px;
+}
