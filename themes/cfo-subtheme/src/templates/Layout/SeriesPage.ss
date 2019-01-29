@@ -63,7 +63,19 @@ $BeforeContent
                			$Thanks
                		</p>
                <% end_if %> 
-           	$SuggestionForm
+               <ul class="accordion" data-allow-all-closed="true" data-accordion>
+				  <li class="accordion-item" data-accordion-item>
+				    <!-- Accordion tab title -->
+				    <a href="#" class="accordion-title">Have a movie suggestion? Let us know!</a>
+
+				    	<div class="accordion-content" data-tab-content>
+			      			$SuggestionForm
+			      
+			    </div>
+			  </li>
+  
+			</ul>
+           					
 
         </div>
     </div>
