@@ -1,4 +1,12 @@
 $Header
+
+<% if $AccentColor %>
+<style>
+    .main-content__header {
+        border-bottom-color: $AccentColor;
+    }
+</style>
+<% end_if %>
 <main class="main-content__container" id="main-content__container">
 
 	<!-- Background Image Feature -->

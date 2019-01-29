@@ -25,6 +25,7 @@ $Header
         <article role="main" class="main-content main-content--with-padding main-content--with-sidebar">
             <div class="main-content__text">
                 <div class="">
+                   <% loop $SeriesPages %><a href="$Link" class="showcard__category" style="color: $AccentColor">$Title</a><% end_loop %>
                     <h1 class="showpage__title">$Title</h1>
                     $Content
 

@@ -24,10 +24,12 @@ use OP\AutocompleteSuggestField;
 use SilverStripe\CMS\Controllers\ModelAsController;
 use SilverStripe\Control\HTTPRequest;
 use SilverStripe\View\Requirements;
+use RyanPotter\SilverStripeColorField\Forms\ColorField;
+
 class SeriesPage extends Page {
 
     private static $db = array(
-
+        'AccentColor' => 'Varchar(7)',
     );
 
     private static $has_one = array(
@@ -39,11 +41,32 @@ class SeriesPage extends Page {
         'ShowDates' => 'ShowDate'
     );
 
+    //private static $allowed_children = array("");
+
     public function getCMSFields() {
         $fields = parent::getCMSFields();
 
-
+        $fields->addFieldToTab('Root.Main', ColorField::create('AccentColor'), 'Content');
         return $fields;
+    }
+
+    public function AccentRgb(){
+        $hex = $this->AccentColor;
+        $rgb = $this->hex2rgb($hex);
+        // print_r($rgb);
+        $rgbString = $rgb['red'].','.$rgb['green'].','.$rgb['blue'];
+
+        return $rgbString;
+    }
+
+    public function NextUpcomingBackgroundURL(){
+        $show = $this->UpcomingShows(1)->First();
+
+        if($show){
+            if($show->TmdbBgURL) return $show->TmdbBgURL;
+            if($show->FeaturedImage()) return $show->FeaturedImage()->URL;
+        }
+
     }
 
     public function UpcomingShows($count = 5){
@@ -74,6 +97,23 @@ class SeriesPage extends Page {
         return $shows;
     }
 
-    //private static $allowed_children = array("");
+
+    private function hex2rgb( $colour ) {
+            if ( $colour[0] == '#' ) {
+                    $colour = substr( $colour, 1 );
+            }
+            if ( strlen( $colour ) == 6 ) {
+                    list( $r, $g, $b ) = array( $colour[0] . $colour[1], $colour[2] . $colour[3], $colour[4] . $colour[5] );
+            } elseif ( strlen( $colour ) == 3 ) {
+                    list( $r, $g, $b ) = array( $colour[0] . $colour[0], $colour[1] . $colour[1], $colour[2] . $colour[2] );
+            } else {
+                    return false;
+            }
+            $r = hexdec( $r );
+            $g = hexdec( $g );
+            $b = hexdec( $b );
+            return array( 'red' => $r, 'green' => $g, 'blue' => $b );
+    }
+
 
 }

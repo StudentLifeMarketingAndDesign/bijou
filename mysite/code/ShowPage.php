@@ -257,7 +257,7 @@ class ShowPage extends BlogPost {
     {
         // check on first write action, aka "database row creation" (ID-property is not set)
               // echo $this->FilmID;
-        if($this->FilmID != 0) {
+        if(($this->FilmID != 0) && ($this->UseTmdbForLookup)) {
             $film = $this->getMovieInfo($this->FilmID);
 
 
