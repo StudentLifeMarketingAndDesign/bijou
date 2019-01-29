@@ -2,12 +2,15 @@
 
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\TextField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\File;
 use SilverStripe\ORM\ArrayList;
 class HomePageExtension extends DataExtension {
 
-	private static $has_one = array(
+	private static $db = array(
+
+        'NumberOfUpcomingShowsToDisplay' => 'Int'
 
     );
 
@@ -16,6 +19,7 @@ class HomePageExtension extends DataExtension {
 	);
 
     public function updateCMSFields(FieldList $fields) {
+        $fields->addFieldToTab('Root.Main', new TextField('NumberOfUpcomingShowsToDisplay'), 'Content');
        // $fields->push($upload = new UploadField('AudioClip', 'Upload Podcast'));
     }
 
@@ -24,19 +28,26 @@ class HomePageExtension extends DataExtension {
         $existingFeaturesArrayList = $this->owner->to_array_list($existingFeatures);
 
         $showHolder = ShowHolderPage::get()->First();
-        $nextShow = $showHolder->UpcomingShows(1)->First();
+        $nextShows = $showHolder->UpcomingShows($this->owner->NumberOfUpcomingShowsToDisplay);
+
+        // print_r($nextShow);
 
 
+        if($nextShows){
 
-        if($nextShow){
+            foreach($nextShows as $nextShow){
 
-            $showFeature = new NewHomePageHeroFeature();
-            $showFeature->Title = $nextShow->Title;
-            $showFeature->AssociatedPageID = $nextShow->ID;
-            $showFeature->ImageID = $nextShow->FeaturedImageID;
-            $showFeature->ButtonText = "Learn more and buy tickets";
+                $showFeature = new NewHomePageHeroFeature();
+                $showFeature->Title = $nextShow->Title;
+                $showFeature->AssociatedPageID = $nextShow->ID;
+                $showFeature->ImageID = $nextShow->FeaturedImageID;
+                $showFeature->ButtonText = "Learn more and buy tickets";
 
-            $existingFeaturesArrayList->unshift($showFeature);
+                $existingFeaturesArrayList->unshift($showFeature);
+
+            }
+
+
         }
 
 

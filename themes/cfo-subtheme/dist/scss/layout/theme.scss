@@ -1,0 +1,118 @@
+
+body{
+	background-size: cover;
+    background-image: url('../images/bg.jpg');
+	background-color: $body-background;
+    background-repeat: no-repeat;
+    color: rgba(255,255,255,.8);
+}
+
+.content-block__container {
+    background-color: $body-background;
+}
+.body--dark-header .breadcrumb__anchor {
+	color: rgba(255,255,255,.8);
+}
+.main-content__container{
+	background: $body-background;
+	color: rgba(255,255,255,.8);
+	box-shadow: inset 0px 10px 13px -7px rgba(0,0,0,0.31);
+}
+
+.main-content__header{
+    border-bottom-color: $highlight;
+    h1 {
+        color: #fff;
+    }
+}
+.childpages__title{
+	color: #fff;
+}
+.childpages__summary{
+	color: rgba(255,255,255,.8);
+}
+.childpages__link{
+	border-bottom-color: #d1502f;
+	color: rgba(255,255,255,.8);
+	&:after{
+		background: #fff;
+	}
+}
+.button, input.action {
+	color: #e2393e;
+	background: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: rem-calc(22);
+}
+#uiowa-bar #uiowa-search .links a{
+	color: white;
+}
+.background-image{
+	box-shadow: inset -2px 12px 26px -10px rgba(0,0,0,0.63);
+}
+.stafflist__position{
+    color: #bbb;
+}
+.element {
+    margin: 0;
+}
+/* Block area
+===================================================== */
+.elemental-area--AfterContent,
+.elemental-area--BeforeContent {
+    background-color: $body-background;
+}
+
+.featuredpageblock__button a{
+  color: #fff;
+}
+.staff__button{
+	background: #0e64b0;
+    color: #fff;
+    border: .5px solid #f3f3f3;
+    padding: 12px 24px;
+    font-weight: 700;
+    font-size: .75rem;
+    letter-spacing:1px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 5px;
+    -moz-box-shadow: 0px 0px 0px 6px #0e64b0;
+    -webkit-box-shadow: 0px 0px 0px 6px #0e64b0;
+    box-shadow: 0px 0px 0px 6px #0e64b0;
+    &:hover,&:active,&:focus{
+    	color:#fff;
+    	background-color:#000;
+    	box-shadow: 0 0 0 6px #000;
+    }
+}
+
+.staff__buttoncontainer{
+    text-align: center;
+}
+
+.podcast-widget{
+    background-color:#f3f3f3;
+    text-align: center;
+    font-weight: bold;
+    padding:20px 20px;
+    line-height: 1.5;
+    border-radius: 0px 0px 36px 36px;
+    -moz-border-radius: 0px 0px 36px 36px;
+    -webkit-border-radius: 0px 0px 36px 36px;
+    border: 0px solid #000000;
+    -webkit-box-shadow: 0px 0px 33px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 33px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 33px 0px rgba(0,0,0,0.75);
+}
+
+.fs-logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tmbd{
+    width:45px;
+    height:40px;
+}

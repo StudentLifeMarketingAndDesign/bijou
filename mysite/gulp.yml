@@ -19,10 +19,11 @@ PATHS:
   projectName: "bijou"
   theme: "../../../themes/cfo-subtheme"
   # Path to theme folder
-  dist: "dist"  
+  dist: "dist"
   # Paths to static assets that aren't images, CSS, or JavaScript
   assets:
     - "src/**/*"
+    - "../../../themes/cfo-subtheme/src/**/*"
     - "!src/{images,scripts,scss,templates}/**/*"
     - "!src/{images,scripts,scss,templates}"
     - "!../../../themes/cfo-subtheme/src/{images,scripts,scss,templates}/**/*"

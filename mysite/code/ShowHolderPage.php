@@ -23,7 +23,34 @@ class ShowHolderPage extends Blog {
     private static $belongs_many_many = array (
 
     );
+    /**
+     * This sets the title for our gridfield.
+     *
+     * @return string
+     */
+    public function getLumberjackTitle()
+    {
+        return _t(__CLASS__ . '.LumberjackTitle', 'Shows');
+    }
+    public function getCMSFields() {
+        $fields = parent::getCMSFields();
 
+        $fields->removeByName('YoutubeBackgroundEmbed');
+        $fields->removeByName('LayoutType');
+        $fields->removeByName('BackgroundImage');
+        $fields->removeByName('CustomSummary');
+        $fields->removeByName('AudioClip');
+        $fields->removeByName('FeaturedImage');
+        $fields->removeByName('Blocks');
+        $fields->removeByName('PostOptions');
+        $fields->removeByName('MetaData');
+        $fields->removeByName('SocialMediaSharing');
+        $fields->removeByName('Widgets');
+        $fields->removeByName('Main');
+        $fields->removeByName('Categorisation');
+
+        return $fields;
+    }
     public function UpcomingDates($count = 7){
         $now = date('Y-m-d');
         $dates = ShowDate::get()->filter(array(
@@ -78,7 +105,7 @@ class ShowHolderPage extends Blog {
         $shows = new ArrayList();
 
         foreach($dates as $date){
-            $showPage = ShowPage::get()->filter(array('ID' => 472))->First();
+            $showPage = ShowPage::get()->filter(array('ID' => $date->ShowPageID))->First();
 
 
             if($showPage){

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "03c9e03537f9d5da665ba7039d33a0e4",
+    "content-hash": "e15df030e14b2320d3f2fef3456d153e",
     "packages": [
         {
             "name": "bummzack/sortablefile",
@@ -2368,6 +2368,47 @@
                 "psr7"
             ],
             "time": "2017-11-06T19:17:52+00:00"
+        },
+        {
+            "name": "ryanpotter/silverstripe-color-field",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Rhym/silverstripe-color-field.git",
+                "reference": "d8c0c560229afe268d0c0d42b0555190d38df9d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Rhym/silverstripe-color-field/zipball/d8c0c560229afe268d0c0d42b0555190d38df9d2",
+                "reference": "d8c0c560229afe268d0c0d42b0555190d38df9d2",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "^4.0"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "installer-name": "silverstripe-color-field",
+                "expose": [
+                    "client"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ryan Potter",
+                    "homepage": "http://ryanpotter.co.nz/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Silverstripe Color Field",
+            "keywords": [
+                "silverstripe"
+            ],
+            "time": "2018-10-24T03:38:05+00:00"
         },
         {
             "name": "silverstripe/admin",
