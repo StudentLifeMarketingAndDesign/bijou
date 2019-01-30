@@ -1,4 +1,51 @@
 $Header
+<% with $SeriesPages.First %>
+<% if $AccentColor %>
+<style>
+
+    .series-page-splash{
+
+
+      background:
+        linear-gradient(
+          rgba({$AccentRgb}, 0.2),
+          rgba({$AccentLightRgb}, 0.75)
+        ),
+
+        /* bottom, image */
+        url($NextUpcomingBackgroundURL);
+
+    }
+    .main-content__header {
+        border-bottom-color: $AccentColor;
+    }
+    .showpage__accent a{
+        color: {$AccentColorLight};
+    }
+    .main-content__container .accordion-title{
+        background-color: #1a538c;
+        color: white;
+        border-color: #15486e;
+    }
+
+    .accordion-content{
+        border-top-color: #15486e;
+    }
+    .show-list__time{
+        background-color: $AccentColor;
+    }
+
+    .sidenav__section-title{
+        border-color: $AccentColor;
+
+    }
+
+}
+
+}
+</style>
+<% end_if %>
+<% end_with %>
 <main class="main-content__container" id="main-content__container">
 
     <!-- $Breadcrumbs -->
@@ -27,17 +74,20 @@ $Header
                 <div class="">
                    <% loop $SeriesPages %><a href="$Link" class="showcard__category" style="background-color: $AccentColor">$Title</a><% end_loop %>
                     <h1 class="showpage__title">$Title</h1>
+
+                    <div class="showpage__accent">
                     $Content
 
                     <% if $FilmSummary %>
                     <hr />
 
                     $FilmSummary
+
                  
 
                     <% end_if %>
 
-
+                    </div>
 
 
 
@@ -47,7 +97,7 @@ $Header
                         <% else %>
                             <h2>Time(s):</h2>
                         <% end_if %>
-                        <div class="show-list">
+                        <div class="show-list ">
                             <% loop $Dates %>
                                 <p class="show-list__date"><strong>$Date.Format("E, MMM d")</strong></p>
                                 <div class="show-list__time-list">
@@ -74,7 +124,7 @@ $Header
                 </div>
             <% end_if %>
 
-            <div class="show-meta">
+            <div class="show-meta showpage__accent">
                 <ul class="show-meta__list">
                     <% if $FilmSceneLink %>
                         <li class="show-meta__item">
