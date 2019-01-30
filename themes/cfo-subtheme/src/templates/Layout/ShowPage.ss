@@ -25,28 +25,43 @@ $Header
         <article role="main" class="main-content main-content--with-padding main-content--with-sidebar">
             <div class="main-content__text">
                 <div class="">
-                   <% loop $SeriesPages %><a href="$Link" class="showcard__category" style="color: $AccentColor">$Title</a><% end_loop %>
+                   <% loop $SeriesPages %><a href="$Link" class="showcard__category" style="background-color: $AccentColor">$Title</a><% end_loop %>
                     <h1 class="showpage__title">$Title</h1>
                     $Content
 
+                    <% if $FilmSummary %>
                     <hr />
 
                     $FilmSummary
+                 
 
-                    <% if $FilmTitle %>
-                    <h2>Showtimes for $FilmTitle:</h2>
-                    <div class="show-list">
-                        <% loop $Dates %>
-                            <p class="show-list__date"><strong>$Date.Format("E, MMM d")</strong></p>
-                            <div class="show-list__time-list">
-                                <% loop $TimesFormatted %>
-                                    <time class="show-list__time">$TimeFormatted</time>
-                                <% end_loop %>
-                            </div>
-                        <% end_loop %>
-                    </div>
-                    <br /><br />
                     <% end_if %>
+
+
+
+
+
+                    <% if $Dates %>
+                        <% if $FilmTitle %>
+                            <h2>Showtimes for $FilmTitle:</h2>
+                        <% else %>
+                            <h2>Time(s):</h2>
+                        <% end_if %>
+                        <div class="show-list">
+                            <% loop $Dates %>
+                                <p class="show-list__date"><strong>$Date.Format("E, MMM d")</strong></p>
+                                <div class="show-list__time-list">
+                                    <% loop $TimesFormatted %>
+                                        <time class="show-list__time">$TimeFormatted</time>
+                                    <% end_loop %>
+                                </div>
+                            <% end_loop %>
+                        </div>
+                    <% end_if %>
+
+                    <hr />
+
+                    <p><em>Individuals with disabilities are encouraged to attend all University of Iowa-sponsored events. If you are a person with a disability who requires a reasonable accommodation in order to participate in this program, please contact the Bijou Film Board in advance (@bijoufilm on Facebook or at (319) 335-3041).</em></p>
                 </div>
                 $AfterContentConstrained
             </div>

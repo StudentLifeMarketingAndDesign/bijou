@@ -1,62 +1,59 @@
 <?php
 
-use SilverStripe\ORM\DataExtension;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
-use SilverStripe\AssetAdmin\Forms\UploadField;
-use SilverStripe\Assets\File;
-use SilverStripe\ORM\ArrayList;
+use SilverStripe\ORM\DataExtension;
+
 class HomePageExtension extends DataExtension {
 
-	private static $db = array(
+    private static $db = array(
 
-        'NumberOfUpcomingShowsToDisplay' => 'Int'
+        'NumberOfUpcomingShowsToDisplay' => 'Int',
 
     );
 
-	private static $owns = array(
+    private static $owns = array(
 
-	);
+    );
 
     public function updateCMSFields(FieldList $fields) {
         $fields->addFieldToTab('Root.Main', new TextField('NumberOfUpcomingShowsToDisplay'), 'Content');
-       // $fields->push($upload = new UploadField('AudioClip', 'Upload Podcast'));
+        // $fields->push($upload = new UploadField('AudioClip', 'Upload Podcast'));
     }
 
-    public function HomePageHeroFeaturesMixed(){
+    public function HomePageHeroFeaturesMixed() {
         $existingFeatures = NewHomePageHeroFeature::get();
         $existingFeaturesArrayList = $this->owner->to_array_list($existingFeatures);
-
+        $numShows = $this->owner->NumberOfUpcomingShowsToDisplay;
         $showHolder = ShowHolderPage::get()->First();
-        $nextShows = $showHolder->UpcomingShows($this->owner->NumberOfUpcomingShowsToDisplay);
+
+        if ((!$showHolder) || ($numShows == 0)) {
+            return $existingFeatures;
+        }
+
+        $nextShows = $showHolder->UpcomingShows($numShows);
 
         // print_r($nextShow);
 
+        if ($nextShows) {
 
-        if($nextShows){
-
-            foreach($nextShows as $nextShow){
+            foreach ($nextShows as $nextShow) {
 
                 $showFeature = new NewHomePageHeroFeature();
                 $showFeature->Title = $nextShow->Title;
                 $showFeature->AssociatedPageID = $nextShow->ID;
                 $showFeature->ImageID = $nextShow->FeaturedImageID;
+                $showFeature->TmdbBgURL = $nextShow->TmdbBgURL;
                 $showFeature->ButtonText = "Learn more and buy tickets";
 
                 $existingFeaturesArrayList->unshift($showFeature);
 
             }
 
-
         }
-
-
 
         //print_r($existingFeaturesArrayList);
         return $existingFeaturesArrayList;
     }
 
 }
-
-
-

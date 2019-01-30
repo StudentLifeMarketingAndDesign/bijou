@@ -1,31 +1,21 @@
 <?php
 
-use SilverStripe\CMS\Model\SiteTree;
-use SilverStripe\Forms\TreeDropdownField;
-use SilverStripe\Forms\TreeMultiselectField;
-use DNADesign\Elemental\Models\BaseElement;
-use SilverStripe\Forms\OptionsetField;
-use UncleCheese\DisplayLogic\Forms\Wrapper;
-use SilverStripe\Forms\DropdownField;
-use SilverStripe\ORM\DataObject;
+use SilverStripe\Forms\DateField;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextareaField;
-use SilverStripe\Forms\DateField;
-use SilverStripe\Forms\GridField\GridField;
-use SilverStripe\Forms\GridField\GridFieldConfig;
-use SilverStripe\Forms\GridField\GridFieldDataColumns;
-use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use SilverStripe\ORM\ArrayList;
+use SilverStripe\ORM\DataObject;
 use SilverStripe\Versioned\Versioned;
-class ShowDate extends DataObject{
+
+class ShowDate extends DataObject {
 
     private static $db = array(
         'Date' => 'Date',
-        'Times' => 'Text'
+        'Times' => 'Text',
 
     );
     private static $has_one = array(
-        'ShowPage' => 'ShowPage'
+        'ShowPage' => 'ShowPage',
     );
 
     private static $has_many = array(
@@ -33,7 +23,7 @@ class ShowDate extends DataObject{
     );
 
     private static $many_many = array(
-        'SeriesPages' => 'SeriesPage'
+        'SeriesPages' => 'SeriesPage',
     );
 
     private static $summary_fields = array('Date');
@@ -47,28 +37,25 @@ class ShowDate extends DataObject{
         $fields = new FieldList();
 
         $fields->push(new DateField('Date'));
-        $fields->push(new TextareaField('Times','Time(s) (One time per line)'));
+        $fields->push(new TextareaField('Times', 'Start time(s) (One time per line, no time ranges or end times, please only start times. ex: "6pm")'));
         // $timeFieldConfig = GridFieldConfig_RelationEditor::create();
         // $timeField = new GridField('Times', 'Times', $this->Times());
         // $timeField->setConfig($timeFieldConfig);
-
 
         // $fields->push($timeField);
 
         return $fields;
     }
 
-
     // public function onBeforeWrite()
     // {
-
 
     //     $this->SeriesPages = $this->ShowPage()->SeriesPages();
 
     //     parent::onBeforeWrite();
     // }
-    public function TimesFormatted(){
-        if(!$this->Times){
+    public function TimesFormatted() {
+        if (!$this->Times) {
             return;
         }
 
@@ -79,18 +66,16 @@ class ShowDate extends DataObject{
 
         $timesArrayList = new ArrayList();
 
-        foreach($timesArray as $time){
+        foreach ($timesArray as $time) {
             //$time = strip_tags($time);
             $time = trim(preg_replace('/\s+/', ' ', $time));
 
             $timestamp = strtotime($time);
 
-
-
             $timeFormatted = date('g:iA', $timestamp);
 
             $timeObj = new DataObject;
-            $timeObj->TimeFormatted =  $timeFormatted;
+            $timeObj->TimeFormatted = $timeFormatted;
             $timesArrayList->push($timeObj);
 
             //print_r($timeObj->TimeFormatted);

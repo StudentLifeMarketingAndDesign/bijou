@@ -2,25 +2,55 @@ $Header
 
 <% if $AccentColor %>
 <style>
+
+    .series-page-splash{
+
+
+      background:
+        linear-gradient(
+          rgba({$AccentRgb}, 0.2),
+          rgba({$AccentLightRgb}, 0.75)
+        ),
+
+        /* bottom, image */
+        url($NextUpcomingBackgroundURL);
+
+    }
     .main-content__header {
         border-bottom-color: $AccentColor;
     }
+    .main-content__container a{
+        color: {$AccentColorLight};
+    }
+	.main-content__container .accordion-title{
+		background-color: #1a538c;
+		color: white;
+		border-color: #15486e;
+	}
+
+	.accordion-content{
+		border-top-color: #15486e;
+	}
+    .show-list__time{
+    	background-color: $AccentColor;
+	}
+
+	.sidenav__section-title{
+		border-color: $AccentColor;
+
+	}
+
+}
 </style>
 <% end_if %>
 <main class="main-content__container" id="main-content__container">
 
-	<!-- Background Image Feature -->
-	<% if $BackgroundImage %>
-		<% include FeaturedImage %>
-	<% end_if %>
-	$Breadcrumbs
-	<% if not $BackgroundImage %>
-	<div class="column row">
-		<div class="main-content__header">
-			<h1>$Title</h1>
-		</div>
+	<div class="series-page-splash">
+		<h1 class="series-page-splash__header">$Title</h1>
 	</div>
-<% end_if %>
+
+	$Breadcrumbs
+
 
 $BeforeContent
 

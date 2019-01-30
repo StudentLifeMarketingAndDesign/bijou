@@ -23,6 +23,25 @@
                                 </div>
                             </div>
                         </div>
+                    <% else_if $TmdbBgURL %>
+
+                        
+                        <div class="cell-bg" data-flickity-bg-lazyload="$TmdbBgURL" style="background-position: 50% 50%;">
+                       
+                            <div class="inner">
+                                <div class="cell-text">
+                                    <span>Featured Page</span>
+                                    <h2>$Title</h2>
+                                    <% if $ExternalLink %>
+                                        <a href="$ExternalLink" target="_blank" class="cell-btn">$ButtonText</a>
+                                    <% else %>
+                                        <a href="$AssociatedPage.Link" class="cell-btn">$ButtonText</a>
+                                    <% end_if %>
+                                </div>
+                            </div>
+                        </div>
+
+
                     <% else_if $Video %>
                         <div class="cell-bg">
                             <div class="fullwidth-video">

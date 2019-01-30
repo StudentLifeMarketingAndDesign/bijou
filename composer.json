@@ -8,7 +8,7 @@
         "edgarindustries/youtubefield": "^1.1",
         "md/silverstripe-event-calendar": "dev-master",
         "php-tmdb/api": "~2.1",
-        "otago/autocomplete-suggest-field" : "dev-master",
+        "otago/autocomplete-suggest-field": "dev-master",
         "ryanpotter/silverstripe-color-field": "^1.0"
     },
     "require-dev": {

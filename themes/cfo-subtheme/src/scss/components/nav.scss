@@ -1,9 +1,16 @@
 .nav-mobile{
 	@include menu-base;
 	@include menu-direction(vertical);
+	
+	width: 80%;
 
 	&__item{
 		// border-bottom: 1px solid #ccc;
+
+
+		&--home{
+
+		}
 
 	}
 
@@ -640,7 +647,7 @@
 	&:after{
 		top: 5px;
 	}
-	@include breakpoint(375) {
+	@include breakpoint(425) {
 		left: 74px;
 		right: 1.2em;
 	}

@@ -7,6 +7,9 @@ body{
     color: rgba(255,255,255,.8);
 }
 
+.sslogin_box{
+    background-color: #202020;
+}
 .content-block__container {
     background-color: $body-background;
 }
@@ -18,7 +21,6 @@ body{
 	color: rgba(255,255,255,.8);
 	box-shadow: inset 0px 10px 13px -7px rgba(0,0,0,0.31);
 }
-
 .main-content__header{
     border-bottom-color: $highlight;
     h1 {

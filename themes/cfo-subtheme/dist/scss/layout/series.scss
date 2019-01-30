@@ -29,6 +29,7 @@
         position: relative;
         font-weight: bold;
         font-size: 50px;
+        text-transform: uppercase;
     }
     &:before {
         background-color: rgba(#353223, 0.75);
@@ -49,6 +50,27 @@
             width: 100%;
         }
     }
+}
+
+
+.series-page-splash{
+    background-color: $primary-color;
+    background-position: 50% 50%;
+    &__header{
+        margin: 0;
+        font-family:Kollektif;
+        text-transform: uppercase;
+        font-size: rem-calc(50);
+        text-align: center;
+        padding: rem-calc(50) 0;
+
+        @include breakpoint(large) {
+            font-size: rem-calc(75);
+            padding: rem-calc(75) 0;
+        }
+    }
+
+    
 }
 
 // .series-horizons{

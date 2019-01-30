@@ -15,7 +15,7 @@
             <itunes:email>bijou.executive@gmail.com</itunes:email>
         </itunes:owner>
         <itunes:explicit>clean</itunes:explicit>
-        <itunes:image href="http://bijou.uiowa.edu/assets/bijou-logo-album.jpg" />
+        <itunes:image href="http://bijou.uiowa.edu/assets/a11a564205/bijou-logo-album.jpg" />
         <itunes:category text="TV &amp; Film" />
 
         <% loop $Entries %>
@@ -25,8 +25,8 @@
                     <link>$AbsoluteLink</link>
                     <% if $Description %><description>$Description.CDATA</description><% end_if %>
                     <itunes:author>Bijou Film Board</itunes:author>
-                    <itunes:subtitle>$Description.NoHTML.LimitCharacters(180)</itunes:subtitle>
-                    <itunes:summary>$Description.NoHTML</itunes:summary>
+                    <itunes:subtitle>$Description.Plain.LimitCharacters(180)</itunes:subtitle>
+                    <itunes:summary>$Description.Plain</itunes:summary>
                     <enclosure url="$AudioClip.AbsoluteURL" length="0" type="audio/x-m4a" />
                     <% if $Date %><pubDate>$Date.Rfc822</pubDate>
                     <% else %><pubDate>$Created.Rfc822</pubDate><% end_if %>

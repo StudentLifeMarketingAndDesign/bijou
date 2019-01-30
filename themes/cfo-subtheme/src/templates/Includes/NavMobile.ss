@@ -5,7 +5,7 @@
   </button>
   <!-- Menu -->
   <ul class="nav-mobile">
-    <li class="nav-mobile__item"><a class="nav-mobile__link nav-mobile__link--home" href="{$BaseUrl}"><img src="{$ThemeDir}/dist/images/logo.png" alt="$SiteConfig.Title.ATT"/></a></li>
+    <li class="nav-mobile__item nav-mobile__item--home"><a class="nav-mobile__link nav-mobile__link--home" href="{$BaseUrl}"><img src="{$ThemeDir}/dist/images/logo.png" alt="$SiteConfig.Title.ATT"/></a></li>
     <% loop $Menu(1) %>
     <li class="nav-mobile__item"><a class="nav-mobile__link" href="$Link">$MenuTitle</a>
     </li>

@@ -6,14 +6,19 @@
 
           background:
             linear-gradient(
-              rgba({$AccentRgb}, 0.75),
-              rgba({$AccentRgb}, 0.75)
+              rgba({$AccentRgb}, 0.2),
+              rgba({$AccentLightRgb}, 0.75)
             ),
 
             /* bottom, image */
             url($NextUpcomingBackgroundURL);
 
-    }
+        }
+
+
+
+
+
 
     <% end_loop %>
 </style>

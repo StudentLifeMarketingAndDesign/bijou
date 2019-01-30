@@ -1,32 +1,22 @@
 <?php
-use SilverStripe\Dev\Debug;
+use EdgarIndustries\YouTubeField\YouTubeField;
+use OP\AutocompleteSuggestField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;
 use SilverStripe\Blog\Model\BlogPost;
-use SilverStripe\Forms\DateField;
-use SilverStripe\Forms\TextareaField;
-use SilverStripe\Forms\TextField;
-use EdgarIndustries\YouTubeField\YouTubeField;
+use SilverStripe\Core\Environment;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridField;
-use SilverStripe\Forms\GridField\GridFieldConfig;
-use SilverStripe\Forms\GridField\GridFieldDataColumns;
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
-use SilverStripe\Forms\LabelField;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Forms\LiteralField;
+use SilverStripe\Forms\ReadonlyField;
+use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\ORM\DataObject;
-use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\TagField\TagField;
-use SilverStripe\Forms\ReadonlyField;
-use SilverStripe\Forms\LiteralField;
-use SilverStripe\Forms\CheckboxField;
-use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
-use SilverStripe\Core\Environment;
-use OP\AutocompleteSuggestField;
-use SilverStripe\CMS\Controllers\ModelAsController;
-use SilverStripe\Control\HTTPRequest;
-use SilverStripe\View\Requirements;
-use SilverStripe\Forms\FieldList;
 use UncleCheese\DisplayLogic\Forms\Wrapper;
-
 
 class ShowPage extends BlogPost {
 
@@ -35,7 +25,6 @@ class ShowPage extends BlogPost {
         'TicketsLink' => 'Varchar(255)',
         'FacebookEventLink' => 'Varchar(255)',
         'FilmSceneLink' => 'Varchar(255)',
-
 
         'UseTmdbForLookup' => 'Boolean',
 
@@ -53,7 +42,7 @@ class ShowPage extends BlogPost {
         'CustomFilmYear' => 'Varchar(10)',
         'CustomTrailerVideoID' => 'Varchar(11)',
         'CustomFilmRating' => 'Varchar(11)',
-        'CustomFilmSummary' => 'HTMLText'
+        'CustomFilmSummary' => 'HTMLText',
 
     );
 
@@ -66,18 +55,17 @@ class ShowPage extends BlogPost {
     );
 
     private static $has_many = array(
-        'Dates' => 'ShowDate'
+        'Dates' => 'ShowDate',
     );
 
     private static $owns = array(
         'Poster',
-        'Dates'
+        'Dates',
     );
 
     private static $many_many = array(
-        'SeriesPages' => 'SeriesPage'
+        'SeriesPages' => 'SeriesPage',
     );
-
 
     public function getCMSFields() {
         $fields = parent::getCMSFields();
@@ -98,7 +86,6 @@ class ShowPage extends BlogPost {
         $dateField = new GridField('Dates', 'Dates', $this->Dates());
         $dateField->setConfig($dateFieldConfig);
 
-
         $seriesField = TagField::create(
             'SeriesPages',
             'Series',
@@ -106,16 +93,16 @@ class ShowPage extends BlogPost {
             $this->SeriesPages()
         )
             ->setShouldLazyLoad(true) // tags should be lazy loaded
-            ->setCanCreate(false);     // new tag DataObjects can be created
+            ->setCanCreate(false); // new tag DataObjects can be created
 
         $fields->addFieldToTab('Root.Main', $seriesField, 'Content');
         $fields->addFieldToTab('Root.Main', $dateField, 'Content');
 
-        if($this->Title != 'New Show Page'){
+        if ($this->Title != 'New Show Page') {
 
-        }else{
+        } else {
             $dateField->setDisabled(true);
-            $fields->addFieldToTab('Root.Main', new LiteralField('DateWarning', '<p style="font-size: 16px;"><strong>Please give this page a title before adding a date.</strong></p>'), 'Dates');
+            $fields->addFieldToTab('Root.Main', new LiteralField('DateWarning', '<p style="font-size: 16px;"><strong>Please give this page a title and safe as a draft before adding a date.</strong></p>'), 'Dates');
         }
 
         $fields->addFieldToTab('Root.Main', new TextField('TicketsLink', 'Buy tickets link'), 'Content');
@@ -123,16 +110,14 @@ class ShowPage extends BlogPost {
         $fields->addFieldToTab('Root.Main', new TextField('FacebookEventLink', 'Facebook Event Link'), 'Content');
         $fields->addFieldToTab('Root.Main', new TextField('FilmSceneLink', 'FilmScene Link'), 'Content');
 
-        $fields->addFieldToTab('Root.FilmInfo', new CheckboxField('UseTmdbForLookup','Use TMDB for film information'));
-
+        $fields->addFieldToTab('Root.FilmInfo', new CheckboxField('UseTmdbForLookup', 'Use TMDB for film information'));
 
         // $fields->addFieldToTab('Root.FilmInfo', new , 'Content');
-
 
         $tmdbFieldWrapper = Wrapper::create(
             LiteralField::create('TmdbInfo', '<p style="font-size: 14px;"><strong>Use the field below to autofill in information and imagery (poster/background) from <img src="resources/themes/cfo-subtheme/dist/images/tmdb.svg" height="27" width="30" /> for a film. Save a draft of this page after choosing a film to see the info below.</strong></p>'),
             $suggestedFilm = AutocompleteSuggestField::create('FilmID', FilmSuggestController::create(), 'Film Lookup:', null, $this),
-            ReadonlyField::create('TmdbBgURL','Background Image (from TMDB)'),
+            ReadonlyField::create('TmdbBgURL', 'Background Image (from TMDB)'),
 
             ReadonlyField::create('TmdbPosterURL', 'Poster Image (from TMDB)'),
             YouTubeField::create('TmdbTrailerVideoID', 'YouTube Video'),
@@ -140,7 +125,7 @@ class ShowPage extends BlogPost {
             ReadonlyField::create('TmdbFilmSummary'),
             LiteralField::create('TmdbInfoTwo', '<p style="font-size: 14px;">Use the fields below to override any of the fields above.</p>'))
 
-        ->displayIf('UseTmdbForLookup')->isChecked()->end();
+            ->displayIf('UseTmdbForLookup')->isChecked()->end();
 
         $suggestedFilm->setDescription('Enter text to search for a film, then <strong>save a draft of this page</strong> to see the information appear below.');
 
@@ -148,7 +133,7 @@ class ShowPage extends BlogPost {
 
         // $fields->addFieldsToTab('Root.FilmInfo', $tmdbFieldWrapper);
 
-         $overrideFields = new FieldList(
+        $overrideFields = new FieldList(
             UploadField::create('Poster', 'Custom Poster Image (vertical images work best)'),
             UploadField::create('FeaturedImage', 'Custom Background Image'),
             TextField::create('CustomFilmTitle'),
@@ -156,8 +141,7 @@ class ShowPage extends BlogPost {
             YouTubeField::create('CustomTrailerVideoID'),
             HTMLEditorField::create('CustomFilmSummary')
         );
-         $fields->addFieldsToTab('Root.FilmInfo', $overrideFields);
-
+        $fields->addFieldsToTab('Root.FilmInfo', $overrideFields);
 
         // $fields->addFieldToTab('Root.FilmInfo', new );
         // $fields->addFieldToTab('Root.FilmInfo', new );
@@ -170,10 +154,10 @@ class ShowPage extends BlogPost {
         return $fields;
     }
 
-    public function getFilmTitle(){
+    public function getFilmTitle() {
 
         $override = $this->CustomFilmTitle;
-        if($override != ''){
+        if ($override != '') {
             return $override;
         }
 
@@ -181,10 +165,10 @@ class ShowPage extends BlogPost {
 
     }
 
-    public function getFilmYear(){
+    public function getFilmYear() {
 
         $override = $this->CustomFilmYear;
-        if($override != ''){
+        if ($override != '') {
             return $override;
         }
 
@@ -192,10 +176,10 @@ class ShowPage extends BlogPost {
 
     }
 
-    public function getFilmSummary(){
+    public function getFilmSummary() {
 
         $override = $this->obj('CustomFilmSummary');
-        if($override != ''){
+        if ($override != '') {
             return $override;
         }
 
@@ -203,16 +187,15 @@ class ShowPage extends BlogPost {
 
     }
 
-    public function getTrailerVideoID(){
-         $override = $this->CustomTrailerVideoID;
-        if($override != ''){
+    public function getTrailerVideoID() {
+        $override = $this->CustomTrailerVideoID;
+        if ($override != '') {
             return $override;
         }
 
         return $this->dbObject('TmdbTrailerVideoID');
     }
-    public function TimesFormatted(){
-
+    public function TimesFormatted() {
 
         //$this->getMovieInfo('Where the wild things are');
         // if(!$this->Times){
@@ -224,24 +207,22 @@ class ShowPage extends BlogPost {
         //Debug::show($times);
         $timesArray = explode("\n", $times);
 
-        if(count($timesArray) == 0){
+        if (count($timesArray) == 0) {
             return;
         }
 
         $timesArrayList = new ArrayList();
 
-        foreach($timesArray as $time){
+        foreach ($timesArray as $time) {
             //$time = strip_tags($time);
             $time = trim(preg_replace('/\s+/', ' ', $time));
 
             $timestamp = strtotime($time);
 
-
-
             $timeFormatted = date('g:iA', $timestamp);
 
             $timeObj = new DataObject;
-            $timeObj->TimeFormatted =  $timeFormatted;
+            $timeObj->TimeFormatted = $timeFormatted;
             $timesArrayList->push($timeObj);
 
             //print_r($timeObj->TimeFormatted);
@@ -251,34 +232,27 @@ class ShowPage extends BlogPost {
 
     }
 
-
-
-    public function onBeforeWrite()
-    {
+    public function onBeforeWrite() {
         // check on first write action, aka "database row creation" (ID-property is not set)
-              // echo $this->FilmID;
-        if(($this->FilmID != 0) && ($this->UseTmdbForLookup)) {
+        // echo $this->FilmID;
+        if (($this->FilmID != 0) && ($this->UseTmdbForLookup)) {
             $film = $this->getMovieInfo($this->FilmID);
 
+            if ($film) {
 
-
-            if($film){
-
-                foreach($film as $filmKey => $filmVal){
+                foreach ($film as $filmKey => $filmVal) {
                     $this->{$filmKey} = $filmVal;
                 }
-                 // $this->FilmTitle = $film['FilmTitle'];
-                 // $this->FilmYear = $film['FilmYear'];
-                 // $this->FilmSummary = $film['FilmSummary'];
-                 // $this->TmdbBgURL = $film['TmdbBgURL'];
-                 // $this->TmdbPosterURL = $film['TmdbPosterURL'];
-                 // $this->TrailerVideoID = $film['TrailerVideoID'];
+                // $this->FilmTitle = $film['FilmTitle'];
+                // $this->FilmYear = $film['FilmYear'];
+                // $this->FilmSummary = $film['FilmSummary'];
+                // $this->TmdbBgURL = $film['TmdbBgURL'];
+                // $this->TmdbPosterURL = $film['TmdbPosterURL'];
+                // $this->TrailerVideoID = $film['TrailerVideoID'];
 
             }
 
         }
-
-
 
         // check on every write action
         // if(!$this->record['TeamID']) {
@@ -290,20 +264,19 @@ class ShowPage extends BlogPost {
         // SilverStripe will not execute the request.
         parent::onBeforeWrite();
     }
-    public function onBeforeDelete(){
-
+    public function onBeforeDelete() {
 
         parent::onBeforeDelete();
 
     }
-    public function getMovieInfo($filmID){
+    public function getMovieInfo($filmID) {
 
-        $token  = new \Tmdb\ApiToken(Environment::getEnv('TMDB_API_KEY'));
+        $token = new \Tmdb\ApiToken(Environment::getEnv('TMDB_API_KEY'));
 
         $client = new \Tmdb\Client($token, [
             'cache' => [
-                'path' => '/tmp/php-tmdb'
-            ]
+                'path' => '/tmp/php-tmdb',
+            ],
         ]);
 
         $infoArray = array();
@@ -312,14 +285,12 @@ class ShowPage extends BlogPost {
         $query->page(1);
 
         $searchRepo = new \Tmdb\Repository\SearchRepository($client);
-        $movieRepo =  new \Tmdb\Repository\MovieRepository($client);
+        $movieRepo = new \Tmdb\Repository\MovieRepository($client);
         $configRepository = new \Tmdb\Repository\ConfigurationRepository($client);
-
 
         $config = $configRepository->load();
 
         $configImages = $config->getImages();
-
 
         $firstFilm = $movieRepo->load($filmID);
 
@@ -327,11 +298,9 @@ class ShowPage extends BlogPost {
 
         // $firstFilm = reset($findArray);
 
-
-        if(!$firstFilm){
+        if (!$firstFilm) {
             return;
         }
-
 
         //****************************
         //Get id (for other api calls)
@@ -340,7 +309,6 @@ class ShowPage extends BlogPost {
         $filmId = $firstFilm->getId();
 
         $infoArray['TmdbFilmID'] = $filmId;
-
 
         //***********
         //Get title
@@ -363,22 +331,17 @@ class ShowPage extends BlogPost {
 
         $infoArray['TmdbFilmSummary'] = $firstFilm->getOverview();
 
-
         //**********
         //Get Images
         //**********
 
         $imgBase = $configImages['secure_base_url'];
 
-
-
         $backdropSize = $configImages['backdrop_sizes'][2];
-        $backdropBase = $imgBase.$backdropSize.$firstFilm->getBackdropPath();
+        $backdropBase = $imgBase . $backdropSize . $firstFilm->getBackdropPath();
 
         $posterSize = $configImages['poster_sizes'][4];
-        $posterBase = $imgBase.$posterSize.$firstFilm->getPosterPath();
-
-
+        $posterBase = $imgBase . $posterSize . $firstFilm->getPosterPath();
 
         $infoArray['TmdbBgURL'] = $backdropBase;
         $infoArray['TmdbPosterURL'] = $posterBase;
@@ -390,12 +353,11 @@ class ShowPage extends BlogPost {
         $videosArray = $movieRepo->getVideos($filmId)->toArray();
         $firstVideo = reset($videosArray);
 
-        if($firstVideo){
+        if ($firstVideo) {
 
             $infoArray['TmdbTrailerVideoID'] = $firstVideo->getKey();
 
         }
-
 
         return $infoArray;
 
