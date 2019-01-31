@@ -15,6 +15,9 @@ $Header
         /* bottom, image */
         url($NextUpcomingBackgroundURL);
 
+        background-position: center;
+        background-size: cover;
+
     }
     .main-content__header {
         border-bottom-color: $AccentColor;
@@ -39,7 +42,9 @@ $Header
 		border-color: $AccentColor;
 
 	}
-
+    .seriespage__accent a{
+        color: {$AccentColorLight};
+    }
 }
 </style>
 <% end_if %>
@@ -70,7 +75,7 @@ $BeforeContent
 
 				<%-- $Header --%>
     <div class="grid-container">
-        <div class="main-content__text">
+        <div class="main-content__text seriespage__accent">
 
 
                <%--  <h2 class="show-list__date-header">$Date.Format("E, MMM d")</h2> --%>

@@ -1,9 +1,16 @@
 .nav-mobile{
 	@include menu-base;
 	@include menu-direction(vertical);
+	
+	width: 80%;
 
 	&__item{
 		// border-bottom: 1px solid #ccc;
+
+
+		&--home{
+
+		}
 
 	}
 

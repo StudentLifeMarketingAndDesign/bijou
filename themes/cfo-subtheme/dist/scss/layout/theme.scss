@@ -7,18 +7,24 @@ body{
     color: rgba(255,255,255,.8);
 }
 
+.sslogin_box{
+    background-color: #202020;
+}
 .content-block__container {
     background-color: $body-background;
 }
 .body--dark-header .breadcrumb__anchor {
 	color: rgba(255,255,255,.8);
 }
+
+.breadcrumb__listitem:first-child .breadcrumb__anchor {
+     background-color: #222;
+}
 .main-content__container{
 	background: $body-background;
 	color: rgba(255,255,255,.8);
 	box-shadow: inset 0px 10px 13px -7px rgba(0,0,0,0.31);
 }
-
 .main-content__header{
     border-bottom-color: $highlight;
     h1 {
@@ -53,6 +59,9 @@ body{
 }
 .stafflist__position{
     color: #bbb;
+}
+.stafflist__text{
+    color: white;
 }
 .element {
     margin: 0;

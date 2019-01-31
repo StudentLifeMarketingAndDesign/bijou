@@ -67,5 +67,6 @@
     <script src="{$ThemeDir}/dist/scripts/app.js"></script>
 
     $Analytics
+
   </body>
 </html>

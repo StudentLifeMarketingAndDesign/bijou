@@ -21,10 +21,13 @@
 .showcard {
     &__category {
         color: rgba(255,255,255,.8);
+        font-family: Kollektif;
+        padding: 3px;
+        font-weight: bold;
+        border-radius: 3px;
         text-transform: uppercase;
         font-style: normal;
         font-size: rem-calc(12);
-        letter-spacing: 1px;
         line-height: 1;
         margin-bottom: rem-calc(12);
         &:hover, &:focus {
