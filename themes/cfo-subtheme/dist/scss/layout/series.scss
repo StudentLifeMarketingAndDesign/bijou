@@ -56,6 +56,7 @@
 .series-page-splash{
     background-color: $primary-color;
     background-position: 50% 50%;
+    background-size: cover;
     &__header{
         margin: 0;
         font-family:Kollektif;
@@ -70,7 +71,7 @@
         }
     }
 
-    
+
 }
 
 // .series-horizons{
