@@ -125,12 +125,66 @@ body{
     width:45px;
     height:40px;
 }
+.accordion-title{
+    font-size:16px;
+}
 .left{
-    color: #404040;
+    color:#fff;
+}
+.accordion-content{
+    border:none;
+    background-color:rgba(27, 24, 25, .94);
+
+}
+:last-child:not(.is-active)>.accordion-title{
+    border-bottom:none;
+}
+:last-child>.accordion-content:last-child{
+    border-bottom:none;
+}
+[type=color], 
+[type=date], 
+[type=datetime-local], 
+[type=datetime], 
+[type=email], 
+[type=month], 
+[type=number], 
+[type=password], 
+[type=search], 
+[type=tel], 
+[type=text], 
+[type=time], 
+[type=url], 
+[type=week], 
+textarea{
+    color:#fff;
+    border:1px solid #585858;
+}
+.text{
+    background-color:rgba(38,38,38,1);
+
+}
+
+[type=color]:focus, 
+[type=date]:focus, 
+[type=datetime-local]:focus, 
+[type=datetime]:focus, 
+[type=email]:focus, 
+[type=month]:focus, 
+[type=number]:focus, 
+[type=password]:focus, 
+[type=search]:focus, 
+[type=tel]:focus, 
+[type=text]:focus, 
+[type=time]:focus, 
+[type=url]:focus, 
+[type=week]:focus, 
+textarea:focus{
+    background-color:rgba(38,38,38,1);
+
 }
 .button, input.action{
     color:#ddd;
-    background-color:#0e64b0;
     border:none;
     margin: 30px 0px;
 }

@@ -24,12 +24,15 @@
     -webkit-border-radius: 10px;
     border-radius: 10px;
     background-position: 50% 50%;
-    & span {
+    & h2 {
         z-index: 20;
         position: relative;
         font-weight: bold;
         font-size: 50px;
         text-transform: uppercase;
+        display:block;
+        margin-bottom:0px;
+
     }
     &:before {
         background-color: rgba(#353223, 0.75);
@@ -52,7 +55,13 @@
     }
 }
 
-
+.subtitle{
+        padding-bottom:20px;
+        min-height: 20px;
+        font-family:Kollektif;
+        color: white;
+        text-align: center;
+}
 .series-page-splash{
     background-color: $primary-color;
     background-position: 50% 50%;

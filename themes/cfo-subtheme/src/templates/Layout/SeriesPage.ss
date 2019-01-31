@@ -26,14 +26,18 @@ $Header
         color: {$AccentColorLight};
     }
 	.main-content__container .accordion-title{
-		background-color: #1a538c;
+		background-color: $AccentColor;
 		color: white;
 		border-color: #15486e;
 	}
 
 	.accordion-content{
 		border-top-color: #15486e;
+
 	}
+    .button, input.action{
+        background-color:$AccentColor;
+}
     .show-list__time{
     	background-color: $AccentColor;
 	}
@@ -52,6 +56,7 @@ $Header
 
 	<div class="series-page-splash">
 		<h1 class="series-page-splash__header">$Title</h1>
+        <p class="subtitle">$Subtitle</p>
 	</div>
 
 	$Breadcrumbs
@@ -76,6 +81,7 @@ $BeforeContent
 				<%-- $Header --%>
     <div class="grid-container">
         <div class="main-content__text seriespage__accent">
+            
 
 
                <%--  <h2 class="show-list__date-header">$Date.Format("E, MMM d")</h2> --%>
