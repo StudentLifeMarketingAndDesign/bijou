@@ -60,7 +60,11 @@ $Header
 	</div>
 
 	$Breadcrumbs
-
+    <div class="column row">
+            <div class="main-content__header">
+                <h1>$Title</h1>
+            </div>
+        </div>
 
 $BeforeContent
 
@@ -81,7 +85,7 @@ $BeforeContent
 				<%-- $Header --%>
     <div class="grid-container">
         <div class="main-content__text seriespage__accent">
-            
+
 
 
                <%--  <h2 class="show-list__date-header">$Date.Format("E, MMM d")</h2> --%>

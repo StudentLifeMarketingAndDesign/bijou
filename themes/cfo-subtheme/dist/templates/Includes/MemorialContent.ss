@@ -1,14 +1,16 @@
 <div class="main-content__text">
     <div class="staffpage">
 
-    	<img src="$ThemeDir/dist/images/seanwu1.jpg">
+    	<img src="resources/themes/cfo-subtheme/dist/images/seanwu1.jpg">
 
 
     	<h1> In Memory of Sean "Scooter" Wu</h1>
-    	
-    	<p><i>"Sean always used to brighten my day by saying this to me: 'For every minute you are sad, you lose sixty seconds of happiness'." - Meghan Razimoff on Sean Wu</i></p>
 
-    	<hr>
+    	<blockquote>"Sean always used to brighten my day by saying this to me: 'For every minute you are sad, you lose sixty seconds of happiness'." - Meghan Razimoff on Sean Wu</i></blockquote>
+
+         <h2>Scholarship</h2>
+        <p><a href="https://studentlife.uiowa.edu/news/sean-wu-scholarships/" target="_blank">The Sean Wu Memorial Scholarship</a> was created in 2017 to honor the contributions Sean Wu (1998-2017) made to both the Bijou Film Board as well as the local Iowa City community.</p>
+        <h2>About Sean Wu</h2>
 
 		<p><a href= "https://www.facebook.com/swu.hoo.1998"><b>Sean Hsiang Yang Wu</b></a> was born Aug. 12, 1998, to Dr. David Wu and Una Yang in Phoenix, Ariz. He was diagnosed with Kawasaki disease at the age of 6, but never let the disease slow him down. Through the Make-a-Wish Foundation, he was able to meet President George W. Bush because he was obsessed with the United States presidency. He could name every president and first lady in order and knew all the fun facts. </p>
 
@@ -23,13 +25,13 @@
 
 		<p>
 		Sean passed away at the end of his freshman year, after leaving a lasting positive mark everywhere he went and on everyone he touched.</p>
-		
+
 		<p>He is survived by his loving parents, Dr. David Wu and Una Yang; his twin brother, Austin; paternal grandmother, Dr. Chiu Hui Wu; and maternal grandmother, Mrs. Un Suk Yang.</p>
 
 
 		<p>In short, Sean was not only an incredible friend and peer, he was a successful student, important community member, and a role model to those who looked up to his kind, fun-loving personality.</p>
 
-		<img src="$ThemeDir/dist/images/seanwu2.jpg"><br>
+		<img src="resources/themes/cfo-subtheme/dist/images/seanwu2.jpg"><br>
 
 		<p> <i>"The one thing I appreciated about Sean the most was his consistent, bright, and positive personality. He was always the same person no matter who he was with, how well he knew you, or how his day was going. Everyday I could expect Sean to make me smile because that is just what he was able to do. He had so many more hearts left to touch before we lost him and that is why I believe it is important to keep his memory alive... - Roman Starkey on Sean Wu </i></p>
 
@@ -42,7 +44,7 @@
 
 		<p><i>"Sean's passion and drive inspired those around him to be curious, kind, and confident in their own quirkiness... If more people channeled their inner Sean, this campus would be a better place." - Kit Fitzgerald on Sean Wu</i></p>
 
-		
+
 		<div align="center">
 
 		<a href= "https://www.facebook.com/swu.hoo.1998"><b> Sean's Memorial Facebook Page</b></a><br>
@@ -54,9 +56,6 @@
 
 		</div>
 
-        <%-- <% if $Photo %>
-            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="dp-lazy" data-original="$Photo.ScaleWidth(945).URL" width="945" height="$Photo.ScaleWidth(945).Height" alt="$Title" role="presentation" class="staffpage__img">
-        <% end_if %> --%>
     </div>
-    
+
 </div>

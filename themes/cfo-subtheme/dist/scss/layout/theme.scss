@@ -7,6 +7,9 @@ body{
     color: rgba(255,255,255,.8);
 }
 
+blockquote{
+    color: #ccc;
+}
 .sslogin__box{
     background-color: #202020;
 }
@@ -18,7 +21,7 @@ body{
 }
 
 .breadcrumb__listitem:first-child .breadcrumb__anchor {
-     background-color: #222;
+     // background-color: #222;
 }
 .main-content__container{
 	background: $body-background;

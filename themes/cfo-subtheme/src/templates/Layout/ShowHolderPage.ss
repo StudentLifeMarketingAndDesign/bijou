@@ -8,7 +8,7 @@ $Header
             </div>
         </div>
 
-    <div class="grid-container grid-container--show-holder">
+    <div class="column row">
 
 
         <div class="main-content__text">
