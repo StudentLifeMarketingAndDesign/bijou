@@ -1,7 +1,11 @@
+.grid-container--show-holder{
+    margin-top: 20px;
+}
+
 .show-list{
     color: #fff;
     &__date-header{
-        
+
         text-transform: uppercase;
         font-size: rem-calc(28);
         color: white;

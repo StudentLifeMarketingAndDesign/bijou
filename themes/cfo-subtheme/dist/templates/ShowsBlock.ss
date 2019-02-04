@@ -1,10 +1,11 @@
+
 <% if $AreaName == "AfterContent" %>
     <section class="content-block__container " aria-labelledby="Block$ID">
         <div class="content-block row">
             <div class="column showsblock">
                 <h3 class="showsblock__title" id="Block$ID">Upcoming Shows</h3>
                 <ul class="showsblock__cards">
-                    <% loop $Shows %>
+                    <% loop $UpcomingShows %>
                         <li class="">
                             <% include ShowCard %>
                         </li>

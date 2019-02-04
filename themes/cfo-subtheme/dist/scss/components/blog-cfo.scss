@@ -5,9 +5,31 @@
 .blogmeta__byline p a{
     color:#fff;
 }
+
+.bloglistitem{
+    border-top: 1px solid #666;
+}
 .bloglistitem__category a:hover{
     color: #D3D3D3;
 }
 .bloglistitem .blogmeta__byline a{
     color: #D3D3D3;
+}
+.WidgetHolder {
+    background-color: #333;
+    border: 1px solid #666;
+    margin-bottom: 1.875rem;
+    width: 100%;
+    border-radius: 3px;
+}
+.WidgetHolder li {
+    border-bottom: 1px solid #666;
+}
+.WidgetHolder li a {
+
+    color: white;
+
+    .text{
+        background: none;
+    }
 }

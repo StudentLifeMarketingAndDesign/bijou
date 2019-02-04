@@ -100,8 +100,14 @@
 <section class="instafeed" aria-labelledby="instagramid">
     <div class="row">
         <div class="columns">
+<<<<<<< HEAD
             <h3 id="instagramid">Follow us on Instagram <a href="https://www.instagram.com/uistudentlife/">@uistudentlife</a></h3>
             <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://cdn.lightwidget.com/widgets/d42f1547dd2c56fb8ad082838075f620.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+=======
+            <h3 id="instagramid">Follow us on Instagram <a href="https://www.instagram.com/bijoufilm/">@bijoufilm</a></h3>
+            <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/c060e031b3005eb087f46126ea5ae2be.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+
+>>>>>>> origin/2.0.x
         </div>
     </div>
 </section>

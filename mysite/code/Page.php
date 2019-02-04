@@ -2,10 +2,12 @@
 
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\ORM\ArrayList;
-
+use SilverStripe\Forms\CheckboxField;
 class Page extends SiteTree {
 
 	private static $db = array(
+
+        'HideInstaFeed' => 'Boolean'
 
 	);
 
@@ -26,6 +28,8 @@ class Page extends SiteTree {
 
 	public function getCMSFields(){
 		$f = parent::getCMSFields();
+
+        $f->addFieldToTab('Root.Main', new CheckboxField('HideInstaFeed', 'Hide Instagram feed from this page'));
 
 		return $f;
 	}
