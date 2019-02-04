@@ -34,7 +34,14 @@ class Page extends SiteTree {
 		return $f;
 	}
 
+    public function AllUpcomingShows(){
 
+        $holder = ShowHolderPage::get()->First();
+
+        if($holder){
+            return $holder->UpcomingShows();
+        }
+    }
     /**
      * This method converts a {@link DataList} to an {@link ArrayList} with an option to add
      * an additional column to each list item to be used for sorting. This is particularly useful when you are
