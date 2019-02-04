@@ -3,7 +3,7 @@
     <% if $SeriesPages.exists %>
         <p class="showcard__category">
         <% loop $SeriesPages %>
-            <a href="$Link" class="showcard__category" style="color: $AccentColor">$Title</a><% if not Last %><% else %><% end_if %>
+            <a href="$Link" class="showcard__category" style="background-color: $AccentColor">$Title</a><% if not Last %><% else %><% end_if %>
         <% end_loop %>
         </p>
     <% end_if %>

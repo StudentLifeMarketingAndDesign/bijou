@@ -25,9 +25,9 @@
                         </div>
                     <% else_if $TmdbBgURL %>
 
-                        
+
                         <div class="cell-bg" data-flickity-bg-lazyload="$TmdbBgURL" style="background-position: 50% 50%;">
-                       
+
                             <div class="inner">
                                 <div class="cell-text">
                                     <span>Featured Page</span>
@@ -95,3 +95,14 @@
 </div>
 
 <% include HomePageContent %>
+
+<!-- Instagram Feed -->
+<section class="instafeed" aria-labelledby="instagramid">
+    <div class="row">
+        <div class="columns">
+            <h3 id="instagramid">Follow us on Instagram <a href="https://www.instagram.com/bijoufilm/">@bijoufilm</a></h3>
+            <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/c060e031b3005eb087f46126ea5ae2be.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+
+        </div>
+    </div>
+</section>

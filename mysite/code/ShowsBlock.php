@@ -30,9 +30,13 @@ class ShowsBlock extends BaseElement{
     }
 
 
-    public function Shows() {
-        $shows = ShowPage::get()->sort('ShowingDate DESC')->limit(5);
-        return $shows;
+    public function UpcomingShows(){
+
+        $holder = ShowHolderPage::get()->First();
+
+        if($holder){
+            return $holder->UpcomingShows();
+        }
     }
 
 

@@ -1,12 +1,29 @@
 $Header
+
 <main class="main-content__container" id="main-content__container">
     $Breadcrumbs
-    <div class="grid-container">
+    <div class="column row">
+            <div class="main-content__header">
+                <h1>$Title</h1>
+            </div>
+        </div>
+
+    <div class="grid-container grid-container--show-holder">
+
+
         <div class="main-content__text">
+            $Content
             <% loop $UpcomingDates %>
                 <h2 class="show-list__date-header">$Date.Format("E, MMM d")</h2>
                 <div class="show-list grid-x grid-margin-x medium-up-2 large-up-3">
                     <% loop $ShowsTransient %>
+                        <% if $SeriesPages.exists %>
+                            <p class="showcard__category">
+                            <% loop $SeriesPages %>
+                                <a href="$Link" class="showcard__category" style="background-color: $AccentColor">$Title</a><% if not Last %><% else %><% end_if %>
+                            <% end_loop %>
+                            </p>
+                        <% end_if %>
                         <a href="$Link" class="cell show-list__show">
                             <% if $TmdbPosterURL %>
                                 <img class="show-list__show-img" src="$TmdbPosterURL" alt="$Title poster image" role="presentation" />

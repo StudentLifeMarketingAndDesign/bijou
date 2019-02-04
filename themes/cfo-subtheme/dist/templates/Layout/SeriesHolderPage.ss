@@ -45,8 +45,11 @@ $Header
                 <div class="cell large-12">
                     <div style="position:relative;">
                         <a href="$Link" class=" series series-{$URLSegment}">
-                            <span>$Title</span>
+                            <span><h2>$Title</h2><br><p class="subtitle">$Subtitle</p></span>
+
+
                         </a>
+
                     </div>
                 </div>
 

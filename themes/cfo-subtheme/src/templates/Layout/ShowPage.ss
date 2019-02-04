@@ -83,7 +83,7 @@ $Header
 
                     $FilmSummary
 
-                 
+
 
                     <% end_if %>
 
@@ -110,6 +110,8 @@ $Header
                     <% end_if %>
 
                     <hr />
+                    <p>Location: <a href="http://icfilmscene.org" target="_blank">FilmScene</a></p>
+
 
                     <p><em>Individuals with disabilities are encouraged to attend all University of Iowa-sponsored events. If you are a person with a disability who requires a reasonable accommodation in order to participate in this program, please contact the Bijou Film Board in advance (@bijoufilm on Facebook or at (319) 335-3041).</em></p>
                 </div>
@@ -125,6 +127,7 @@ $Header
             <% end_if %>
 
             <div class="show-meta showpage__accent">
+
                 <ul class="show-meta__list">
                     <% if $FilmSceneLink %>
                         <li class="show-meta__item">
