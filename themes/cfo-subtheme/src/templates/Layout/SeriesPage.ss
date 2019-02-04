@@ -86,7 +86,12 @@ $BeforeContent
     <div class="grid-container">
         <div class="main-content__text seriespage__accent">
 
+               <% if $Thanks %>
+                    <p class="thanks">
+                        $Thanks
+                    </p>
 
+               <% end_if %>
 
                <%--  <h2 class="show-list__date-header">$Date.Format("E, MMM d")</h2> --%>
                 <div class="show-list grid-x grid-margin-x medium-up-2 large-up-3">
@@ -113,12 +118,7 @@ $BeforeContent
                         </a>
                     <% end_loop %>
                 </div><br />
-               <% if $Thanks %>
-               		<p class="thanks">
-               			$Thanks
-               		</p>
 
-               <% end_if %>
 
 
 

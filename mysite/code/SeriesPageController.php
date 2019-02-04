@@ -38,45 +38,44 @@ class SeriesPageController extends PageController
     }
         public function SuggestionForm(){
 
-         $fields = new FieldList(
-            TextField::create('Name','Your Name (optional):'),
-            TextField::create('ContactInfo', 'Your Email (optional):'),
-            TextField::create('FilmSeries', 'Film Series:', $this->Title),
-            TextField::create('FilmTitle','Suggested Film Title (required):')
+            $fields = new FieldList(
+                TextField::create('Name','Your Name (optional):'),
+                TextField::create('ContactInfo', 'Your Email (optional):'),
+                TextField::create('FilmSeries', 'Film Series:', $this->Title),
+                TextField::create('FilmTitle','Suggested Film Title (required):')
             );
 
-        $actions = new FieldList(
-                FormAction::create('submit')->setTitle('Submit a Suggestion!')
-            );
+            $actions = new FieldList(
+                    FormAction::create('submit')->setTitle('Submit a Suggestion!')
+                );
 
-        $required = new RequiredFields('FilmTitle');
+            $required = new RequiredFields('FilmTitle');
 
-        $form = new Form($this, 'SuggestionForm', $fields, $actions, $required);
-
-        return $form;
+            $form = new Form($this, 'SuggestionForm', $fields, $actions, $required);
+            $form->enableSpamProtection();
+            return $form;
         }
 
-          public function submit($data, $form)
-    {
-        $email = new Email();
+        public function submit($data, $form){
+            $email = new Email();
 
-        $email->setTo('dustin-quam@uiowa.edu');
-        $email->setFrom('imu-web@uiowa.edu');
-        $email->setSubject("Movie Suggestion from {$data['Name']}");
+            $email->setTo('bijouui.executive@gmail.com');
+            $email->setFrom('imu-web@uiowa.edu');
+            $email->setSubject("[Bijou Website] Film Suggestion from {$data['Name']}");
 
-        $messageBody = "
-            <p><strong>Name:</strong> {$data['Name']}</p>
-            <p><strong>Email:</strong> {$data['ContactInfo']}</p>
-            <p><strong>Film Series:</strong>{$data['FilmSeries']}</p>
-            <p><strong>Film Title:</strong>{$data['FilmTitle']}</p>
-        ";
-        $email->setBody($messageBody);
-        $email->send();
-        return [
-            'Thanks' => 'Thank you for your suggestion!',
-            'Form' => ''
-        ];
-    }
+            $messageBody = "
+                <p><strong>Name:</strong> {$data['Name']}</p>
+                <p><strong>Email:</strong> {$data['ContactInfo']}</p>
+                <p><strong>Film Series:</strong>{$data['FilmSeries']}</p>
+                <p><strong>Film Suggestion:</strong>{$data['FilmTitle']}</p>
+            ";
+            $email->setBody($messageBody);
+            $email->send();
+            return [
+                'Thanks' => 'Thank you for your suggestion!',
+                'Form' => ''
+            ];
+        }
 }
 
     //      public function SendSuggestion($data, Form $form)
