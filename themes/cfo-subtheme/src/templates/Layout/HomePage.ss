@@ -93,6 +93,54 @@
         </div>
     <% end_if %>
 </div>
+<style>
+    <% loop $AllSeriesPages %>
+
+    .series-{$URLSegment}{
+
+
+          background:
+            linear-gradient(
+              rgba({$AccentRgb}, 0.2),
+              rgba({$AccentLightRgb}, 0.75)
+            ),
+
+            /* bottom, image */
+            url($NextUpcomingBackgroundURL);
+
+        }
+
+
+
+
+
+
+    <% end_loop %>
+</style>
+
+     <div class="row">
+        <div class="grid-container">
+          <div class="grid-x grid-margin-x grid-padding-x grid-padding-y">
+
+                <% loop $AllSeriesPages %>
+                <div class="cell large-12">
+                    <div style="position:relative;">
+                        <a href="$Link" class=" series series-{$URLSegment}">
+                            <span><h2>$Title</h2><br><p class="subtitle">$Subtitle</p></span>
+
+
+                        </a>
+
+                    </div>
+                </div>
+
+               <% end_loop %>
+
+            </div>
+
+
+
+
 
 <% include HomePageContent %>
 
