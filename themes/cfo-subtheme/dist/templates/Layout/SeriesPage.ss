@@ -28,7 +28,7 @@ $Header
 	.main-content__container .accordion-title{
 		background-color: $AccentColor;
 		color: white;
-		border-color: #15486e;
+		border-color: $AccentColorLight;
 	}
 
 	.accordion-content{
@@ -86,7 +86,12 @@ $BeforeContent
     <div class="grid-container">
         <div class="main-content__text seriespage__accent">
 
+               <% if $Thanks %>
+                    <p class="thanks">
+                        $Thanks
+                    </p>
 
+               <% end_if %>
 
                <%--  <h2 class="show-list__date-header">$Date.Format("E, MMM d")</h2> --%>
                 <div class="show-list grid-x grid-margin-x medium-up-2 large-up-3">
@@ -113,31 +118,26 @@ $BeforeContent
                         </a>
                     <% end_loop %>
                 </div><br />
-               <% if $Thanks %>
-               		<p class="thanks">
-               			$Thanks
-               		</p>
-
-               <% end_if %>
 
 
-               <ul class="accordion" data-allow-all-closed="true" data-accordion>
-				  <li class="accordion-item" data-accordion-item>
-				    <!-- Accordion tab title -->
-				    <a href="#" class="accordion-title">Have a movie suggestion? Let us know!</a>
 
-				    	<div class="accordion-content" data-tab-content>
-			      			$SuggestionForm
 
-			    </div>
-			  </li>
-
-			</ul>
 
 
         </div>
     </div>
+               <ul class="accordion" data-allow-all-closed="true" data-accordion>
+                  <li class="accordion-item" data-accordion-item>
+                    <!-- Accordion tab title -->
+                    <a href="#" class="accordion-title">Have a movie suggestion? Let us know!</a>
 
+                        <div class="accordion-content" data-tab-content>
+                            $SuggestionForm
+
+                </div>
+              </li>
+
+            </ul>
 
 
 		<% if $ShowChildPages %>

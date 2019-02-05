@@ -34,6 +34,45 @@ blockquote{
         color: #fff;
     }
 }
+.site-search--is-active{
+    background-color: #231f20;
+}
+.site-search__submit{
+    color:#fff;
+    background-color:#231f20;
+}
+.site-search__icon{
+    color:#fff;
+    background-color:#231f20;
+}
+.site-search__cancel-button{
+    color:#fff;
+}
+[type=color], 
+[type=date], 
+[type=datetime-local], 
+[type=datetime], 
+[type=email], 
+[type=month], 
+[type=number], 
+[type=password], 
+[type=search], 
+[type=tel], 
+[type=text], 
+[type=time], 
+[type=url], 
+[type=week], 
+textarea{
+    color:#231f20;
+    border:none;
+
+}
+
+input, input:matches([type="password"], [type="search"]){
+    background: #231f20;
+    color: white;
+    border: none;
+}
 .childpages__title{
 	color: #fff;
 }
