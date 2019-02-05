@@ -34,6 +34,10 @@ class Page extends SiteTree {
 		return $f;
 	}
 
+    public function AllSeriesPages(){
+        return SeriesPage::get();
+    }
+
     public function AllUpcomingShows(){
 
         $holder = ShowHolderPage::get()->First();
