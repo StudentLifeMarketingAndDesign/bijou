@@ -120,7 +120,12 @@ $Header
             $Form
         </article>
         <aside class="sidebar dp-sticky">
-            <% if $TmdbPosterURL %>
+
+            <% if $Poster %>
+                <div class="posterimg">
+                    <img src="$Poster.URL" alt="$Title poster image" />
+                </div>
+            <% else_if $TmdbPosterURL %>
                 <div class="posterimg">
                     <img src="$TmdbPosterURL" alt="$Title poster image" />
                 </div>
