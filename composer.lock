@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "e15df030e14b2320d3f2fef3456d153e",
@@ -119,7 +119,7 @@
                 "gridfield bulk upload",
                 "silverstripe"
             ],
-            "time": "2018-10-01T03:57:59+00:00"
+            "time": "2018-10-01 03:57:59"
         },
         {
             "name": "composer/ca-bundle",
@@ -831,16 +831,16 @@
         },
         {
             "name": "johngrogg/ics-parser",
-            "version": "v2.1.8",
+            "version": "v2.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/u01jmg3/ics-parser.git",
-                "reference": "d7d9c33e554af1bb75130eb0ded288eff60be2a1"
+                "reference": "21402b044b85ef5d7aa97f76bf61ff49677d5e55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/u01jmg3/ics-parser/zipball/d7d9c33e554af1bb75130eb0ded288eff60be2a1",
-                "reference": "d7d9c33e554af1bb75130eb0ded288eff60be2a1",
+                "url": "https://api.github.com/repos/u01jmg3/ics-parser/zipball/21402b044b85ef5d7aa97f76bf61ff49677d5e55",
+                "reference": "21402b044b85ef5d7aa97f76bf61ff49677d5e55",
                 "shasum": ""
             },
             "require": {
@@ -882,7 +882,7 @@
                 "ics-parser",
                 "ifb"
             ],
-            "time": "2019-01-05T23:50:50+00:00"
+            "time": "2019-02-02T00:39:59+00:00"
         },
         {
             "name": "jonom/focuspoint",
@@ -1343,7 +1343,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/tree/ss4.x-ui",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/issues"
             },
-            "time": "2018-10-22T17:49:15+00:00"
+            "time": "2018-10-22 17:49:15"
         },
         {
             "name": "md/division-analytics",
@@ -1370,7 +1370,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-analytics/tree/1.2.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-analytics/issues"
             },
-            "time": "2018-08-17T20:20:52+00:00"
+            "time": "2018-08-17 20:20:52"
         },
         {
             "name": "md/division-project",
@@ -1427,10 +1427,10 @@
             },
             "description": "The University of Iowa Division of Student Life Project Code and Theme",
             "support": {
-                "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/ss4.3.x",
+                "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/ss4.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2019-02-01T19:06:10+00:00"
+            "time": "2019-02-01 19:06:10"
         },
         {
             "name": "md/saml",
@@ -1498,7 +1498,7 @@
             "support": {
                 "source": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-saml/tree/md"
             },
-            "time": "2018-08-22T20:27:51+00:00"
+            "time": "2018-08-22 20:27:51"
         },
         {
             "name": "md/silverstripe-event-calendar",
@@ -1544,7 +1544,7 @@
             "support": {
                 "source": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-event-calendar/tree/master"
             },
-            "time": "2018-11-13T17:38:59+00:00"
+            "time": "2018-11-13 17:38:59"
         },
         {
             "name": "md/silverstripe-maintenance-mode",
@@ -1608,7 +1608,7 @@
                 "issues": "http://github.com/dljoseph/silverstripe-maintenance-mode/issues",
                 "source": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-maintenance-mode/tree/master"
             },
-            "time": "2018-09-19T20:02:58+00:00"
+            "time": "2018-09-19 20:02:58"
         },
         {
             "name": "md/uiowa-bar",
@@ -1635,7 +1635,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/uiowa-bar/tree/1.2.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/uiowa-bar/issues"
             },
-            "time": "2018-07-05T17:48:54+00:00"
+            "time": "2018-07-05 17:48:54"
         },
         {
             "name": "monolog/monolog",
@@ -1918,7 +1918,7 @@
             "keywords": [
                 "silverstripe"
             ],
-            "time": "2018-11-28T20:14:37+00:00"
+            "time": "2018-11-28 20:14:37"
         },
         {
             "name": "paragonie/random_compat",
@@ -3455,16 +3455,16 @@
         },
         {
             "name": "silverstripe/tagfield",
-            "version": "2.2.1",
+            "version": "2.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-tagfield.git",
-                "reference": "feff8b52f1df3d6feef639b70d3a4abe8c92f149"
+                "reference": "dd403bb96f50754ced6b2dde1567943d1c3fe0fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-tagfield/zipball/feff8b52f1df3d6feef639b70d3a4abe8c92f149",
-                "reference": "feff8b52f1df3d6feef639b70d3a4abe8c92f149",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-tagfield/zipball/dd403bb96f50754ced6b2dde1567943d1c3fe0fa",
+                "reference": "dd403bb96f50754ced6b2dde1567943d1c3fe0fa",
                 "shasum": ""
             },
             "require": {
@@ -3504,7 +3504,7 @@
                 "silverstripe",
                 "tag"
             ],
-            "time": "2018-12-04T09:13:39+00:00"
+            "time": "2019-01-24T20:44:42+00:00"
         },
         {
             "name": "silverstripe/userforms",
@@ -3923,16 +3923,16 @@
         },
         {
             "name": "symfony/cache",
-            "version": "v3.4.21",
+            "version": "v3.4.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache.git",
-                "reference": "86056403bf6cd6f8e65d2b1a3d4958814fe7258e"
+                "reference": "38e5f4300cff5e70b714afd7cc658f5138514f94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache/zipball/86056403bf6cd6f8e65d2b1a3d4958814fe7258e",
-                "reference": "86056403bf6cd6f8e65d2b1a3d4958814fe7258e",
+                "url": "https://api.github.com/repos/symfony/cache/zipball/38e5f4300cff5e70b714afd7cc658f5138514f94",
+                "reference": "38e5f4300cff5e70b714afd7cc658f5138514f94",
                 "shasum": ""
             },
             "require": {
@@ -3989,20 +3989,20 @@
                 "caching",
                 "psr6"
             ],
-            "time": "2019-01-01T13:45:19+00:00"
+            "time": "2019-01-16T13:27:11+00:00"
         },
         {
             "name": "symfony/config",
-            "version": "v3.4.21",
+            "version": "v3.4.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "17c5d8941eb75a03d19bc76a43757738632d87b3"
+                "reference": "c9bc510c217075d42d4a927e285917d0c2001cf4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/17c5d8941eb75a03d19bc76a43757738632d87b3",
-                "reference": "17c5d8941eb75a03d19bc76a43757738632d87b3",
+                "url": "https://api.github.com/repos/symfony/config/zipball/c9bc510c217075d42d4a927e285917d0c2001cf4",
+                "reference": "c9bc510c217075d42d4a927e285917d0c2001cf4",
                 "shasum": ""
             },
             "require": {
@@ -4053,20 +4053,20 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-01T13:45:19+00:00"
+            "time": "2019-01-30T11:33:42+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v3.4.21",
+            "version": "v3.4.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "d1cdd46c53c264a2bd42505bd0e8ce21423bd0e2"
+                "reference": "ed5be1663fa66623b3a7004d5d51a14c4045399b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/d1cdd46c53c264a2bd42505bd0e8ce21423bd0e2",
-                "reference": "d1cdd46c53c264a2bd42505bd0e8ce21423bd0e2",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/ed5be1663fa66623b3a7004d5d51a14c4045399b",
+                "reference": "ed5be1663fa66623b3a7004d5d51a14c4045399b",
                 "shasum": ""
             },
             "require": {
@@ -4116,20 +4116,20 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-01T18:08:36+00:00"
+            "time": "2019-01-16T13:27:11+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.4.21",
+            "version": "v3.4.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "c24ce3d18ccc9bb9d7e1d6ce9330fcc6061cafde"
+                "reference": "b52454ec66fe5082b7a66a491339d1f1da9a5a0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/c24ce3d18ccc9bb9d7e1d6ce9330fcc6061cafde",
-                "reference": "c24ce3d18ccc9bb9d7e1d6ce9330fcc6061cafde",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/b52454ec66fe5082b7a66a491339d1f1da9a5a0d",
+                "reference": "b52454ec66fe5082b7a66a491339d1f1da9a5a0d",
                 "shasum": ""
             },
             "require": {
@@ -4166,20 +4166,20 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-01T13:45:19+00:00"
+            "time": "2019-01-16T13:27:11+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v3.4.21",
+            "version": "v3.4.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "3f2a2ab6315dd7682d4c16dcae1e7b95c8b8555e"
+                "reference": "7c0c627220308928e958a87c293108e5891cde1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/3f2a2ab6315dd7682d4c16dcae1e7b95c8b8555e",
-                "reference": "3f2a2ab6315dd7682d4c16dcae1e7b95c8b8555e",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/7c0c627220308928e958a87c293108e5891cde1d",
+                "reference": "7c0c627220308928e958a87c293108e5891cde1d",
                 "shasum": ""
             },
             "require": {
@@ -4215,20 +4215,20 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-01T13:45:19+00:00"
+            "time": "2019-01-16T13:43:35+00:00"
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v3.4.21",
+            "version": "v3.4.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
-                "reference": "8a10e36ffd04c0c551051594952304d34ecece71"
+                "reference": "0f1cbaee6b356e72c0e025f9a4e9d76a25bf4793"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/8a10e36ffd04c0c551051594952304d34ecece71",
-                "reference": "8a10e36ffd04c0c551051594952304d34ecece71",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/0f1cbaee6b356e72c0e025f9a4e9d76a25bf4793",
+                "reference": "0f1cbaee6b356e72c0e025f9a4e9d76a25bf4793",
                 "shasum": ""
             },
             "require": {
@@ -4269,7 +4269,7 @@
                 "configuration",
                 "options"
             ],
-            "time": "2019-01-01T13:45:19+00:00"
+            "time": "2019-01-16T09:39:14+00:00"
         },
         {
             "name": "symfony/polyfill-apcu",
@@ -4372,7 +4372,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "BackEndTea@gmail.com"
+                    "email": "backendtea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
@@ -4510,16 +4510,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.4.21",
+            "version": "v3.4.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "554a59a1ccbaac238a89b19c8e551a556fd0e2ea"
+                "reference": "ba11776e9e6c15ad5759a07bffb15899bac75c2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/554a59a1ccbaac238a89b19c8e551a556fd0e2ea",
-                "reference": "554a59a1ccbaac238a89b19c8e551a556fd0e2ea",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/ba11776e9e6c15ad5759a07bffb15899bac75c2d",
+                "reference": "ba11776e9e6c15ad5759a07bffb15899bac75c2d",
                 "shasum": ""
             },
             "require": {
@@ -4565,7 +4565,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-01T13:45:19+00:00"
+            "time": "2019-01-16T10:59:17+00:00"
         },
         {
             "name": "unclecheese/display-logic",
@@ -4625,7 +4625,7 @@
                 "logic",
                 "silverstripe"
             ],
-            "time": "2018-11-14T23:16:44+00:00"
+            "time": "2018-11-14 23:16:44"
         },
         {
             "name": "undefinedoffset/silverstripe-nocaptcha",

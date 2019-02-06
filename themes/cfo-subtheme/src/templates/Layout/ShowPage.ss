@@ -111,6 +111,9 @@ $Header
 
                     <hr />
                     <p>Location: <a href="http://icfilmscene.org" target="_blank">FilmScene</a></p>
+                    <% if $TmdbFilmRuntime %>
+                        <p>Runtime: $TmdbFilmRuntime</p>
+                    <% end_if %>
 
 
                     <p><em>Individuals with disabilities are encouraged to attend all University of Iowa-sponsored events. If you are a person with a disability who requires a reasonable accommodation in order to participate in this program, please contact the Bijou Film Board in advance (@bijoufilm on Facebook or at (319) 335-3041).</em></p>

@@ -30,6 +30,7 @@ class ShowPage extends BlogPost {
 
         'TmdbFilmID' => 'Int',
         'TmdbFilmTitle' => 'Text',
+        'TmdbFilmRuntime' => 'Varchar(10)',
         'TmdbFilmYear' => 'Varchar(10)',
         'TmdbTrailerVideoID' => 'Varchar(11)',
         'TmdbFilmRating' => 'Varchar(11)',
@@ -39,6 +40,7 @@ class ShowPage extends BlogPost {
         'TmdbBgURL' => 'Varchar(255)',
 
         'CustomFilmTitle' => 'Text',
+        'CustomFilmRuntime' => 'Varchar(10)',
         'CustomFilmYear' => 'Varchar(10)',
         'CustomTrailerVideoID' => 'Varchar(11)',
         'CustomFilmRating' => 'Varchar(11)',
@@ -137,6 +139,7 @@ class ShowPage extends BlogPost {
             UploadField::create('Poster', 'Custom Poster Image (vertical images work best)'),
             UploadField::create('FeaturedImage', 'Custom Background Image'),
             TextField::create('CustomFilmTitle'),
+            TextField::create('CustomFilmRuntime'),
             TextField::create('CustomFilmYear'),
             YouTubeField::create('CustomTrailerVideoID'),
             HTMLEditorField::create('CustomFilmSummary')
@@ -163,6 +166,16 @@ class ShowPage extends BlogPost {
 
         return $this->dbObject('TmdbFilmTitle');
 
+    }
+
+    public function getFilmRuntime(){
+
+        $override = $this->CustomFilmRuntime;
+        if ($override != '') {
+            return $override;
+        }
+
+        return $this->dbObject('TmdbFilmRuntime');
     }
 
     public function getFilmYear() {
@@ -315,6 +328,12 @@ class ShowPage extends BlogPost {
         //************
 
         $infoArray['TmdbFilmTitle'] = $firstFilm->getTitle();
+
+        //***********
+        //Get runtime
+        //************
+        $infoArray['TmdbFilmRuntime'] = $firstFilm->getRuntime();
+        print_r($infoArray['TmdbFilmRuntime']);
 
         //****************
         //Get release year
