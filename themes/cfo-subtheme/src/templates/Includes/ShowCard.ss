@@ -11,7 +11,7 @@
     <% if $Poster %>
 
         <a href="$Link" class="showcard__img">
-            <img class="dp-lazy" alt="" role="presentation" data-original="$Poster.FocusFill(267, 400)" width="267" height="400" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="$Title">
+            <img class="dp-lazy" alt="" role="presentation" data-original="$Poster.FocusFill(267, 400).URL" width="267" height="400" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="$Title">
         </a>
     <% else_if $TmdbPosterURL %>
         <a href="$Link" class="showcard__img">
