@@ -111,8 +111,8 @@ $Header
 
                     <hr />
                     <p>Location: <a href="http://icfilmscene.org" target="_blank">FilmScene</a></p>
-                    <% if $TmdbFilmRuntime %>
-                        <p>Runtime: $TmdbFilmRuntime</p>
+                    <% if $FilmRuntime %>
+                        <p>Runtime: $FilmRuntime</p>
                     <% end_if %>
 
 

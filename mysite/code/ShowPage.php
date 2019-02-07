@@ -174,8 +174,8 @@ class ShowPage extends BlogPost {
         if ($override != '') {
             return $override;
         }
-
-        return $this->dbObject('TmdbFilmRuntime');
+        //print_r($this->dbObject('TmdbFilmRuntime'));
+        return $this->TmdbFilmRuntime.' minutes';
     }
 
     public function getFilmYear() {
