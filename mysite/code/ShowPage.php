@@ -230,6 +230,16 @@ class ShowPage extends BlogPost {
 
     }
 
+
+    public function NextUpcomingDate(){
+        $now = date('Y-m-d');
+        $date = $this->Dates()->filter(array(
+            'Date:GreaterThanOrEqual' => $now,
+        ))->sort('Date')->First();
+
+        return $date;
+    }
+
     public function onBeforeWrite() {
         // check on first write action, aka "database row creation" (ID-property is not set)
         // echo $this->FilmID;

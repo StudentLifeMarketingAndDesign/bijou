@@ -39,12 +39,14 @@ class HomePageExtension extends DataExtension {
 
             foreach ($nextShows as $nextShow) {
 
+                $nextShowDate = $nextShow->NextUpcomingDate()->obj('Date')->Format("MMMM d");
+
                 $showFeature = new NewHomePageHeroFeature();
                 $showFeature->Title = $nextShow->Title;
                 $showFeature->AssociatedPageID = $nextShow->ID;
                 $showFeature->ImageID = $nextShow->FeaturedImageID;
                 $showFeature->TmdbBgURL = $nextShow->TmdbBgURL;
-                $showFeature->ButtonText = "Learn more and buy tickets";
+                $showFeature->ButtonText = $nextShowDate;
 
                 $existingFeaturesArrayList->unshift($showFeature);
 
