@@ -59,7 +59,7 @@ class SeriesPageController extends PageController
         public function submit($data, $form){
             $email = new Email();
 
-            $email->setTo('dustin-quam@uiowa.edu');
+            $email->setTo('quamsta@gmail.com');
             $email->setFrom('imu-web@uiowa.edu');
             $email->setSubject("[Bijou Website] Film Suggestion from {$data['Name']}");
 
