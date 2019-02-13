@@ -53,6 +53,7 @@ class HomePageExtension extends DataExtension {
 
 
             }
+            $existingFeaturesArrayList = $existingFeaturesArrayList->reverse();
             $existingFeaturesArrayList->merge($showFeatures);
             $existingFeaturesArrayList = $existingFeaturesArrayList->reverse();
         }
