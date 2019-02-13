@@ -3,7 +3,7 @@
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataExtension;
-
+use SilverStripe\ORM\ArrayList;
 class HomePageExtension extends DataExtension {
 
     private static $db = array(
@@ -32,7 +32,7 @@ class HomePageExtension extends DataExtension {
         }
 
         $nextShows = $showHolder->UpcomingShows($numShows);
-
+        $showFeatures = new ArrayList();
         // print_r($nextShow);
 
         if ($nextShows) {
@@ -48,10 +48,13 @@ class HomePageExtension extends DataExtension {
                 $showFeature->TmdbBgURL = $nextShow->TmdbBgURL;
                 $showFeature->ButtonText = $nextShowDate;
 
-                $existingFeaturesArrayList->unshift($showFeature);
+
+                $showFeatures->unshift($showFeature);
+
 
             }
-
+            $existingFeaturesArrayList->merge($showFeatures);
+            $existingFeaturesArrayList = $existingFeaturesArrayList->reverse();
         }
 
         //print_r($existingFeaturesArrayList);
