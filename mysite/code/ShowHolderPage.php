@@ -55,7 +55,7 @@ class ShowHolderPage extends Blog {
 
         $combinedDates = array();
         $masterDates = new ArrayList();
-        //todo: make this an arraylist full of dates, add events to the dates where appropriate
+
         $datesArrayList = $this->to_array_list($dates);
         $datesUnique = $datesArrayList->removeDuplicates('Date');
         //print_r($datesArrayList);
@@ -73,17 +73,25 @@ class ShowHolderPage extends Blog {
         foreach ($dates as $date) {
             $show = $date->ShowPage();
 
-            $showWithTimes = new ShowPage();
-            $showWithTimes->Title = $show->Title;
-            $showWithTimes->Content = $show->Content;
-            $showWithTimes->URLSegment = $show->URLSegment;
-            $showWithTimes->Times = $date->Times;
-            $showWithTimes->TmdbPosterURL = $show->TmdbPosterURL;
+            if($show->isPublished()){
 
-            $masterDateToUse = $masterDates->find('Date', $date->Date);
 
-            //print_r($masterDateToUse);
-            $masterDateToUse->ShowsTransient->push($showWithTimes);
+                $showWithTimes = new ShowPage();
+                $showWithTimes->Title = $show->Title;
+                $showWithTimes->Content = $show->Content;
+                $showWithTimes->URLSegment = $show->URLSegment;
+                $showWithTimes->Times = $date->Times;
+                $showWithTimes->Poster = $show->Poster;
+                $showWithTimes->TmdbPosterURL = $show->TmdbPosterURL;
+
+                $masterDateToUse = $masterDates->find('Date', $date->Date);
+
+                //print_r($masterDateToUse);
+                $masterDateToUse->ShowsTransient->push($showWithTimes);
+
+
+            }
+
 
         }
 

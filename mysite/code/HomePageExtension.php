@@ -3,7 +3,7 @@
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataExtension;
-
+use SilverStripe\ORM\ArrayList;
 class HomePageExtension extends DataExtension {
 
     private static $db = array(
@@ -32,24 +32,30 @@ class HomePageExtension extends DataExtension {
         }
 
         $nextShows = $showHolder->UpcomingShows($numShows);
-
+        $showFeatures = new ArrayList();
         // print_r($nextShow);
 
         if ($nextShows) {
 
             foreach ($nextShows as $nextShow) {
 
+                $nextShowDate = $nextShow->NextUpcomingDate()->obj('Date')->Format("MMMM d");
+
                 $showFeature = new NewHomePageHeroFeature();
                 $showFeature->Title = $nextShow->Title;
                 $showFeature->AssociatedPageID = $nextShow->ID;
                 $showFeature->ImageID = $nextShow->FeaturedImageID;
                 $showFeature->TmdbBgURL = $nextShow->TmdbBgURL;
-                $showFeature->ButtonText = "Learn more and buy tickets";
+                $showFeature->ButtonText = $nextShowDate;
 
-                $existingFeaturesArrayList->unshift($showFeature);
+
+                $showFeatures->unshift($showFeature);
+
 
             }
-
+            $existingFeaturesArrayList = $existingFeaturesArrayList->reverse();
+            $existingFeaturesArrayList->merge($showFeatures);
+            $existingFeaturesArrayList = $existingFeaturesArrayList->reverse();
         }
 
         //print_r($existingFeaturesArrayList);

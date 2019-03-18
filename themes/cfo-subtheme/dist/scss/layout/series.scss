@@ -1,0 +1,100 @@
+@font-face {
+    font-family: Kollektif;
+    src: url(../fonts/Kollektif.ttf);
+}
+
+@font-face {
+    font-family: Kollektif;
+    src: url(../fonts/Kollektif-Bold.ttf);
+    font-weight: bold;
+}
+
+.series {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 200px;
+    font-family:Kollektif;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    justify-content: center;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-position: 50% 50%;
+    & h2 {
+        z-index: 20;
+        position: relative;
+        font-weight: bold;
+        font-size: 50px;
+        text-transform: uppercase;
+        display:block;
+        margin-bottom:0px;
+
+    }
+    &:before {
+        background-color: rgba(#353223, 0.75);
+        height: 100%;
+        top: 0;
+        content: '';
+        bottom: 0;
+        left: 0;
+        width: 0;
+        position: absolute;
+        transition: all .5s ease-in-out;
+        z-index: 7;
+    }
+    &:hover, &:focus {
+        color: white;
+        z-index: 8;
+        &:before {
+            width: 100%;
+        }
+    }
+}
+
+.subtitle{
+        padding-bottom:20px;
+        min-height: 20px;
+        font-family:Kollektif;
+        color: white;
+        text-align: center;
+}
+.series-page-splash{
+    background-color: $primary-color;
+    background-position: 50% 50%;
+    background-size: cover;
+    &__header{
+        margin: 0;
+        font-family:Kollektif;
+        text-transform: uppercase;
+        font-size: rem-calc(50);
+        text-align: center;
+        padding: rem-calc(50) 0;
+
+        @include breakpoint(large) {
+            font-size: rem-calc(75);
+            padding: rem-calc(75) 0;
+        }
+    }
+
+
+}
+
+// .series-horizons{
+
+// }
+// .series-after-hours{
+//     background-color: #c40003;
+// }
+// .series-bijou-thursdays{
+//     background-color: #00b506;
+// }
+// .series-film-forum{
+//     background-color: #efde00;
+// }
+// .series-bijou-open-screen{
+//     background-color: #00b506;
+// }
