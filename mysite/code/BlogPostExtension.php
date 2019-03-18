@@ -4,7 +4,8 @@ use SilverStripe\ORM\DataExtension;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\File;
-
+use SilverStripe\TagField\TagField;
+use SilverStripe\Blog\Model\BlogTag;
 class BlogPostExtension extends DataExtension {
 
 	private static $has_one = array(
@@ -30,7 +31,24 @@ class BlogPostExtension extends DataExtension {
         // }
 
     public function updateCMSFields(FieldList $fields) {
-       $fields->push($upload = new UploadField('AudioClip', 'Upload Podcast'));
+       $fields->addFieldToTab('Root.Main', $upload = new UploadField('AudioClip', 'Upload Podcast'), 'Content');
+       $fields->removeByName('Tags');
+       $fields->removeByName('YoutubeBackgroundEmbed');
+       $fields->removeByName('LayoutType');
+       $fields->removeByName('BackgroundImage');
+       $parent = $this->owner->Parent();
+          $tags = $parent instanceof Blog
+        ? $parent->Tags()
+        : BlogTag::get();
+
+       $tagField = TagField::create(
+                'Tags',
+                'Tags (e.g., "podcast")',
+                $tags,
+                $this->owner->Tags()
+            )->setCanCreate($this->owner->canCreateTags())->setShouldLazyLoad(true);
+
+       $fields->addFieldToTab('Root.Main', $tagField, 'AudioClip');
     }
 
 }

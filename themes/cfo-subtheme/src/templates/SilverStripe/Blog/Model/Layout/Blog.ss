@@ -42,7 +42,6 @@ $Header
 			<div class="main-content__text">
 				$Content
 
-
 				<% loop $PaginatedList %>
 					<% include BlogCard %>
 				<% end_loop %>
