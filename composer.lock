@@ -68,12 +68,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/colymba/GridFieldBulkEditingTools.git",
-                "reference": "5581c11df86723316b8f2f1a380a4fdb6c032e95"
+                "reference": "7f871a7cfa53de714078505d6920d45ff7ac2830"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/5581c11df86723316b8f2f1a380a4fdb6c032e95",
-                "reference": "5581c11df86723316b8f2f1a380a4fdb6c032e95",
+                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/7f871a7cfa53de714078505d6920d45ff7ac2830",
+                "reference": "7f871a7cfa53de714078505d6920d45ff7ac2830",
                 "shasum": ""
             },
             "require": {
@@ -119,7 +119,7 @@
                 "gridfield bulk upload",
                 "silverstripe"
             ],
-            "time": "2018-10-01T03:57:59+00:00"
+            "time": "2019-03-19T03:24:17+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -1323,12 +1323,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-project.git",
-                "reference": "d2807909b3c1c83afb09871da40e49222a5f4379"
+                "reference": "7d965884b865ac4111bd73c0affe43c743a821dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/d2807909b3c1c83afb09871da40e49222a5f4379",
-                "reference": "d2807909b3c1c83afb09871da40e49222a5f4379",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-project/zipball/7d965884b865ac4111bd73c0affe43c743a821dd",
+                "reference": "7d965884b865ac4111bd73c0affe43c743a821dd",
                 "shasum": ""
             },
             "require": {
@@ -1354,6 +1354,7 @@
                 "silverstripe/recipe-cms": "*",
                 "silverstripe/recipe-plugin": "*",
                 "silverstripe/reports": "*",
+                "silverstripe/sharedraftcontent": "*",
                 "silverstripe/siteconfig": "*",
                 "silverstripe/spamprotection": "3.*",
                 "silverstripe/tagfield": "*",
@@ -1376,7 +1377,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-project/tree/ss4.x",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-project/issues"
             },
-            "time": "2019-03-15T13:46:20+00:00"
+            "time": "2019-03-20T14:54:49+00:00"
         },
         {
             "name": "md/saml",
@@ -3193,6 +3194,64 @@
                 "silverstripe"
             ],
             "time": "2018-09-03T11:17:10+00:00"
+        },
+        {
+            "name": "silverstripe/sharedraftcontent",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-sharedraftcontent.git",
+                "reference": "3cc82ba88339ab7932f9e90a79da3bc840d60b20"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-sharedraftcontent/zipball/3cc82ba88339ab7932f9e90a79da3bc840d60b20",
+                "reference": "3cc82ba88339ab7932f9e90a79da3bc840d60b20",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/cms": "^4.3",
+                "silverstripe/framework": "^4.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "client/dist"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "SilverStripe\\ShareDraftContent\\": "src/",
+                    "SilverStripe\\ShareDraftContent\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "David Craig",
+                    "email": "david@silverstripe.com"
+                },
+                {
+                    "name": "Damian Mooyman",
+                    "email": "damian.mooyman@gmail.com"
+                },
+                {
+                    "name": "Christopher Pitt",
+                    "email": "chris@silverstripe.com"
+                }
+            ],
+            "description": "Share draft page content with non-CMS users",
+            "keywords": [
+                "silverstripe"
+            ],
+            "time": "2018-08-07T03:12:08+00:00"
         },
         {
             "name": "silverstripe/siteconfig",
