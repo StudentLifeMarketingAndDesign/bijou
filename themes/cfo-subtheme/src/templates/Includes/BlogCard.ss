@@ -1,14 +1,14 @@
 <article class="bloglistitem clearfix ">
     <% if $FeaturedImage %>
-        <a href="$Link" class="bloglistitem__img border-effect">
+        <a href="$Link" class="blogcard__img">
             <img class="dp-lazy" data-original="$FeaturedImage.FocusFill(500,333).URL" width="500" height="333" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="$Title">
         </a>
     <% else_if $BackgroundImage %>
-        <a href="$Link" class="bloglistitem__img border-effect">
+        <a href="$Link" class="blogcard__img">
             <img class="dp-lazy" data-original="$BackgroundImage.FocusFill(500,333).URL" width="500" height="333" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="$Title">
         </a>
     <% else_if $YoutubeBackgroundEmbed %>
-        <a href="$Link" class="bloglistitem__img border-effect">
+        <a href="$Link" class="blogcard__img">
             <img class="dp-lazy" data-original="http://img.youtube.com/vi/$YoutubeBackgroundEmbed/sddefault.jpg" width="500" height="333"  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="$Title">
         </a>
     <% end_if %>
