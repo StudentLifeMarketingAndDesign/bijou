@@ -36,7 +36,7 @@
     <link rel="shortcut icon" href="vendor/md/division-project/src/favicons/favicon.ico">
     <meta name="msapplication-config" content="vendor/md/division-project/src/favicons/browserconfig.xml">
     <meta name="theme-color" content="#000000">
-
+    $OpenGraph
     <% if $PreventSearchEngineIndex %>
       <meta name="robots" content="noindex">
     <% end_if %>
