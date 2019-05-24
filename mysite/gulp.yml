@@ -24,6 +24,7 @@ PATHS:
   assets:
     - "src/**/*"
     - "../../../themes/cfo-subtheme/src/**/*"
+    - "!src/_manifest_exclude"
     - "!src/{images,scripts,scss,templates}/**/*"
     - "!src/{images,scripts,scss,templates}"
     - "!../../../themes/cfo-subtheme/src/{images,scripts,scss,templates}/**/*"
