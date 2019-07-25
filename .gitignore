@@ -3,7 +3,9 @@
 /vendor/
 /themes/simple/
 /resources/
+/_resources/
 /public/resources/
+/public/_resources/
 /public/assets/
 .sass-cache/*
 *.scssc

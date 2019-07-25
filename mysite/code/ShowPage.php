@@ -113,8 +113,8 @@ class ShowPage extends BlogPost {
         // $fields->addFieldToTab('Root.FilmInfo', new , 'Content');
 
         $tmdbFieldWrapper = Wrapper::create(
-            LiteralField::create('TmdbInfo', '<p style="font-size: 14px;"><strong>Use the field below to autofill in information and imagery (poster/background) from <img src="resources/themes/cfo-subtheme/dist/images/tmdb.svg" height="27" width="30" /> for a film. Save a draft of this page after choosing a film to see the info below.</strong></p>'),
-            $suggestedFilm = AutocompleteSuggestField::create('FilmID', FilmSuggestController::create(), 'Film Lookup:', null, $this),
+            LiteralField::create('TmdbInfo', '<p style="font-size: 14px;"><strong>Use the field below to autofill in information and imagery (poster/background) from <img src="_resources/themes/cfo-subtheme/dist/images/tmdb.svg" height="27" width="30" /> for a film. Save a draft of this page after choosing a film to see the info below.</strong> This field only works in Firefox/Chrome.</p>'),
+            $suggestedFilm = AutocompleteSuggestField::create('FilmID', $this, 'Film Lookup:', FilmSuggestController::create(), null, $this),
             ReadonlyField::create('TmdbBgURL', 'Background Image (from TMDB)'),
 
             ReadonlyField::create('TmdbPosterURL', 'Poster Image (from TMDB)'),
