@@ -73,8 +73,8 @@
             "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-saml"
         },
         {
-           "type":"vcs",
-           "url":"https://github.com/StudentLifeMarketingAndDesign/deploy-helper"
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/deploy-helper"
         }
     ],
     "config": {

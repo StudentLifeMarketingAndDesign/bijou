@@ -1,5 +1,5 @@
 $Header
-<main class="main-content__container" id="main-content__container">
+<div class="main-content__container" id="main-content__container">
 	<% if $BackgroundImage %>
 		<% include FeaturedImage %>
 	<% end_if %>
@@ -14,15 +14,24 @@ $Header
 	<% end_if %>
 
 	$Breadcrumbs
-
-	<% if not $BackgroundImage %>
 		<div class="column row">
 			<div class="main-content__header">
-				<h1>$Title</h1>
-				<% if $Summary %>
-					<div class="blogpost__summary">$Summary</div>
-				<% end_if %>
-			</div>
+				<% if not $BackgroundImage %><h1>$Title</h1><% end_if %>
+                <div class="blogmeta">
+                    <% if not $Parent.HideDatesAndAuthors %>
+                        <% include ByLine %>
+                    <% end_if %>
+                    <ul class="social-icons">
+                        <li><a href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u=$AbsoluteLink', '_blank', 'width=400,height=500');void(0);"  title="Share on Facebook"><img src="{$ThemeDir}/dist/images/icon_facebook.png" alt="Share on Facebook"></a>
+                        </li>
+                        <li><a href="https://twitter.com/intent/tweet?text=$AbsoluteLink" title="Share on Twitter" target="_blank"><img src="{$ThemeDir}/dist/images/icon_twitter.png" alt="Share on Twitter"></a></li>
+                        <li><a href="javascript:window.open('https://www.linkedin.com/cws/share?url=$AbsoluteLink', '_blank', 'width=400,height=500');void(0);" title="Share on LinkedIn" target="_blank"><img src="{$ThemeDir}/dist/images/icon_linkedin.png" alt="share on linkedid"></a></li>
+                    </ul>
+                </div>
+            </div>
+		</div>
+	<% if not $BackgroundImage %>
+		<div class="column row">
 			<% if $FeaturedImage %>
 				<% if FeaturedImage.Width >= 1200 %>
 					<p class="post-image"><img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.FocusFill(1200,700).URL" width="1200" height="700" alt="" role="presentation" /></p>
@@ -43,25 +52,6 @@ $Header
 					<% end_if %>
 				<% end_if %>
 				<div class="content">
-
-					<div class="blogmeta clearfix">
-						<% if not $Parent.HideDatesAndAuthors %>
-							<% include ByLine %>
-						<% end_if %>
-						<ul class="blogmeta__social">
-							<li><a href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u=$AbsoluteLink', '_blank', 'width=400,height=500');void(0);"  title="Share on Facebook"><img src="{$ThemeDir}/dist/images/icon_facebook.png" alt="Share on Facebook"></a>
-							</li>
-							<li><a href="https://twitter.com/intent/tweet?text=$AbsoluteLink" title="Share on Twitter" target="_blank"><img src="{$ThemeDir}/dist/images/icon_twitter.png" alt="Share on Twitter"></a></li>
-							<li><a href="javascript:window.open('https://www.linkedin.com/cws/share?url=$AbsoluteLink', '_blank', 'width=400,height=500');void(0);" title="Share on LinkedIn" target="_blank"><img src="{$ThemeDir}/dist/images/icon_linkedin.png" alt="share on linkedid"></a></li>
-						</ul>
-					</div>
-					<% if $FeaturedImage %>
-						<% if FeaturedImage.Width < 700 %>
-							<img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.URL" alt="" class="right post-image">
-						<% end_if %>
-					<% end_if %>
-
-
 					$Content
 					<% if $ExternalURL %>
 						<p><a href="$ExternalURL" class="button--shaded" target="_blank">$ExternalURLText</a></p>
@@ -87,7 +77,7 @@ $Header
 		</aside>
 	</div>
 	$AfterContent
-</main>
+</div>
 
 <% if $RelatedNewsEntries %>
 <div class="block_area block_area_aftercontent">

@@ -88,10 +88,10 @@ input, input:matches([type="password"], [type="search"]){
 }
 .button, input.action {
 	color: #e2393e;
-	background: white;
+	background: $highlight;
 	font-weight: bold;
-	text-transform: uppercase;
-	font-size: rem-calc(22);
+    padding: 5px;
+
 }
 #uiowa-bar #uiowa-search .links a{
 	color: white;

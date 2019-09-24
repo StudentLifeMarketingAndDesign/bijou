@@ -1,5 +1,5 @@
 $Header
-<main class="main-content__container" id="main-content__container">
+<div class="main-content__container" id="main-content__container">
 	<% if $BackgroundImage %>
 		<% include FeaturedImage %>
 	<% end_if %>
@@ -14,7 +14,22 @@ $Header
 	<% end_if %>
 
 	$Breadcrumbs
-
+		<div class="column row">
+			<div class="main-content__header">
+				<% if not $BackgroundImage %><h1>$Title</h1><% end_if %>
+                <div class="blogmeta">
+                    <% if not $Parent.HideDatesAndAuthors %>
+                        <% include ByLine %>
+                    <% end_if %>
+                    <ul class="social-icons">
+                        <li><a href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u=$AbsoluteLink', '_blank', 'width=400,height=500');void(0);"  title="Share on Facebook"><img src="{$ThemeDir}/dist/images/icon_facebook.png" alt="Share on Facebook"></a>
+                        </li>
+                        <li><a href="https://twitter.com/intent/tweet?text=$AbsoluteLink" title="Share on Twitter" target="_blank"><img src="{$ThemeDir}/dist/images/icon_twitter.png" alt="Share on Twitter"></a></li>
+                        <li><a href="javascript:window.open('https://www.linkedin.com/cws/share?url=$AbsoluteLink', '_blank', 'width=400,height=500');void(0);" title="Share on LinkedIn" target="_blank"><img src="{$ThemeDir}/dist/images/icon_linkedin.png" alt="share on linkedid"></a></li>
+                    </ul>
+                </div>
+            </div>
+		</div>
 	<% if not $BackgroundImage %>
 		<div class="column row">
 			<div class="main-content__header">
@@ -87,7 +102,7 @@ $Header
 		</aside>
 	</div>
 	$AfterContent
-</main>
+</div>
 
 <% if $RelatedNewsEntries %>
 <div class="block_area block_area_aftercontent">
