@@ -13,7 +13,7 @@
         <!-- <atom:link href="$Link" rel="self" type="application/rss+xml"/> -->
         <itunes:owner>
             <itunes:name>Bijou Banter</itunes:name>
-            <itunes:email>bijou.executive@gmail.com</itunes:email>
+            <itunes:email>bijouui.executive@gmail.com</itunes:email>
         </itunes:owner>
         <itunes:explicit>clean</itunes:explicit>
         <itunes:image href="http://bijou.uiowa.edu/assets/a11a564205/bijou-logo-album.jpg" />
