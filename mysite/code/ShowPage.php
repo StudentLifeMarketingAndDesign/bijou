@@ -100,7 +100,7 @@ class ShowPage extends BlogPost {
 
         } else {
             $dateField->setDisabled(true);
-            $fields->addFieldToTab('Root.Main', new LiteralField('DateWarning', '<p style="font-size: 16px;"><strong>Please give this page a title and safe as a draft before adding a date.</strong></p>'), 'Dates');
+            $fields->addFieldToTab('Root.Main', new LiteralField('DateWarning', '<p style="font-size: 16px;"><strong>Please give this page a title and save as a draft before adding a date.</strong></p>'), 'Dates');
         }
 
         $fields->addFieldToTab('Root.Main', new TextField('TicketsLink', 'Buy tickets link'), 'Content');
