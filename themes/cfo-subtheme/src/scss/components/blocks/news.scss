@@ -5,7 +5,7 @@
 .newsblock-title {
     color: #fff;
 }
-.bloglistitem {
+.blogcard {
 
     &__heading {
         @include breakpoint(medium) {
@@ -23,6 +23,6 @@
        color: rgba(255,255,255,.8);
     }
 }
-.bloglistitem .blogmeta__byline {
+.blogcard .blogmeta__byline {
     color: rgba(255,255,255,.8);
 }
