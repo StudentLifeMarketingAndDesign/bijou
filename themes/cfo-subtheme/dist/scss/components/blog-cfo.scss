@@ -1,4 +1,4 @@
-.bloglistitem__category {
+.blogcard__category {
     color: #D3D3D3;
 }
 
@@ -6,13 +6,13 @@
     color:#fff;
 }
 
-.bloglistitem{
+.blogcard{
     border-top: 1px solid #666;
 }
-.bloglistitem__category a:hover{
+.blogcard__category a:hover{
     color: #D3D3D3;
 }
-.bloglistitem .blogmeta__byline a{
+.blogcard .blogmeta__byline a{
     color: #D3D3D3;
 }
 .WidgetHolder {
