@@ -34,7 +34,7 @@ $Header
 		<div class="column row">
 			<% if $FeaturedImage %>
 				<% if FeaturedImage.Width >= 1200 %>
-					<p class="post-image"><img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.FocusFill(1200,700).URL" width="1200" height="700" alt="" role="presentation" /></p>
+					<p class="post-image"><img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.FocusFill(1200,700).URL" width="1200" height="700" <% if $FeaturedImageAltText %> alt="$FeaturedImageAltText" <% else %> alt="" role="presentation" <% end_if %> /></p>
 				<% end_if %>
 			<% end_if %>
 		</div>
@@ -48,7 +48,7 @@ $Header
 			<div class="main-content__text">
 				<% if $FeaturedImage %>
 					<% if FeaturedImage.Width >= 700 && FeaturedImage.Width < 1200 %>
-						<p class="post-image"><img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.ScaleWidth(840).URL" alt="" role="presentation" width="840" height="$FeaturedImage.ScaleWidth(840).Height" /></p>
+						<p class="post-image"><img class="dp-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="$FeaturedImage.ScaleWidth(840).URL" <% if $FeaturedImageAltText %> alt="$FeaturedImageAltText" <% else %> alt="" role="presentation" <% end_if %> width="840" height="$FeaturedImage.ScaleWidth(840).Height" /></p>
 					<% end_if %>
 				<% end_if %>
 				<div class="content">
