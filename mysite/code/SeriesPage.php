@@ -18,6 +18,10 @@ class SeriesPage extends Page {
 		'Image' => Image::class,
 
 	);
+
+	private static $owns = array(
+		'Image',
+	);
 	private static $belongs_many_many = array(
 		'ShowPages' => 'ShowPage',
 		'ShowDates' => 'ShowDate',
