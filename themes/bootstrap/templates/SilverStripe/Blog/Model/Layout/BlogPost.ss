@@ -5,8 +5,9 @@
         <div class="col-lg-8">
             <div class="blog__content">
                 <div class="py-3">
-                     <% include SilverStripe\\Blog\\EntryMeta %>
+
                     <h1 class="display-3 pb-4">$Title</h1>
+                    <% include SilverStripe\\Blog\\EntryMeta %>
                     <hr>
                 </div>
                 <% if $FeaturedImage %>
