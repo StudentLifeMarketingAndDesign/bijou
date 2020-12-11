@@ -1,9 +1,9 @@
 {
-  "name": "division-project",
+  "name": "bijou-website",
   "version": "2.0.0",
   "scripts": {
-    "start": "cd vendor/md/division-project && npm install && npm start",
-    "build": "cd vendor/md/division-project && npm run-script build"
+    "start": "cd vendor/md/bootstrap-project && npm install && gulp",
+    "build": "cd vendor/md/bootstrap-project && npm gulp build"
   },
   "dependencies": {
     "babel-preset-es2015": "^6.24.0"
