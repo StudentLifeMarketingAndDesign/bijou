@@ -16,14 +16,6 @@ class HomePage extends Page {
 
 	public function getCMSFields() {
 		$f = parent::getCMSFields();
-		$contentField = $f->dataFieldByName('Content');
-		$contentField->setRows(2);
-		$f->removeByName("Content");
-		$f->removeByName("BackgroundImage");
-		$f->removeByName("InheritSidebarItems");
-		$f->removeByName("SidebarLabel");
-		$f->removeByName("SidebarItem");
-		$f->removeByName("Metadata");
 
 		return $f;
 	}
