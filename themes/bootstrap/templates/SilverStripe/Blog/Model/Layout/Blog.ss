@@ -1,16 +1,20 @@
 <% include Header %>
 
 <main class="container my-5" id="content">
+    <article id="content" class="pb-5">
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+                    <h1>$Title</h1>
+                    $Content
+
+            </div>
+
+
+        </div>
+    </article>
     <div class="row">
         <div class="col-lg-12">
-            <h1>$Title</h1>
-            <br>
-            $Content
-
-
-
-
-
             <% if $PaginatedList.Exists %>
                 <div class="card-list row">
                     <% loop $PaginatedList %>

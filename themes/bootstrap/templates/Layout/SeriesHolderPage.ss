@@ -1,12 +1,23 @@
 <% include Header %>
 
 <main class="container-xl my-5">
+<article id="content">
+    <div class="row justify-content-center">
+
+        <div class="col-lg-8">
+                <h1>$Title</h1>
+                $Content
+
+        </div>
+
+
+    </div>
+</article>
 	<div class="row">
 		<div class="col-lg-12">
             <%-- $Breadcrumbs --%>
-			<article id="content">
-				<h1>$Title</h1>
-                $Content
+
+
                 <div class="row">
 				<% loop Children %>
 
@@ -29,7 +40,7 @@
 
 				<% end_loop %>
 				</div>
-			</article>
+
 			$Form
 			$PageComments
 
