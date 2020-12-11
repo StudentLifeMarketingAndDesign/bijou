@@ -1,5 +1,7 @@
 <?php
 
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Assets\Image;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\ORM\ArrayList;
 
@@ -13,9 +15,9 @@ class SeriesPage extends Page {
 	);
 
 	private static $has_one = array(
+		'Image' => Image::class,
 
 	);
-
 	private static $belongs_many_many = array(
 		'ShowPages' => 'ShowPage',
 		'ShowDates' => 'ShowDate',
@@ -28,6 +30,7 @@ class SeriesPage extends Page {
 
 		// $fields->addFieldToTab('Root.Main', ColorField::create('AccentColor'), 'Content');
 		// $fields->addFieldToTab('Root.Main', ColorField::create('AccentColorLight'), 'Content');
+		$fields->addFieldToTab('Root.Main', new UploadField('Image', 'Main Icon'), 'Content');
 		$fields->addFieldToTab('Root.Main', TextareaField::create('Subtitle'), 'Content');
 		return $fields;
 	}
