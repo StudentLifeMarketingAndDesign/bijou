@@ -3,7 +3,7 @@
 <main class="container my-5" id="content">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="text-center">$Title</h1>
+            <h1>$Title</h1>
             <br>
             $Content
 
