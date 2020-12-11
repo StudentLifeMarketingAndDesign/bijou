@@ -7,7 +7,7 @@
                <p class="lead">
                    $Content
                </p>
-               <p><a href="calendar/" class="btn btn-outline-light btn-large">See our calendar</a> <a href="get-involved/" class="btn btn-outline-light btn-large">Get Involved with CAB</a> <a href="collaborate/" class="btn btn-outline-light btn-large"> Collaborate with CAB</a></p>
+               <p><a href="calendar/" class="btn btn-outline-light btn-large">See our calendar</a> <a href="join/" class="btn btn-outline-light btn-large">Join Bijou</a> <a href="about/" class="btn btn-outline-light btn-large">Learn about Bijou</a></p>
 
             </div>
 
@@ -16,18 +16,45 @@
 </section>
 <!-- SnapWidget -->
 
-<iframe src="https://embed.podcasts.apple.com/us/podcast/bijou-banter/id924764855?itsct=podcast_box&amp;itscg=30200&amp;theme=light" height="450px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; max-width: 660px; overflow: hidden; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; background-color: transparent; background-position: initial initial; background-repeat: initial initial;"></iframe>
+
+<section>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-lg-6">
 
 
-<main id="content" class="my-3 mb-5 my-lg-6">
-    <div class="container-xl">
-        <div class="row justify-content-center">
 
-            <div class="col-lg-10">
-                $Content
+                <div class="card-list row">
+                    <% loop $LatestPosts(9) %>
+                        <div class="col-6 col-lg-4 px-0 card-list__item">
+                            <% include BlogCard %>
+                        </div>
+                    <% end_loop %>
+                </div>
+                    <%-- <% include BlogCard %> --%>
+
+
+            </div>
+
+            <div class="col-lg-6 pt-5">
+
+                <iframe src="https://embed.podcasts.apple.com/us/podcast/bijou-banter/id924764855?itsct=podcast_box&amp;itscg=30200&amp;theme=light" height="450px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; overflow: hidden; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; background-color: transparent; background-position: initial initial; background-repeat: initial initial;"></iframe>
+
+                <a href="#" class="mt-3 btn btn-lg btn-outline-primary d-block">Bijou Banter is also available on Spotify</a>
+
             </div>
 
         </div>
+
+    </div>
+
+</section>
+
+
+<%-- <main id="content" class="my-3 mb-5">
+    <div class="container-xl">
         <% if $Calendar.EventList %>
             <hr class="my-5" />
             <div class="row justify-content-center">
@@ -46,7 +73,7 @@
         <% end_if %>
     </div>
 </main>
-
+ --%>
 
 
 

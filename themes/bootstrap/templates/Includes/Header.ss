@@ -1,6 +1,6 @@
 <header class="header">
     <a class="skip-link small" href="#content">Skip to main content</a>
-    <div class="container-xl">
+    <div class="container-fluid">
         <div class="row">
             <div class="col">
                 <nav class="navbar navbar-main navbar-expand-lg p-0" aria-label="Site main navigation">
