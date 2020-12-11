@@ -27,7 +27,7 @@
 </main>
 
 <!-- Previous/Next Links -->
-<section class="bg-primary mt-4">
+<section class="bg-primary mt-4" style="margin-bottom: 100px;">
     <div class="container-xl">
         <% if $PreviousPage || $NextPage %>
             <div class="row">
@@ -74,6 +74,16 @@
     </div>
 </section>
 
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
 
+            <h2>More on the Bijou Blog:</h2>
+        </div>
 
-<% include SilverStripe\\Blog\\BlogSideBar %>
+    </div>
+
+</div>
+
+<% include BlogSection %>
+

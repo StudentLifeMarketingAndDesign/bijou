@@ -7,7 +7,7 @@
                <p class="lead">
                    $Content
                </p>
-               <p><a href="calendar/" class="btn btn-outline-light btn-large">See our calendar</a> <a href="join/" class="btn btn-outline-light btn-large">Join Bijou</a> <a href="about/" class="btn btn-outline-light btn-large">Learn about Bijou</a></p>
+               <p><a href="calendar/" class="btn btn-outline-light btn-large">See our calendar</a> <a href="join/" class="btn btn-outline-light btn-large">Apply To Join Bijou</a> <a href="about/" class="btn btn-outline-light btn-large">Learn about Bijou</a></p>
 
             </div>
 
@@ -16,44 +16,10 @@
 </section>
 
 
-
-<section>
-
-    <div class="container-fluid">
-
-        <div class="row">
-            <div class="col-lg-6">
-
-
-
-                <div class="card-list row">
-                    <% loop $LatestPosts(9) %>
-                        <div class="col-6 col-xl-4 px-0 card-list__item <% if $Last %>d-none d-xl-block<% end_if %>">
-                            <% include BlogCard %>
-                        </div>
-                    <% end_loop %>
-                </div>
-                    <%-- <% include BlogCard %> --%>
-
-
-            </div>
-
-            <div class="col-lg-6 pt-5">
-
-                <iframe src="https://embed.podcasts.apple.com/us/podcast/bijou-banter/id924764855?itsct=podcast_box&amp;itscg=30200&amp;theme=light" height="450px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; overflow: hidden; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; background-color: transparent; background-position: initial initial; background-repeat: initial initial;"></iframe>
-<%--
-                <a href="#" class="mt-3 btn btn-lg btn-outline-primary d-block"><i class="fab fa-spotify" style="color: #1ed05d"></i> Bijou Banter is also available on Spotify</a> --%>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+<% include BlogSection %>
 
 <section class="bg-dark py-5 text-light">
-    <div class="container-fluid">
+    <div class="container-xl">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
 
