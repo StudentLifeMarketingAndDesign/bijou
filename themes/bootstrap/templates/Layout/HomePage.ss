@@ -28,7 +28,7 @@
 
                 <div class="card-list row">
                     <% loop $LatestPosts(9) %>
-                        <div class="col-6 col-lg-4 px-0 card-list__item">
+                        <div class="col-6 col-xl-4 px-0 card-list__item">
                             <% include BlogCard %>
                         </div>
                     <% end_loop %>
