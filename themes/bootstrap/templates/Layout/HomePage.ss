@@ -14,7 +14,7 @@
         </div>
     </div>
 </section>
-<!-- SnapWidget -->
+
 
 
 <section>
@@ -28,7 +28,7 @@
 
                 <div class="card-list row">
                     <% loop $LatestPosts(9) %>
-                        <div class="col-6 col-xl-4 px-0 card-list__item">
+                        <div class="col-6 col-xl-4 px-0 card-list__item <% if $Last %>d-none d-xl-block<% end_if %>">
                             <% include BlogCard %>
                         </div>
                     <% end_loop %>
@@ -41,8 +41,8 @@
             <div class="col-lg-6 pt-5">
 
                 <iframe src="https://embed.podcasts.apple.com/us/podcast/bijou-banter/id924764855?itsct=podcast_box&amp;itscg=30200&amp;theme=light" height="450px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; overflow: hidden; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; background-color: transparent; background-position: initial initial; background-repeat: initial initial;"></iframe>
-
-                <a href="#" class="mt-3 btn btn-lg btn-outline-primary d-block">Bijou Banter is also available on Spotify</a>
+<%--
+                <a href="#" class="mt-3 btn btn-lg btn-outline-primary d-block"><i class="fab fa-spotify" style="color: #1ed05d"></i> Bijou Banter is also available on Spotify</a> --%>
 
             </div>
 
@@ -51,6 +51,42 @@
     </div>
 
 </section>
+
+<section class="bg-dark py-5 text-light">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+
+                <h2>Bijou Series:</h2>
+
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <% loop $Series %>
+                <div class="col-lg-6">
+                    <div class="row my-md-5">
+                        <div class="col-3 committee-image">
+
+                            <% if $Image %>
+                            <img src="$Image.URL" class="w-100 d-block" style="border-radius: 300px" alt="" role="presentation">
+                            <% end_if %>
+
+                        </div>
+                        <div class="col-9">
+                            <h3 class="$URLSegment">$Title</h3>
+                            $Content.Summary
+                            <p><a href="$Link" class="">Learn more about {$Title}...</a></p>
+                        </div>
+                    </div>
+                </div>
+<%--                 <div class="col-lg-1">
+                    <a href="$Link" class="d-block"><img src="$Image.URL" class="w-100 d-block" style="border-radius: 300px" alt="$Title"></a>
+                </div> --%>
+            <% end_loop %>
+        </div>
+    </div>
+</section>
+
 
 
 <%-- <main id="content" class="my-3 mb-5">

@@ -34,4 +34,8 @@ class PageController extends ContentController {
 	public function LatestPosts($limit = 5) {
 		return BlogPost::get()->Limit($limit);
 	}
+
+	public function Series() {
+		return SeriesPage::get();
+	}
 }

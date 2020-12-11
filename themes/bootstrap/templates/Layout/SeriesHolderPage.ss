@@ -21,7 +21,8 @@
 			   			</div>
 			   		 	<div class="col-9">
 			   		 		<h3 class="$URLSegment">$Title</h3>
-							$Content
+							$Content.Summary
+                            <p><a href="$Link" class="">Continue Reading About {$Title}...</a></p>
 						</div>
 					</div>
 				</div>

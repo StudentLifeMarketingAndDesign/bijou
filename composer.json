@@ -20,7 +20,8 @@
   {
     "resources-dir": "_resources",
     "expose": [
-      "themes/bootstrap/dist"
+      "themes/bootstrap/dist",
+      "themes/cfo-subtheme/dist"
     ],
     "project-files-installed": [
       "app/.htaccess",
