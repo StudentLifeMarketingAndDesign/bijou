@@ -3,12 +3,7 @@
     <div class="container-xl">
         <div class="row d-flex align-items-center justify-content-center">
             <div class="col-lg-10">
-                <h2 class="hero-header">Making Thoughtful Cinema Accessible To All Students.</h2>
-               <p class="lead">
-                   $Content
-               </p>
-               <p><a href="calendar/" class="btn btn-outline-light btn-large">See our calendar</a> <a href="join/" class="btn btn-outline-light btn-large">Apply To Join Bijou</a> <a href="about/" class="btn btn-outline-light btn-large">Learn about Bijou</a></p>
-
+                $Content
             </div>
 
         </div>
