@@ -1,6 +1,5 @@
 <?php
 use SilverStripe\Blog\Model\Blog;
-use SilverStripe\Blog\Model\BlogPost;
 
 class NewsHolder extends Blog {
 
@@ -10,7 +9,7 @@ class NewsHolder extends Blog {
 		return $f;
 	}
 	private static $allowed_children = [
-		BlogPost::class,
+		'*BlogPost',
 	];
 	public function getPostsWithAudio() {
 
