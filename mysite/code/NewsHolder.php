@@ -1,4 +1,5 @@
 <?php
+use SilverStripe\Blog\Model\Blog;
 use SilverStripe\Blog\Model\BlogPost;
 
 class NewsHolder extends Blog {
