@@ -10,7 +10,8 @@
     "undefinedoffset/silverstripe-nocaptcha": "*",
     "edgarindustries/youtubefield": "^1.1",
     "php-tmdb/api": "~2.1",
-    "otago/autocomplete-suggest-field": "dev-master"
+    "otago/autocomplete-suggest-field": "dev-master",
+    "unclecheese/display-logic": "*"
   },
   "require-dev":
   {

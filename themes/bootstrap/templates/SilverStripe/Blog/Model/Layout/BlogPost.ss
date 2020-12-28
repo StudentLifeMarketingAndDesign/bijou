@@ -17,6 +17,10 @@
                 <% if $Summary %>
                     <div class="lead">$Summary</div>
                 <% end_if %>
+                <% if $AudioClip %>
+                    <h2><i class="fas fa-podcast"></i>  Listen to this episode:</h2>
+                    <audio src="$AudioClip.URL" controls="controls" preload="none"></audio>
+                <% end_if %>
 
                 $Content
 

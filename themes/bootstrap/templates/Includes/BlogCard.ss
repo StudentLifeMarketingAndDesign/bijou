@@ -11,5 +11,10 @@
         <% if $Credits %>
         <p class="card-list__byline"><% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %> <%t Blog.AND "and" %> <% end_if %>$Name.XML<% end_loop %></p>
         <% end_if %>
+        <% if $AudioClip %>
+            <p class="card-list__byline"><small><i class="fas fa-podcast"></i> Bijou Banter Episode</small></p>
+        <% end_if %>
+
     </div>
+
 </a>
