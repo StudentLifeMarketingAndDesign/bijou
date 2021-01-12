@@ -19,7 +19,8 @@
     &--small {
 
         @include media-breakpoint-up(lg) {
-            min-height: rem-calc(200);
+            min-height: rem-calc(2
+00);
         }
     }
 
@@ -33,8 +34,10 @@
     &--large {
 
         @include media-breakpoint-up(lg) {
-            min-height: rem-calc(400);
+            min-height: rem-calc(500);
         }
+
+
     }
 
     &--margin-bottom {

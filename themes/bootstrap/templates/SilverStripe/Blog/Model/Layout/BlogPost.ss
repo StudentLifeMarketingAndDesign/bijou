@@ -80,8 +80,8 @@
 </section>
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
+    <div class="row justify-content-center">
+        <div class="col-10">
 
             <h2>More on the Bijou Blog:</h2>
         </div>

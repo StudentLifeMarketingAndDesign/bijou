@@ -1,5 +1,5 @@
 <% include Header %>
-    <section class="bg-dark text-white py-3 py-sm-6">
+ <section class="bg-dark text-white py-3 py-sm-6">
     <div class="container-xl">
         <div class="row d-flex align-items-center justify-content-center">
             <div class="col-lg-10">
@@ -9,7 +9,13 @@
         </div>
     </div>
 </section>
-
+<div class="container-xl">
+    <div class="row">
+        <div class="col-lg-9">
+            <h2 class="my-3">Recent Posts:</h2>
+        </div>
+    </div>
+</div>
 
 <% include BlogSection %>
 
