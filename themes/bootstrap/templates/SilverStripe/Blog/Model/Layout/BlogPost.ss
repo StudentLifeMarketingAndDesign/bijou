@@ -5,7 +5,7 @@
         <div class="col-lg-8">
             <div class="blog__content">
                 <div class="py-3">
-
+                    <% if $AudioClip || $HasTag("podcast") || $HasTag("banter") %><p class="h4"><i class="fas fa-podcast"></i> Bijou Banter</p> <% end_if %>
                     <h1 class="display-3 pb-4">$Title</h1>
                     <% include SilverStripe\\Blog\\EntryMeta %>
                     <hr>
@@ -17,8 +17,11 @@
                 <% if $Summary %>
                     <div class="lead">$Summary</div>
                 <% end_if %>
+
+
+                $Content
                 <% if $AudioClip || $HasTag("podcast") || $HasTag("banter") %>
-                <div class="card float-right" style="width: 18rem;">
+                <div class="card" style="width: 18rem;">
                   <div class="card-body">
                     <h2 class="card-title h6"><i class="fas fa-podcast"></i> Listen to this episode:</h2>
                     <p class="card-text"><audio src="$AudioClip.URL" controls="controls" preload="none"></audio></p>
@@ -29,9 +32,6 @@
 
 
                 <% end_if %>
-
-                $Content
-
                 $Form
                 $CommentsForm
             </div>

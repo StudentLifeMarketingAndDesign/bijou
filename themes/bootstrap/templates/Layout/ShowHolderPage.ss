@@ -35,10 +35,12 @@
             <% end_loop %>
         </div>
     <% end_if %>
-
-    <% with $paginatedPreviousShows %>
-        <% include SilverStripe\\Blog\\Pagination %>
-    <% end_with %>
-
+    <div class="row justify-content-center">
+        <div class="col-lg-4 my-5">
+             <% with $paginatedPreviousShows %>
+                <% include SilverStripe\\Blog\\Pagination %>
+            <% end_with %>
+        </div>
+    </div>
 
 </main>

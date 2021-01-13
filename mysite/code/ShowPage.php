@@ -6,6 +6,7 @@ use SilverStripe\Assets\Image;
 use SilverStripe\Blog\Model\BlogPost;
 use SilverStripe\Core\Environment;
 use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Forms\DateField;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
@@ -43,6 +44,9 @@ class ShowPage extends BlogPost {
 		'CustomTrailerVideoID' => 'Varchar(11)',
 		'CustomFilmRating' => 'Varchar(11)',
 		'CustomFilmSummary' => 'HTMLText',
+
+		'Ongoing' => 'Boolean',
+		'OngoingExpiry' => 'Date',
 
 	);
 
@@ -93,6 +97,10 @@ class ShowPage extends BlogPost {
 		);
 
 		$fields->addFieldToTab('Root.Main', $seriesField, 'Content');
+
+		$fields->addFieldToTab('Root.Main', new CheckboxField('Ongoing', 'Ongoing Stream'), 'Content');
+		$fields->addFieldToTab('Root.Main', DateField::create('OngoingDateExpiry', 'Ongoing stream expires on this date'), 'Content');
+
 		$fields->addFieldToTab('Root.Main', $dateField, 'Content');
 
 		if ($this->Title != 'New Show Page') {
