@@ -49,7 +49,7 @@
 	</div>
 </main>
 
-
+<% include InstaFeed %>
 
 
 

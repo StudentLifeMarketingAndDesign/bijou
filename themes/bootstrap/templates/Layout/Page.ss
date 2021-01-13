@@ -21,3 +21,4 @@
 		<% end_if %>
 	</div>
 </main>
+<% include InstaFeed %>

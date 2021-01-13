@@ -41,7 +41,7 @@
                     <hr />
                     $FilmSummary
                 <% end_if %>
-
+                <% if $Ongoing %><p>Date: <strong>Streaming</strong><% end_if %></p>
                 <% if $Dates %>
                     <div class="my-5">
                         <% if $FilmTitle %>
@@ -51,7 +51,7 @@
                         <% end_if %>
                         <div class="show-list">
                             <% loop $Dates %>
-                                <p class="show-list__date"><strong>$Date.Format("E, MMM d")</strong></p>
+                                <p class="show-list__date"><strong>$Date.Format("EEEE, MMMM d, y")</strong></p>
                                 <div class="show-list__time-list">
                                     <% loop $TimesFormatted %>
                                         <time class="show-list__time">$TimeFormatted</time>
@@ -149,4 +149,4 @@
 </div>
 
 <% include BlogSection %>
-
+<% include InstaFeed %>
