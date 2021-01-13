@@ -7,7 +7,7 @@
 </a>
 <div class="show-list__content">
     <div class="show-list__content-inner">
-        <h2><a href="$Link">$Title</a></h2>
+        <h3><a href="$Link">$Title</a></h3>
         <% if $Ongoing %>Date: <strong>Streaming Until ...</strong><% end_if %>
         <% if $Content %>$Content<% end_if %>
         <% loop $Dates %>

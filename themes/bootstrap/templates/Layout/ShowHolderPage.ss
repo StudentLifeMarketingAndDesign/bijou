@@ -14,7 +14,7 @@
         </div>
     </article>
     <div class="row justify-content-center">
-        <div class="col-lg-8">
+        <div class="col-lg-8 py-5">
             <% loop $UpcomingShows %>
                 <% include ShowCardPoster %>
             <% end_loop %>
