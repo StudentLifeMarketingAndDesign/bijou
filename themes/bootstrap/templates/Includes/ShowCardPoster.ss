@@ -9,6 +9,7 @@
     <div class="show-list__content-inner">
         <h2><a href="$Link">$Title</a></h2>
         <% if $Ongoing %>Date: <strong>Streaming Until ...</strong><% end_if %>
+        <% if $Content %>$Content<% end_if %>
         <% loop $Dates %>
             <p class="show-list__date"><strong>$Date.Format("EEEE, MMMM d, Y")</strong></p>
             <h3>Showtimes:</h3>
@@ -18,10 +19,10 @@
                 <% end_loop %>
             </ul>
         <% end_loop %>
-                        <% if $FilmSummary %>
-                    <hr />
-                    $FilmSummary
-                <% end_if %>
+        <% if $FilmSummary %>
+            <hr />
+            $FilmSummary
+        <% end_if %>
     </div>
-    <div class="show-list__moreinfo"><a href="$Link" class="btn btn-outline-dark">More Info</a></div>
+    <div class="show-list__moreinfo pt-4"><a href="$Link" class="btn btn-outline-dark">More Info</a></div>
 </div>

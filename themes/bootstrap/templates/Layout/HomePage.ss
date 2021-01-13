@@ -13,7 +13,7 @@
 <% if $UpcomingShows %>
     <div class="row justify-content-center">
         <div class="col-lg-8 pt-3">
-            <h2>Up next:</h2>
+            <h2>Currently Showing:</h2>
             <% loop $UpcomingShows %>
                 <% include ShowCardPoster %>
             <% end_loop %>
