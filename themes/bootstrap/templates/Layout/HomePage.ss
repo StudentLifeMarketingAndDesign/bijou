@@ -17,11 +17,12 @@
             <% loop $UpcomingShows %>
                 <% include ShowCardPoster %>
             <% end_loop %>
-            <p class="pt-4 text-center"><a class="btn btn-outline-dark btn-lg" href="now-playing/">View our show archive</a></p>
+
         </div>
     </div>
-<% end_if %>
 
+<% end_if %>
+<p class="pt-4 text-center"><a class="btn btn-outline-dark btn-lg" href="now-playing/">View our show archive</a></p>
 <div class="container-xl">
     <div class="row">
         <div class="col-lg-9">
