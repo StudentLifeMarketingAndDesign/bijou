@@ -17,6 +17,10 @@
                 <% end_loop %>
             </ul>
         <% end_loop %>
+                        <% if $FilmSummary %>
+                    <hr />
+                    $FilmSummary
+                <% end_if %>
     </div>
     <div class="show-list__moreinfo"><a href="$Link" class="btn btn-outline-dark">More Info</a></div>
 </div>

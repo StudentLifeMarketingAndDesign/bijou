@@ -14,33 +14,31 @@
         </div>
     </article>
     <div class="row justify-content-center">
-
-            <div class="col-lg-8">
+        <div class="col-lg-8">
             <% loop $UpcomingShows %>
-                    <% include ShowCardPoster %>
+                <% include ShowCardPoster %>
             <% end_loop %>
-
-            </div>
+        </div>
     </div>
 
 
-            $Form
-            $CommentsForm
+    $Form
+    $CommentsForm
 
-            <% if $paginatedPreviousShows %>
-                <h2>Previously presented by Bijou Film Board:</h2>
-                    <div class="card-list row">
-                    <% loop $paginatedPreviousShows %>
-                        <div class="col-6 col-lg-2 px-0">
-                            <% include ShowCardPosterSmall %>
-                        </div>
-                    <% end_loop %>
+    <% if $paginatedPreviousShows %>
+        <h2>Previously presented by Bijou Film Board:</h2>
+            <div class="card-list row">
+            <% loop $paginatedPreviousShows %>
+                <div class="col-6 col-lg-2 px-0">
+                    <% include ShowCardPosterSmall %>
                 </div>
-            <% end_if %>
+            <% end_loop %>
+        </div>
+    <% end_if %>
 
-            <% with $paginatedPreviousShows %>
-                <% include SilverStripe\\Blog\\Pagination %>
-            <% end_with %>
+    <% with $paginatedPreviousShows %>
+        <% include SilverStripe\\Blog\\Pagination %>
+    <% end_with %>
 
 
 </main>

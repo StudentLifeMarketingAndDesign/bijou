@@ -19,8 +19,7 @@
     &--small {
 
         @include media-breakpoint-up(lg) {
-            min-height: rem-calc(2
-00);
+            min-height: rem-calc(200);
         }
     }
 
@@ -92,6 +91,12 @@
     &--always-visible {
         opacity: 1;
     }
+}
+
+.card-list__date {
+    color: white;
+    font-size: rem-calc(12);
+    text-transform: uppercase;
 }
 
 .card-list__flex-aligner {

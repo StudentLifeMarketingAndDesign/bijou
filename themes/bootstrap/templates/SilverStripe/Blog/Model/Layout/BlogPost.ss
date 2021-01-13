@@ -17,9 +17,17 @@
                 <% if $Summary %>
                     <div class="lead">$Summary</div>
                 <% end_if %>
-                <% if $AudioClip %>
-                    <h2><i class="fas fa-podcast"></i>  Listen to this episode:</h2>
-                    <audio src="$AudioClip.URL" controls="controls" preload="none"></audio>
+                <% if $AudioClip || $HasTag("podcast") || $HasTag("banter") %>
+                <div class="card float-right" style="width: 18rem;">
+                  <div class="card-body">
+                    <h2 class="card-title h6"><i class="fas fa-podcast"></i> Listen to this episode:</h2>
+                    <p class="card-text"><audio src="$AudioClip.URL" controls="controls" preload="none"></audio></p>
+                    <a href="https://podcasts.apple.com/us/podcast/bijou-banter/id924764855" target="_blank" rel="noopener" class="btn btn-sm btn-primary"><small>Bijou Banter on Apple Podcasts&nbsp;<i class="fas fa-external-link-alt"></i></small></a>
+
+                  </div>
+                </div>
+
+
                 <% end_if %>
 
                 $Content

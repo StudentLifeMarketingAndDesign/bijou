@@ -9,6 +9,18 @@
         </div>
     </div>
 </section>
+
+<% if $UpcomingShows %>
+    <div class="row justify-content-center">
+        <div class="col-lg-8 pt-3">
+            <h2>Up next:</h2>
+            <% loop $UpcomingShows %>
+                <% include ShowCardPoster %>
+            <% end_loop %>
+        </div>
+    </div>
+<% end_if %>
+
 <div class="container-xl">
     <div class="row">
         <div class="col-lg-9">

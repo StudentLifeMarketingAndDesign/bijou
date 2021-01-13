@@ -1,57 +1,59 @@
 <?php
 
-use SilverStripe\ORM\DataExtension;
-use SilverStripe\Forms\FieldList;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\File;
-use SilverStripe\TagField\TagField;
 use SilverStripe\Blog\Model\BlogTag;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\ORM\DataExtension;
+use SilverStripe\TagField\TagField;
+
 class BlogPostExtension extends DataExtension {
 
 	private static $has_one = array(
-        'AudioClip' => File::class
-    );
-
-	private static $owns = array(
-		'AudioClip'
+		'AudioClip' => File::class,
 	);
 
-        // function getCMSFields() {
+	private static $owns = array(
+		'AudioClip',
+	);
 
-        //     $fields = parent::getCMSFields();
+	// function getCMSFields() {
 
-        //     $fields->addFieldToTab(
-        //         'Root.Upload',
-        //         $uploadField = new UploadField(
-        //             $name = 'AudioClip',
-        //             $title = 'Upload a single audio clip'
-        //         )
-        //     );
-        //     return $fields;
-        // }
+	//     $fields = parent::getCMSFields();
 
-    public function updateCMSFields(FieldList $fields) {
-       $fields->addFieldToTab('Root.Main', $upload = new UploadField('AudioClip', 'Upload Podcast'), 'Content');
-       $fields->removeByName('Tags');
-       $fields->removeByName('YoutubeBackgroundEmbed');
-       $fields->removeByName('LayoutType');
-       $fields->removeByName('BackgroundImage');
-       $parent = $this->owner->Parent();
-          $tags = $parent instanceof Blog
-        ? $parent->Tags()
-        : BlogTag::get();
+	//     $fields->addFieldToTab(
+	//         'Root.Upload',
+	//         $uploadField = new UploadField(
+	//             $name = 'AudioClip',
+	//             $title = 'Upload a single audio clip'
+	//         )
+	//     );
+	//     return $fields;
+	// }
 
-       $tagField = TagField::create(
-                'Tags',
-                'Tags (e.g., "podcast")',
-                $tags,
-                $this->owner->Tags()
-            )->setCanCreate($this->owner->canCreateTags())->setShouldLazyLoad(true);
+	public function updateCMSFields(FieldList $fields) {
+		$fields->addFieldToTab('Root.Main', $upload = new UploadField('AudioClip', 'Upload Podcast'), 'Content');
+		$fields->removeByName('Tags');
+		$fields->removeByName('YoutubeBackgroundEmbed');
+		$fields->removeByName('LayoutType');
+		$fields->removeByName('BackgroundImage');
+		$parent = $this->owner->Parent();
+		$tags = $parent instanceof Blog
+		? $parent->Tags()
+		: BlogTag::get();
 
-       $fields->addFieldToTab('Root.Main', $tagField, 'AudioClip');
-    }
+		$tagField = TagField::create(
+			'Tags',
+			'Tags (e.g., "podcast")',
+			$tags,
+			$this->owner->Tags()
+		)->setCanCreate($this->owner->canCreateTags())->setShouldLazyLoad(true);
+
+		$fields->addFieldToTab('Root.Main', $tagField, 'AudioClip');
+	}
+
+	public function HasTag($tagName) {
+		return $this->owner->Tags()->filter(array('Title' => $tagName))->First();
+	}
 
 }
-
-
-

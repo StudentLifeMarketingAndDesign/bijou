@@ -2,7 +2,7 @@
 
     <div class="container-fluid">
 
-        <div class="row justify-content-center my-5">
+        <div class="row justify-content-center mb-5">
             <div class="col-lg-12">
 
 
@@ -21,7 +21,7 @@
         </div>
 
         <div class="row justify-content-center my-5">
-            <div class="col-lg-4 pt-5">
+            <div class="col-lg-6 pt-5">
                  <h2 class="display-5">Be a part of Bijou!</h2>
                     <div class="list-group my-3">
 
@@ -42,7 +42,7 @@
 
 
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-6">
 
                 <iframe src="https://embed.podcasts.apple.com/us/podcast/bijou-banter/id924764855?itsct=podcast_box&amp;itscg=30200&amp;theme=light" height="450px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; overflow: hidden; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; background-color: transparent; background-position: initial initial; background-repeat: initial initial;"></iframe>
 <%--

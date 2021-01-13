@@ -2,19 +2,19 @@
 
     <% if $TmdbBgURL %>
         <div class="show-featured" style="background-image: url('$TmdbBgURL');">
-            <% if $TrailerVideoID %>
+<%--             <% if $TrailerVideoID %>
                 <a class="popup-youtube show-trailer" href="https://www.youtube.com/watch?v={$TrailerVideoID}">
                     <svg class="css-18vwi2-playButton" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><title>Play Trailer</title><g opacity=".53"><circle cx="20" cy="20" r="19.5" fill="#4a4a4a"></circle><path d="M20 1c10.5 0 19 8.5 19 19s-8.5 19-19 19S1 30.5 1 20 9.5 1 20 1m0-1C9 0 0 9 0 20s9 20 20 20 20-9 20-20S31 0 20 0z" fill="#fff"></path></g><path fill="#fff" d="M29.6 21.1l-14.1-9.3v18.6z"></path></svg>
                 </a>
-            <% end_if %>
+            <% end_if %> --%>
         </div>
     <% else_if $FeaturedImage %>
        <div class="show-featured" style="background-image: url('$FeaturedImage.FocusFill(600,400).URL');">
-            <% if $TrailerVideoID %>
+<%--             <% if $TrailerVideoID %>
                 <a class="popup-youtube show-trailer" href="https://www.youtube.com/watch?v={$TrailerVideoID}">
                     <svg class="css-18vwi2-playButton" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><title>Play Trailer</title><g opacity=".53"><circle cx="20" cy="20" r="19.5" fill="#4a4a4a"></circle><path d="M20 1c10.5 0 19 8.5 19 19s-8.5 19-19 19S1 30.5 1 20 9.5 1 20 1m0-1C9 0 0 9 0 20s9 20 20 20 20-9 20-20S31 0 20 0z" fill="#fff"></path></g><path fill="#fff" d="M29.6 21.1l-14.1-9.3v18.6z"></path></svg>
                 </a>
-            <% end_if %>
+            <% end_if %> --%>
         </div>
     <% end_if %>
 <main id="main-content" class="container-xl">
@@ -22,17 +22,15 @@
 
 
     <div class="row justify-content-center">
-        <div class="col-lg-8">
-            <div class="blog__content">
-                <div class="py-3">
-
-                    <h1 class="display-3 pb-4">$Title</h1>
+        <div class="col-lg-9">
+            <div class="blog__content pt-5">
+                <div class="">
+                    <h1 class="display-3">$Title</h1>
                 </div>
                 <% if $Poster %>
-                        <img src="$Poster.URL" alt="$Title poster image"class="img-thumbnail float-right mb-3 ml-3 mr-lg-n8 mr-xl-n9" />
-
+                    <img src="$Poster.URL" alt="$Title poster image"class="img-thumbnail w-50 d-block float-right mb-3 ml-5 mr-lg-n8 mr-xl-n9" />
                 <% else_if $TmdbPosterURL %>
-                    <img src="$TmdbPosterURL" alt="$Title poster image"class="img-thumbnail float-right mb-3 ml-3 mr-lg-n8 mr-xl-n9" />
+                    <img src="$TmdbPosterURL" alt="$Title poster image"class="img-thumbnail w-50 d-block float-right mb-3 ml-5 mr-lg-n8 mr-xl-n9" />
                 <% end_if %>
                 <% if $Summary %>
                     <div class="lead">$Summary</div>

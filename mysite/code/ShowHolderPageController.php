@@ -8,7 +8,7 @@ class ShowHolderPageController extends PageController {
 
 		$previousShows = $this->PreviousShows();
 		$paginatedItems = new PaginatedList($previousShows, $this->request);
-		$paginatedItems->setPageLength(20);
+		$paginatedItems->setPageLength(24);
 
 		return $paginatedItems;
 	}

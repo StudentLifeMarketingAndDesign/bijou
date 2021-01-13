@@ -1,5 +1,4 @@
 <?php
-
 use SilverStripe\Blog\Model\BlogPost;
 use SilverStripe\CMS\Controllers\ContentController;
 
@@ -32,7 +31,14 @@ class PageController extends ContentController {
 	}
 
 	public function LatestPosts($limit = 5) {
-		return BlogPost::get()->Limit($limit);
+		return BlogPost::get()->filter(array('ClassName' => 'SilverStripe\Blog\Model\BlogPost'))->sort('PublishDate DESC')->Limit($limit);
+	}
+
+	public function UpcomingShows() {
+		$holder = ShowHolderPage::get()->First();
+		if ($holder) {
+			return $holder->UpcomingShows();
+		}
 	}
 
 	public function Series() {
