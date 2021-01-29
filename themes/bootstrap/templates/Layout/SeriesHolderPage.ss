@@ -26,7 +26,7 @@
 			   			<div class="col-3 committee-image">
 
 			   				<% if $Image %>
-			   				<img src="$Image.URL" class="w-100 d-block" style="border-radius: 300px" alt="" role="presentation">
+			   				<img src="$Image.Pad(300,300,fff).URL" class="w-100 d-block" style="border-radius: 300px" alt="" role="presentation">
 			   				<% end_if %>
 
 			   			</div>

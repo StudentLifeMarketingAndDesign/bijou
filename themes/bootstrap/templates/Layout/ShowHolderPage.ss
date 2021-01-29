@@ -4,6 +4,7 @@
 </div>
 <main class="my-5" id="content">
 
+<% if not $paginatedPreviousShows.NotFirstPage %>
     <div class="container">
         <article id="content" class="pb-5">
 
@@ -40,6 +41,7 @@
         </div>
     </div>
 
+<% end_if %>
 
     $Form
     $CommentsForm
