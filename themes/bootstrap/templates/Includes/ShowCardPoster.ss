@@ -8,7 +8,7 @@
 <div class="show-list__content">
     <div class="show-list__content-inner">
         <h3><a href="$Link">$Title</a></h3>
-        <% if $Ongoing %>Date: <strong>Streaming Until ...</strong><% end_if %>
+        <%-- <% if $Ongoing %>Date: <strong>Streaming</strong><% end_if %> --%>
         <% if $Content %>$Content<% end_if %>
         <% loop $Dates %>
             <p class="show-list__date"><strong>$Date.Format("EEEE, MMMM d, Y")</strong></p>
