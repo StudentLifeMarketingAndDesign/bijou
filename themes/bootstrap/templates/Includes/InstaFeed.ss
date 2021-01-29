@@ -1,3 +1,4 @@
+<% if not $HideInstaFeed %>
 <div class="container-fluid">
     <div class="row justify-content-center">
 
@@ -11,3 +12,4 @@
     </div>
 
 </div>
+<% end_if %>

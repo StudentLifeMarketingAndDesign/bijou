@@ -64,7 +64,7 @@
                 <div class="list-group my-3">
                     <% if $FilmSceneLink %>
                       <a href="$FilmSceneLink" class="list-group-item list-group-item-action" target="_blank" rel="noopener">
-                        View on Film Scene
+                        View on ICFilmScene
                       </a>
                     <% end_if %>
                     <% if $FacebookEventLink %>

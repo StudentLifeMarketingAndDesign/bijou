@@ -102,17 +102,16 @@ class ShowHolderPage extends Blog {
 	}
 
 	public function UpcomingShows($count = 5) {
+		$now = date('Y-m-d');
 		$shows = new ArrayList();
 
-		//todo limit by expiry
-		$ongoingShows = ShowPage::get()->filter(array('Ongoing' => true));
+		$ongoingShows = ShowPage::get()->filter(array('OngoingStart:GreaterThanOrEqual' => $now));
 
 		foreach ($ongoingShows as $ongoingShow) {
 
 			$shows->push($ongoingShow);
 		}
 
-		$now = date('Y-m-d');
 		$dates = ShowDate::get()->filter(array(
 			'Date:GreaterThanOrEqual' => $now,
 		))->sort('Date')->limit($count);
@@ -130,11 +129,18 @@ class ShowHolderPage extends Blog {
 	}
 	public function PreviousShows() {
 		$now = date('Y-m-d');
+		$shows = new ArrayList();
 		$dates = ShowDate::get()->filter(array(
 			'Date:LessThanOrEqual' => $now,
-		))->sort('Date');
+		))->sort('Date DESC');
 
-		$shows = new ArrayList();
+		$expiredShows = ShowPage::get()->filter(array(
+			'OngoingExpiry:LessThanOrEqual' => $now,
+		));
+
+		foreach ($expiredShows as $expiredShow) {
+			$shows->push($expiredShow);
+		}
 
 		foreach ($dates as $date) {
 			$showPage = ShowPage::get()->filter(array('ID' => $date->ShowPageID))->First();

@@ -46,12 +46,14 @@ class ShowPage extends BlogPost {
 		'CustomFilmSummary' => 'HTMLText',
 
 		'Ongoing' => 'Boolean',
+		'OngoingStart' => 'Date',
 		'OngoingExpiry' => 'Date',
 
 	);
 
 	private static $defaults = array(
 		'UseTmdbForLookup' => true,
+		'FilmSceneLink' => 'https://icfilmscene.org/',
 	);
 
 	private static $has_one = array(
@@ -99,7 +101,13 @@ class ShowPage extends BlogPost {
 		$fields->addFieldToTab('Root.Main', $seriesField, 'Content');
 
 		$fields->addFieldToTab('Root.Main', new CheckboxField('Ongoing', 'Ongoing Stream'), 'Content');
-		$fields->addFieldToTab('Root.Main', DateField::create('OngoingDateExpiry', 'Ongoing stream expires on this date'), 'Content');
+
+		$ongoingFieldWrapper = Wrapper::create(
+			DateField::create('OngoingStart', 'Ongoing stream starts on this date'),
+			DateField::create('OngoingExpiry', 'Ongoing stream expires on this date')
+		)->displayIf('Ongoing')->isChecked()->end();
+
+		$fields->addFieldToTab('Root.Main', $ongoingFieldWrapper, 'Content');
 
 		$fields->addFieldToTab('Root.Main', $dateField, 'Content');
 
