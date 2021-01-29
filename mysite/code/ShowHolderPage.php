@@ -1,11 +1,13 @@
 <?php
 
 use SilverStripe\Blog\Model\Blog;
+use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\ArrayList;
 
 class ShowHolderPage extends Blog {
 
 	private static $db = array(
+		'CalendarEmbedCode' => 'Text',
 
 	);
 
@@ -30,7 +32,9 @@ class ShowHolderPage extends Blog {
 	}
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
+/*  <iframe allowfullscreen="true" src="https://e.issuu.com/anonymous-embed.html?u=foolsmag&amp;d=foolsvol5_web&amp;wmode=opaque" width="100%" data-embed="true" frameborder="0" height="745"></iframe> */
 
+		$fields->addFieldToTab('Root.Main', new TextField('CalendarEmbedCode', 'Calendar Embed Code'));
 		$fields->removeByName('YoutubeBackgroundEmbed');
 		$fields->removeByName('LayoutType');
 		$fields->removeByName('BackgroundImage');
