@@ -11,16 +11,22 @@
 </section>
 
 <% if $UpcomingShows %>
+<div class="container-xl">
+    <div class="row">
+        <div class="col-lg-9">
+            <h2 class="my-3">Currently Showing:</h2>
+        </div>
+    </div>
     <div class="row justify-content-center">
         <div class="col-lg-8 pt-3">
-            <h2 class="pb-3">Currently Showing:</h2>
+            <h2 class="pb-3"></h2>
             <% loop $UpcomingShows %>
                 <% include ShowCardPoster %>
             <% end_loop %>
 
         </div>
     </div>
-
+</div>
 <% end_if %>
 <p class="pt-4 text-center"><a class="btn btn-outline-dark btn-lg" href="now-playing/">View our show archive</a></p>
 <div class="container-xl">
