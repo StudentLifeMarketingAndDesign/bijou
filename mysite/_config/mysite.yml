@@ -3,18 +3,11 @@ Name: myproject
 ---
 SilverStripe\Core\Manifest\ModuleManifest:
   project: mysite
-SilverStripe\Blog\Model\BlogPost:
-  extensions:
-    - BlogPostExtension
-HomePage:
-  extensions:
-    - HomePageExtension
-NewHomePageHeroFeature:
-  extensions:
-    - NewHomePageHeroFeatureExtension
-StaffTeam:
-  extensions:
-    - StaffTeamExtension
-StaffHolderPageController:
-  extensions:
-    - StaffHolderPageControllerExtension
+SilverStripe\View\SSViewer:
+  themes:
+    - '$public'
+    - 'bootstrap'
+    - '$default'
+SilverStripe\Assets\InterventionBackend:
+  flush_enabled: false
+

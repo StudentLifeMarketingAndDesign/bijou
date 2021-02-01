@@ -6,369 +6,383 @@ use SilverStripe\Assets\Image;
 use SilverStripe\Blog\Model\BlogPost;
 use SilverStripe\Core\Environment;
 use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Forms\DateField;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Forms\ListboxField;
 use SilverStripe\Forms\LiteralField;
 use SilverStripe\Forms\ReadonlyField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\ORM\DataObject;
-use SilverStripe\TagField\TagField;
 use UncleCheese\DisplayLogic\Forms\Wrapper;
-use SilverStripe\Forms\ListboxField;
 
 class ShowPage extends BlogPost {
 
-    private static $db = array(
-
-        'TicketsLink' => 'Varchar(255)',
-        'FacebookEventLink' => 'Varchar(255)',
-        'FilmSceneLink' => 'Varchar(255)',
-
-        'UseTmdbForLookup' => 'Boolean',
+	private static $db = array(
+
+		'TicketsLink' => 'Varchar(255)',
+		'FacebookEventLink' => 'Varchar(255)',
+		'FilmSceneLink' => 'Varchar(255)',
 
-        'TmdbFilmID' => 'Int',
-        'TmdbFilmTitle' => 'Text',
-        'TmdbFilmYear' => 'Varchar(10)',
-        'TmdbTrailerVideoID' => 'Varchar(11)',
-        'TmdbFilmRating' => 'Varchar(11)',
-        'TmdbFilmSummary' => 'HTMLText',
+		'UseTmdbForLookup' => 'Boolean',
 
-        'TmdbPosterURL' => 'Varchar(255)',
-        'TmdbBgURL' => 'Varchar(255)',
-
-        'CustomFilmTitle' => 'Text',
-        'CustomFilmYear' => 'Varchar(10)',
-        'CustomTrailerVideoID' => 'Varchar(11)',
-        'CustomFilmRating' => 'Varchar(11)',
-        'CustomFilmSummary' => 'HTMLText',
-
-    );
-
-    private static $defaults = array(
-        'UseTmdbForLookup' => true,
-    );
-
-    private static $has_one = array(
-        "Poster" => Image::class,
-    );
-
-    private static $has_many = array(
-        'Dates' => 'ShowDate',
-    );
-
-    private static $owns = array(
-        'Poster',
-        'Dates',
-    );
+		'TmdbFilmID' => 'Int',
+		'TmdbFilmTitle' => 'Text',
+		'TmdbFilmYear' => 'Varchar(10)',
+		'TmdbTrailerVideoID' => 'Varchar(11)',
+		'TmdbFilmRating' => 'Varchar(11)',
+		'TmdbFilmSummary' => 'HTMLText',
+
+		'TmdbPosterURL' => 'Varchar(255)',
+		'TmdbBgURL' => 'Varchar(255)',
 
-    private static $many_many = array(
-        'SeriesPages' => 'SeriesPage',
-    );
+		'CustomFilmTitle' => 'Text',
+		'CustomFilmYear' => 'Varchar(10)',
+		'CustomTrailerVideoID' => 'Varchar(11)',
+		'CustomFilmRating' => 'Varchar(11)',
+		'CustomFilmSummary' => 'HTMLText',
 
-    public function getCMSFields() {
-        $fields = parent::getCMSFields();
+		'Ongoing' => 'Boolean',
+		'OngoingStart' => 'Date',
+		'OngoingExpiry' => 'Date',
 
-        $fields->removeByName('YoutubeBackgroundEmbed');
-        $fields->removeByName('LayoutType');
-        $fields->removeByName('BackgroundImage');
-        $fields->removeByName('CustomSummary');
-        $fields->removeByName('AudioClip');
-        $fields->removeByName('FeaturedImage');
-        $fields->removeByName('Blocks');
-        $fields->removeByName('PostOptions');
-        $fields->removeByName('MetaData');
-        $fields->removeByName('SocialMediaSharing');
-        $fields->removeByName('Widgets');
+	);
+
+	private static $defaults = array(
+		'UseTmdbForLookup' => true,
+		'FilmSceneLink' => 'https://icfilmscene.org/',
+	);
+
+	private static $has_one = array(
+		"Poster" => Image::class,
+	);
+
+	private static $has_many = array(
+		'Dates' => 'ShowDate',
+	);
+
+	private static $owns = array(
+		'Poster',
+		'Dates',
+	);
+
+	private static $many_many = array(
+		'SeriesPages' => 'SeriesPage',
+	);
+
+	public function getCMSFields() {
+		$fields = parent::getCMSFields();
+
+		$fields->removeByName('YoutubeBackgroundEmbed');
+		$fields->removeByName('LayoutType');
+		$fields->removeByName('BackgroundImage');
+		$fields->removeByName('CustomSummary');
+		$fields->removeByName('AudioClip');
+		$fields->removeByName('FeaturedImage');
+		$fields->removeByName('Blocks');
+		$fields->removeByName('PostOptions');
+		$fields->removeByName('MetaData');
+		$fields->removeByName('SocialMediaSharing');
+		$fields->removeByName('Widgets');
+
+		$dateFieldConfig = GridFieldConfig_RelationEditor::create();
+		$dateField = new GridField('Dates', 'Dates', $this->Dates());
+		$dateField->setConfig($dateFieldConfig);
 
-        $dateFieldConfig = GridFieldConfig_RelationEditor::create();
-        $dateField = new GridField('Dates', 'Dates', $this->Dates());
-        $dateField->setConfig($dateFieldConfig);
+		$seriesField = ListBoxField::create(
+			'SeriesPages',
+			'Series',
+			SeriesPage::get()->map()
+		);
 
-        $seriesField = ListBoxField::create(
-            'SeriesPages',
-            'Series',
-            SeriesPage::get()->map()
-        );
+		$fields->addFieldToTab('Root.Main', $seriesField, 'Content');
 
-        $fields->addFieldToTab('Root.Main', $seriesField, 'Content');
-        $fields->addFieldToTab('Root.Main', $dateField, 'Content');
+		$fields->addFieldToTab('Root.Main', new CheckboxField('Ongoing', 'Ongoing Stream'), 'Content');
 
-        if ($this->Title != 'New Show Page') {
+		$ongoingFieldWrapper = Wrapper::create(
+			DateField::create('OngoingStart', 'Ongoing stream starts on this date'),
+			DateField::create('OngoingExpiry', 'Ongoing stream expires on this date')
+		)->displayIf('Ongoing')->isChecked()->end();
 
-        } else {
-            $dateField->setDisabled(true);
-            $fields->addFieldToTab('Root.Main', new LiteralField('DateWarning', '<p style="font-size: 16px;"><strong>Please give this page a title and save as a draft before adding a date.</strong></p>'), 'Dates');
-        }
+		$fields->addFieldToTab('Root.Main', $ongoingFieldWrapper, 'Content');
 
-        $fields->addFieldToTab('Root.Main', new TextField('TicketsLink', 'Buy tickets link'), 'Content');
+		$fields->addFieldToTab('Root.Main', $dateField, 'Content');
 
-        $fields->addFieldToTab('Root.Main', new TextField('FacebookEventLink', 'Facebook Event Link'), 'Content');
-        $fields->addFieldToTab('Root.Main', new TextField('FilmSceneLink', 'FilmScene Link'), 'Content');
+		if ($this->Title != 'New Show Page') {
 
-        $fields->addFieldToTab('Root.FilmInfo', new CheckboxField('UseTmdbForLookup', 'Use TMDB for film information'));
+		} else {
+			$dateField->setDisabled(true);
+			$fields->addFieldToTab('Root.Main', new LiteralField('DateWarning', '<p style="font-size: 16px;"><strong>Please give this page a title and save as a draft before adding a date.</strong></p>'), 'Dates');
+		}
 
-        // $fields->addFieldToTab('Root.FilmInfo', new , 'Content');
+		$fields->addFieldToTab('Root.Main', new TextField('TicketsLink', 'Buy tickets link'), 'Content');
 
-        $tmdbFieldWrapper = Wrapper::create(
-            LiteralField::create('TmdbInfo', '<p style="font-size: 14px;"><strong>Use the field below to autofill in information and imagery (poster/background) from <img src="_resources/themes/cfo-subtheme/dist/images/tmdb.svg" height="27" width="30" /> for a film. Save a draft of this page after choosing a film to see the info below.</strong> This field only works in Firefox/Chrome.</p>'),
-            $suggestedFilm = AutocompleteSuggestField::create('FilmID', $this, 'Film Lookup:', FilmSuggestController::create(), null, $this),
-            ReadonlyField::create('TmdbBgURL', 'Background Image (from TMDB)'),
+		$fields->addFieldToTab('Root.Main', new TextField('FacebookEventLink', 'Facebook Event Link'), 'Content');
+		$fields->addFieldToTab('Root.Main', new TextField('FilmSceneLink', 'FilmScene Link'), 'Content');
 
-            ReadonlyField::create('TmdbPosterURL', 'Poster Image (from TMDB)'),
-            YouTubeField::create('TmdbTrailerVideoID', 'YouTube Video'),
-            ReadonlyField::create('TmdbFilmYear'),
-            ReadonlyField::create('TmdbFilmSummary'),
-            LiteralField::create('TmdbInfoTwo', '<p style="font-size: 14px;">Use the fields below to override any of the fields above.</p>'))
+		$fields->addFieldToTab('Root.FilmInfo', new CheckboxField('UseTmdbForLookup', 'Use TMDB for film information'));
 
-            ->displayIf('UseTmdbForLookup')->isChecked()->end();
+		$tmdbFieldWrapper = Wrapper::create(
+			LiteralField::create('TmdbInfo', '<p style="font-size: 14px;"><strong>Use the field below to autofill in information and imagery (poster/background) from <img src="_resources/themes/cfo-subtheme/dist/images/tmdb.svg" height="27" width="30" /> for a film. Save a draft of this page after choosing a film to see the info below.</strong> This field only works in Firefox/Chrome.</p>'),
+			$suggestedFilm = AutocompleteSuggestField::create('TmdbFilmID', $this, 'Film Lookup:', FilmSuggestController::create(), null, $this),
+			ReadonlyField::create('TmdbBgURL', 'Background Image (from TMDB)'),
 
-        $suggestedFilm->setDescription('Enter text to search for a film, then <strong>save a draft of this page</strong> to see the information appear below.');
+			ReadonlyField::create('TmdbPosterURL', 'Poster Image (from TMDB)'),
+			YouTubeField::create('TmdbTrailerVideoID', 'YouTube Video'),
+			ReadonlyField::create('TmdbFilmYear'),
+			ReadonlyField::create('TmdbFilmSummary'),
+			LiteralField::create('TmdbInfoTwo', '<p style="font-size: 14px;">Use the fields below to override any of the fields above.</p>'))
 
-        $fields->addFieldsToTab('Root.FilmInfo', $tmdbFieldWrapper);
+			->displayIf('UseTmdbForLookup')->isChecked()->end();
 
-        // $fields->addFieldsToTab('Root.FilmInfo', $tmdbFieldWrapper);
+		$suggestedFilm->setDescription('Enter text to search for a film, then <strong>save a draft of this page</strong> to see the information appear below.');
 
-        $overrideFields = new FieldList(
-            UploadField::create('Poster', 'Custom Poster Image (vertical images work best)'),
-            UploadField::create('FeaturedImage', 'Custom Background Image'),
-            TextField::create('CustomFilmTitle'),
-            TextField::create('CustomFilmYear'),
-            YouTubeField::create('CustomTrailerVideoID'),
-            HTMLEditorField::create('CustomFilmSummary')
-        );
-        $fields->addFieldsToTab('Root.FilmInfo', $overrideFields);
+		$fields->addFieldsToTab('Root.FilmInfo', $tmdbFieldWrapper);
 
-        // $fields->addFieldToTab('Root.FilmInfo', new );
-        // $fields->addFieldToTab('Root.FilmInfo', new );
-        // $fields->addFieldsToTab('Root.FilmInfo', new );
-        // $fields->addFieldsToTab('Root.FilmInfo', new UploadField('FeaturedImage', 'Custom Background Image '));
-        // $fields->addFieldToTab('Root.FilmInfo', new ));
+		$overrideFields = new FieldList(
+			UploadField::create('Poster', 'Custom Poster Image (vertical images work best)'),
+			UploadField::create('FeaturedImage', 'Custom Background Image'),
+			TextField::create('CustomFilmTitle'),
+			TextField::create('CustomFilmYear'),
+			YouTubeField::create('CustomTrailerVideoID'),
+			HTMLEditorField::create('CustomFilmSummary')
+		);
+		$fields->addFieldsToTab('Root.FilmInfo', $overrideFields);
 
-        // $fields->addFieldToTab('Root.FilmInfo', new );
-        // $fields->addFieldToTab('Root.FilmInfo', new );
-        return $fields;
-    }
+		return $fields;
+	}
+	public function NextPage() {
+		$page = Page::get()->filter(array(
+			'ParentID' => $this->owner->ParentID,
+			'Sort:GreaterThan' => $this->owner->Sort,
+		))->First();
+		return $page;
+	}
 
-    public function getFilmTitle() {
+	public function PreviousPage() {
+		$page = Page::get()->filter(array(
+			'ParentID' => $this->owner->ParentID,
+			'Sort:LessThan' => $this->owner->Sort,
+		))->Last();
+		return $page;
+	}
 
-        $override = $this->CustomFilmTitle;
-        if ($override != '') {
-            return $override;
-        }
+	public function getBackgroundImageURL() {
 
-        return $this->dbObject('TmdbFilmTitle');
+		if ($this->FeaturedImageID) {
 
-    }
+			return $this->FeaturedImage()->URL;
+		} else {
 
-    public function getFilmYear() {
+			return $this->dbObject('TmdbBgURL');
+		}
 
-        $override = $this->CustomFilmYear;
-        if ($override != '') {
-            return $override;
-        }
+	}
 
-        return $this->dbObject('TmdbFilmYear');
+	public function getFilmTitle() {
 
-    }
+		$override = $this->CustomFilmTitle;
+		if ($override != '') {
+			return $override;
+		}
 
-    public function getFilmSummary() {
+		return $this->dbObject('TmdbFilmTitle');
 
-        $override = $this->obj('CustomFilmSummary');
-        if ($override != '') {
-            return $override;
-        }
+	}
 
-        return $this->dbObject('TmdbFilmSummary');
+	public function getFilmYear() {
 
-    }
+		$override = $this->CustomFilmYear;
+		if ($override != '') {
+			return $override;
+		}
 
-    public function getTrailerVideoID() {
-        $override = $this->CustomTrailerVideoID;
-        if ($override != '') {
-            return $override;
-        }
+		return $this->dbObject('TmdbFilmYear');
 
-        return $this->dbObject('TmdbTrailerVideoID');
-    }
-    public function TimesFormatted() {
+	}
 
-        //$this->getMovieInfo('Where the wild things are');
-        // if(!$this->Times){
-        //     return;
-        // }
+	public function getFilmSummary() {
 
-        $times = $this->Times;
-        //$times = strip_tags($times);
-        //Debug::show($times);
-        $timesArray = explode("\n", $times);
+		$override = $this->obj('CustomFilmSummary');
+		if ($override != '') {
+			return $override;
+		}
 
-        if (count($timesArray) == 0) {
-            return;
-        }
+		return $this->dbObject('TmdbFilmSummary');
 
-        $timesArrayList = new ArrayList();
+	}
 
-        foreach ($timesArray as $time) {
-            //$time = strip_tags($time);
-            $time = trim(preg_replace('/\s+/', ' ', $time));
+	public function getTrailerVideoID() {
+		$override = $this->CustomTrailerVideoID;
+		if ($override != '') {
+			return $override;
+		}
 
-            $timestamp = strtotime($time);
+		return $this->dbObject('TmdbTrailerVideoID');
+	}
+	public function TimesFormatted() {
 
-            $timeFormatted = date('g:iA', $timestamp);
+		$times = $this->Times;
 
-            $timeObj = new DataObject;
-            $timeObj->TimeFormatted = $timeFormatted;
-            $timesArrayList->push($timeObj);
+		//Debug::show($times);
+		$timesArray = explode("\n", $times);
 
-            //print_r($timeObj->TimeFormatted);
-        }
+		if (count($timesArray) == 0) {
+			return;
+		}
 
-        return $timesArrayList;
+		$timesArrayList = new ArrayList();
 
-    }
+		foreach ($timesArray as $time) {
+			//$time = strip_tags($time);
+			$time = trim(preg_replace('/\s+/', ' ', $time));
+			$timestamp = strtotime($time);
+			$timeFormatted = date('g:iA', $timestamp);
 
+			$timeObj = new DataObject;
+			$timeObj->TimeFormatted = $timeFormatted;
+			$timesArrayList->push($timeObj);
 
-    public function NextUpcomingDate(){
-        $now = date('Y-m-d');
-        $date = $this->Dates()->filter(array(
-            'Date:GreaterThanOrEqual' => $now,
-        ))->sort('Date')->First();
+			//print_r($timeObj->TimeFormatted);
+		}
 
-        return $date;
-    }
+		return $timesArrayList;
 
-    public function onBeforeWrite() {
-        // check on first write action, aka "database row creation" (ID-property is not set)
-        // echo $this->FilmID;
-        if (($this->FilmID != 0) && ($this->UseTmdbForLookup)) {
-            $film = $this->getMovieInfo($this->FilmID);
+	}
 
-            if ($film) {
+	public function NextUpcomingDate() {
+		$now = date('Y-m-d');
+		$date = $this->Dates()->filter(array(
+			'Date:GreaterThanOrEqual' => $now,
+		))->sort('Date')->First();
 
-                foreach ($film as $filmKey => $filmVal) {
-                    $this->{$filmKey} = $filmVal;
-                }
-                // $this->FilmTitle = $film['FilmTitle'];
-                // $this->FilmYear = $film['FilmYear'];
-                // $this->FilmSummary = $film['FilmSummary'];
-                // $this->TmdbBgURL = $film['TmdbBgURL'];
-                // $this->TmdbPosterURL = $film['TmdbPosterURL'];
-                // $this->TrailerVideoID = $film['TrailerVideoID'];
+		return $date;
+	}
 
-            }
+	public function onBeforeWrite() {
+		// check on first write action, aka "database row creation" (ID-property is not set)
+		// echo $this->FilmID;
 
-        }
+		if (($this->TmdbFilmID != 0) && ($this->UseTmdbForLookup == 1)) {
 
-        // check on every write action
-        // if(!$this->record['TeamID']) {
-        //     user_error('Cannot save player without a valid team', E_USER_ERROR);
-        //     exit();
-        // }
+			$film = $this->getMovieInfo($this->TmdbFilmID);
 
-        // CAUTION: You are required to call the parent-function, otherwise
-        // SilverStripe will not execute the request.
-        parent::onBeforeWrite();
-    }
-    public function onBeforeDelete() {
+			if ($film) {
 
-        parent::onBeforeDelete();
+				foreach ($film as $filmKey => $filmVal) {
+					$this->{$filmKey} = $filmVal;
+				}
 
-    }
-    public function getMovieInfo($filmID) {
+			}
 
-        $token = new \Tmdb\ApiToken(Environment::getEnv('TMDB_API_KEY'));
+		}
 
-        $client = new \Tmdb\Client($token, [
-            'cache' => [
-                'path' => '/tmp/php-tmdb',
-            ],
-        ]);
+		// check on every write action
+		// if(!$this->record['TeamID']) {
+		//     user_error('Cannot save player without a valid team', E_USER_ERROR);
+		//     exit();
+		// }
 
-        $infoArray = array();
+		// CAUTION: You are required to call the parent-function, otherwise
+		// SilverStripe will not execute the request.
+		parent::onBeforeWrite();
+	}
+	public function onBeforeDelete() {
 
-        $query = new \Tmdb\Model\Search\SearchQuery\MovieSearchQuery();
-        $query->page(1);
+		parent::onBeforeDelete();
 
-        $searchRepo = new \Tmdb\Repository\SearchRepository($client);
-        $movieRepo = new \Tmdb\Repository\MovieRepository($client);
-        $configRepository = new \Tmdb\Repository\ConfigurationRepository($client);
+	}
+	public function getMovieInfo($filmID) {
 
-        $config = $configRepository->load();
+		$token = new \Tmdb\ApiToken(Environment::getEnv('TMDB_API_KEY'));
 
-        $configImages = $config->getImages();
+		$client = new \Tmdb\Client($token, [
+			'cache' => [
+				'path' => '/tmp/php-tmdb',
+			],
+		]);
 
-        $firstFilm = $movieRepo->load($filmID);
+		$infoArray = array();
 
-        // $findArray = $find->toArray();
+		$query = new \Tmdb\Model\Search\SearchQuery\MovieSearchQuery();
+		$query->page(1);
 
-        // $firstFilm = reset($findArray);
+		$searchRepo = new \Tmdb\Repository\SearchRepository($client);
+		$movieRepo = new \Tmdb\Repository\MovieRepository($client);
+		$configRepository = new \Tmdb\Repository\ConfigurationRepository($client);
 
-        if (!$firstFilm) {
-            return;
-        }
+		$config = $configRepository->load();
 
-        //****************************
-        //Get id (for other api calls)
-        //****************************
+		$configImages = $config->getImages();
 
-        $filmId = $firstFilm->getId();
+		$firstFilm = $movieRepo->load($filmID);
 
-        $infoArray['TmdbFilmID'] = $filmId;
+		if (!$firstFilm) {
+			return;
+		}
 
-        //***********
-        //Get title
-        //************
+		//****************************
+		//Get id (for other api calls)
+		//****************************
 
-        $infoArray['TmdbFilmTitle'] = $firstFilm->getTitle();
+		$filmId = $firstFilm->getId();
 
-        //****************
-        //Get release year
-        //****************
+		$infoArray['TmdbFilmID'] = $filmId;
 
-        $releaseDate = $firstFilm->getReleaseDate();
-        $releaseYear = $releaseDate->format('Y');
+		//***********
+		//Get title
+		//************
 
-        $infoArray['TmdbFilmYear'] = $releaseYear;
+		$infoArray['TmdbFilmTitle'] = $firstFilm->getTitle();
 
-        //***********
-        //Get summary
-        //***********
+		//****************
+		//Get release year
+		//****************
 
-        $infoArray['TmdbFilmSummary'] = $firstFilm->getOverview();
+		$releaseDate = $firstFilm->getReleaseDate();
+		$releaseYear = $releaseDate->format('Y');
 
-        //**********
-        //Get Images
-        //**********
+		$infoArray['TmdbFilmYear'] = $releaseYear;
 
-        $imgBase = $configImages['secure_base_url'];
+		//***********
+		//Get summary
+		//***********
 
-        $backdropSize = $configImages['backdrop_sizes'][2];
-        $backdropBase = $imgBase . $backdropSize . $firstFilm->getBackdropPath();
+		$infoArray['TmdbFilmSummary'] = $firstFilm->getOverview();
 
-        $posterSize = $configImages['poster_sizes'][4];
-        $posterBase = $imgBase . $posterSize . $firstFilm->getPosterPath();
+		//**********
+		//Get Images
+		//**********
 
-        $infoArray['TmdbBgURL'] = $backdropBase;
-        $infoArray['TmdbPosterURL'] = $posterBase;
-        // print_r($images);
+		$imgBase = $configImages['secure_base_url'];
 
-        //**********
-        //Get Videos
-        //**********
-        $videosArray = $movieRepo->getVideos($filmId)->toArray();
-        $firstVideo = reset($videosArray);
+		$backdropSize = $configImages['backdrop_sizes'][2];
+		$backdropBase = $imgBase . $backdropSize . $firstFilm->getBackdropPath();
 
-        if ($firstVideo) {
+		$posterSize = $configImages['poster_sizes'][4];
+		$posterBase = $imgBase . $posterSize . $firstFilm->getPosterPath();
 
-            $infoArray['TmdbTrailerVideoID'] = $firstVideo->getKey();
+		$infoArray['TmdbBgURL'] = $backdropBase;
+		$infoArray['TmdbPosterURL'] = $posterBase;
+		// print_r($images);
 
-        }
+		//**********
+		//Get Videos
+		//**********
+		$videosArray = $movieRepo->getVideos($filmId)->toArray();
+		$firstVideo = reset($videosArray);
 
-        return $infoArray;
+		if ($firstVideo) {
 
-    }
+			$infoArray['TmdbTrailerVideoID'] = $firstVideo->getKey();
+
+		}
+
+		return $infoArray;
+
+	}
 
 }

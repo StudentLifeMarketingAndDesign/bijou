@@ -13,10 +13,10 @@ $Header
 
         <div class="main-content__text">
             $Content
-            <% loop $UpcomingDates %>
-                <h2 class="show-list__date-header">$Date.Format("E, MMM d")</h2>
+
+                <h2 class="show-list__date-header">Calendar</h2>
                 <div class="show-list grid-x grid-margin-x medium-up-2 large-up-3">
-                    <% loop $ShowsTransient %>
+                    <% loop $UpcomingShows %>
                         <% if $SeriesPages.exists %>
                             <p class="showcard__category">
                             <% loop $SeriesPages %>
@@ -45,8 +45,8 @@ $Header
                             </div>
                         </a>
                     <% end_loop %>
-                </div><br />
-            <% end_loop %>
+                </div>
+
         </div>
     </div>
 </main>

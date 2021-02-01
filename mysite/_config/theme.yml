@@ -1,9 +1,0 @@
----
-Name: mytheme
----
-SilverStripe\View\SSViewer:
-  themes:
-    - '$public'
-    - 'cfo-subtheme'
-    - 'md/division-project'
-    - '$default'

@@ -3,7 +3,7 @@
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
     <channel>
         <title>Bijou Banter</title>
-        <link>http://bijou.uiowa.edu</link>
+        <link>https://bijou.uiowa.edu</link>
         <language>en-us</language>
         <copyright>Copyright Bijou</copyright>
         <itunes:subtitle>A weekly podcast discussing films and the film industry.</itunes:subtitle>
@@ -16,11 +16,12 @@
             <itunes:email>bijouui.executive@gmail.com</itunes:email>
         </itunes:owner>
         <itunes:explicit>clean</itunes:explicit>
-        <itunes:image href="http://bijou.uiowa.edu/assets/a11a564205/bijou-logo-album.jpg" />
+        <itunes:image href="https://bijou.uiowa.edu/assets/a11a564205/bijou-logo-album.jpg" />
         <itunes:category text="TV &amp; Film" />
 
         <% loop $Entries %>
             <% if $AudioClip %>
+                <strong>$AudioClip.ID</strong>
                 <item>
                     <title>$Title.XML</title>
                     <link>$AbsoluteLink</link>
