@@ -37,6 +37,11 @@ class BlogPostExtension extends DataExtension {
 		$fields->removeByName('YoutubeBackgroundEmbed');
 		$fields->removeByName('LayoutType');
 		$fields->removeByName('BackgroundImage');
+
+		$fields->removeByName('FeaturedImage');
+
+		$fields->addFieldToTab('Root.Main', new UploadField('FeaturedImage'), 'Content');
+
 		$parent = $this->owner->Parent();
 		$tags = $parent instanceof Blog
 		? $parent->Tags()

@@ -30,7 +30,11 @@ class Page extends SiteTree {
 
 	public function getCMSFields() {
 		$f = parent::getCMSFields();
-		$f->addFieldToTab('Root.Main', new UploadField('BackgroundImage', 'BackgroundImage'), 'Content');
+		//print_r($this->ClassName);
+		if ($this->ClassName != 'SilverStripe\Blog\Model\BlogPost') {
+			$f->addFieldToTab('Root.Main', new UploadField('BackgroundImage', 'BackgroundImage'), 'Content');
+		}
+
 		$f->addFieldToTab('Root.Main', new CheckboxField('HideInstaFeed', 'Hide Instagram feed from this page'));
 
 		return $f;
