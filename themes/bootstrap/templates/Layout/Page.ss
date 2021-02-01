@@ -9,7 +9,11 @@
 			<article id="content">
 
 			<h1>$Title</h1>
+            <% if Image %>
+                <img class="float-lg-right" src="$Image.Pad(300,300,fff).URL" alt="" role="presentation" />
+            <% end_if %>
             $Content
+
             $Form
 			$PageComments
 			</article>
