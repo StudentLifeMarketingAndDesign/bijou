@@ -3,6 +3,10 @@ use SilverStripe\Blog\Model\Blog;
 
 class NewsHolder extends Blog {
 
+	private static $allowed_children = [
+		BlogPost::class,
+	];
+
 	public function getCMSFields() {
 		$f = parent::getCMSFields();
 
@@ -16,4 +20,5 @@ class NewsHolder extends Blog {
 		return $posts;
 
 	}
+
 }
