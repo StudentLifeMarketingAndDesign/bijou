@@ -1,5 +1,5 @@
 <% include Header %>
-
+<% if not $PaginatedList.NotFirstPage %>
 <div class="container-fluid">
     <div class="row">
         <% loop $PaginatedList.Limit(2) %>
@@ -20,7 +20,7 @@
         </div>
     </article>
 </main>
-
+<% end_if %>
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12">
