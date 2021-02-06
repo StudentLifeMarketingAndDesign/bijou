@@ -25,15 +25,15 @@
                  <h2 class="display-5">Be a part of Bijou!</h2>
                     <div class="list-group my-3">
 
-                      <a href="#" class="list-group-item list-group-item-action" target="_blank" rel="noopener">
+                      <a href="join/" class="list-group-item list-group-item-action" target="_blank" rel="noopener">
                         Apply to join Bijou
                       </a>
 
 
-                        <a href="#" class="list-group-item list-group-item-action" target="_blank" rel="noopener">Submit a blog post</a>
+                        <a href="bijou-blog/" class="list-group-item list-group-item-action" target="_blank" rel="noopener">Submit a blog post</a>
 
 
-                        <a href="#" class="list-group-item list-group-item-action" target="_blank" rel="noopener">
+                        <a href="our-programs/bijou-open-screen/" class="list-group-item list-group-item-action" target="_blank" rel="noopener">
                             Submit a film for Bijou Open Screen
                         </a>
 
