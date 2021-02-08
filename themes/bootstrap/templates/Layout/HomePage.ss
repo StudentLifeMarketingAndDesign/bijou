@@ -14,7 +14,7 @@
 <div class="container-xl">
     <div class="row">
         <div class="col-lg-9">
-            <h2 class="my-3">Currently Showing:</h2>
+            <h2 class="my-3">Up next:</h2>
         </div>
     </div>
     <div class="row justify-content-center">

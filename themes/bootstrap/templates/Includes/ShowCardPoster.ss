@@ -7,7 +7,14 @@
 </a>
 <div class="show-list__content">
     <div class="show-list__content-inner">
-        <h3><a href="$Link">$Title</a></h3>
+        <% if $SeriesPages %>
+            <p class="h4">
+            <% loop $SeriesPages %>
+                <% if $Image %><img src="$Image.ScaleWidth(100).URL" width="50" alt="" role="presentation" /><% end_if %>$Title
+            <% end_loop %>
+            </p>
+        <% end_if %>
+        <h3 class="h1"><a href="$Link">$Title</a></h3>
         <%-- <% if $Ongoing %>Date: <strong>Streaming</strong><% end_if %> --%>
         <% if $Content %>$Content<% end_if %>
         <% loop $Dates %>

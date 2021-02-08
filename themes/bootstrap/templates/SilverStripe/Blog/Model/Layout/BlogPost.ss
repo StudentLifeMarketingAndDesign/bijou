@@ -20,7 +20,7 @@
 
 
                 $Content
-                <% if $AudioClip || $HasTag("podcast") || $HasTag("banter") %>
+                <% if $AudioClip %>
                 <div class="card" style="width: 18rem;">
                   <div class="card-body">
                     <h2 class="card-title h6"><i class="fas fa-podcast"></i> Listen to this episode:</h2>
