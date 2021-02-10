@@ -1,6 +1,6 @@
 # How to add a showing to the calendar
 
-This is just a quick guide to adding a film showing to the [Bijou Film Board] (https://bijou.uiowa.edu) website calendar. If you have any questions, don't hesitate to email Student Life Communications web team at imu-web@uiowa.edu.
+This is just a quick guide to adding a film showing to the [Bijou Film Board](https://bijou.uiowa.edu) website calendar. If you have any questions, don't hesitate to email Student Life Communications web team at imu-web@uiowa.edu.
 
 I'm breaking this up into two parts, just to make it a bit easier.
 
