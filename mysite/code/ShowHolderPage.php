@@ -1,6 +1,7 @@
 <?php
 
 use SilverStripe\Blog\Model\Blog;
+use SilverStripe\Forms\LiteralField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\ArrayList;
 
@@ -34,7 +35,7 @@ class ShowHolderPage extends Blog {
 		$fields = parent::getCMSFields();
 /*  <iframe allowfullscreen="true" src="https://e.issuu.com/anonymous-embed.html?u=foolsmag&amp;d=foolsvol5_web&amp;wmode=opaque" width="100%" data-embed="true" frameborder="0" height="745"></iframe> */
 
-		$fields->addFieldToTab('Root.Main', new TextField('CalendarEmbedCode', 'Calendar Embed Code'));
+		$fields->addFieldToTab('Root.Main', new TextField('CalendarEmbedCode', 'Calendar Embed Code'), 'Content');
 		$fields->removeByName('YoutubeBackgroundEmbed');
 		$fields->removeByName('LayoutType');
 		$fields->removeByName('BackgroundImage');
@@ -48,7 +49,7 @@ class ShowHolderPage extends Blog {
 		$fields->removeByName('Widgets');
 		// $fields->removeByName('Main');
 		$fields->removeByName('Categorisation');
-
+		$fields->addFieldToTab('Root.ChildPages', new LiteralField('InstructionsAdd', '<p class="message notice"><strong><a href="https://github.com/StudentLifeMarketingAndDesign/bijou/blob/main/docs/adding-a-show.md" target="_blank" rel="noopener">Instructions for adding shows and dates can be found here &rarr;</a></strong></p>'), 'ChildPages');
 		return $fields;
 	}
 	public function UpcomingDates($count = 7) {

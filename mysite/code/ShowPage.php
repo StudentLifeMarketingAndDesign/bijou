@@ -88,8 +88,6 @@ class ShowPage extends BlogPost {
 		$fields->removeByName('SocialMediaSharing');
 		$fields->removeByName('Widgets');
 
-		$fields->addFieldToTab('Root.Main', new LiteralField('InstructionsAdd', '<p class="message notice"><strong><a href="https://github.com/StudentLifeMarketingAndDesign/bijou/blob/main/docs/adding-a-show.md" target="_blank" rel="noopener">Instructions for adding shows and dates can be found here &rarr;</a></strong></p>'), 'Title');
-
 		$dateFieldConfig = GridFieldConfig_RelationEditor::create();
 		$dateField = new GridField('Dates', 'Dates', $this->Dates());
 		$dateField->setConfig($dateFieldConfig);
