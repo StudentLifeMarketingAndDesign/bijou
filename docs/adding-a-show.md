@@ -2,7 +2,7 @@
 
 This is just a quick guide to adding a film showing to the [Bijou Film Board](https://bijou.uiowa.edu) website calendar. If you have any questions, don't hesitate to email Student Life Communications web team at imu-web@uiowa.edu.
 
-I'm breaking this up into two parts, just to make it a bit easier.
+I'm breaking this up into a few parts, just to make it a bit easier follow.
 
 ## Adding a showing page
 
@@ -20,10 +20,10 @@ I'm breaking this up into two parts, just to make it a bit easier.
 
 7. At this point **save a draft** of the new showing page by clicking the left "Save" button. This must be completed before the next steps.
 
-8. After saving the draft, you can proceed to fill out the rest of the information and add dates to the showing.
+8. After saving the draft, you can proceed to fill out the rest of the information, (including the series, etc) and add dates to the showing.
 
 
-## Adding dates and optional custom imagery/info to the showing page
+## Adding dates
 
 After completing the above, you can add dates and custom imagery:
 
@@ -40,3 +40,17 @@ If the showing is on one or more dates, like a typical movie showing, do the fol
 4. Click the green "+ Create" button at the bottom
 
 5. Repeat for any additional date and times.
+
+## Finishing Up (Adding Additional Imagery/Info)
+
+If you're not happy with the autofilled imagery, or if the film you've entered isn't in the TMDB database, you can add some custom images and info by doing the following:
+
+1. Click the "Film Info" tab
+
+2. Optional - Uncheck the "Use TMDB for Info" field. This just hides the lookup field from this showing and uses the "Custom" images fields below
+
+3. Fill out the "Custom Poster Image" and similar fields with your preferred imagery and info
+
+4. Upon saving the page, it'll be updated with your uploaded images.
+
+
