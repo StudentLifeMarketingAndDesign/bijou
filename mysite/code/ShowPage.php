@@ -97,7 +97,7 @@ class ShowPage extends BlogPost {
 			'Series',
 			SeriesPage::get()->map()
 		);
-
+		$fields->addFieldToTab('Root.Main', new LiteralField('InstructionsAdd', '<p class="message notice"><strong><a href="https://github.com/StudentLifeMarketingAndDesign/bijou/blob/main/docs/adding-a-show.md" target="_blank" rel="noopener">Instructions for adding shows and dates can be found here &rarr;</a></strong></p>'), 'Title');
 		$fields->addFieldToTab('Root.Main', $seriesField, 'Content');
 
 		$fields->addFieldToTab('Root.Main', new CheckboxField('Ongoing', 'Ongoing Stream'), 'Content');
