@@ -19,12 +19,14 @@
         <% if $Content %>$Content<% end_if %>
         <% loop $Dates %>
             <p class="show-list__date"><strong>$Date.Format("EEEE, MMMM d, Y")</strong></p>
+            <% if $TimesFormatted %>
             <h3>Showtimes:</h3>
             <ul class="show-list__time-list">
                 <% loop $TimesFormatted %>
                     <li class="show-list__time"><time>$TimeFormatted</time></li>
                 <% end_loop %>
             </ul>
+            <% end_if %>
         <% end_loop %>
         <% if $FilmSummary %>
             <hr />
