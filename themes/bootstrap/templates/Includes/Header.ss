@@ -6,7 +6,7 @@
                 <nav class="navbar navbar-main navbar-expand-lg p-0" aria-label="Site main navigation">
                     <a class="navbar-brand py-4" href="{$BaseUrl}" aria-label="{$SiteConfig.Title}">
                         <span class="sr-only">$SiteConfig.Title</span>
-                        <img src="{$ThemeDir}/dist/images/logo-black.png" alt="Scope Productions" class="navbar-brand__logo" />
+                        <img src="{$ThemeDir}/dist/images/logo-black.png" alt="Bijou Film Board" class="navbar-brand__logo" />
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
